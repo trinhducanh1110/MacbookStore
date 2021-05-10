@@ -22,7 +22,7 @@
 <body>
 
 <div class="">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="background-color: #a4c639">
         <div class="container">
             <a class="navbar-brand" href="/Macbook_war/home"><h2 style="color: black">MACBOOK STORE</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

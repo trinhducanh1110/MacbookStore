@@ -13,14 +13,6 @@
 
     <title>Home</title>
 
-<%--    <!-- Bootstrap core CSS -->--%>
-<%--    <link href="http://localhost:8080/MacbookStore/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--%>
-
-<%--    <!-- Additional CSS Files -->--%>
-<%--    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/fontawesome.css">--%>
-<%--    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/templatemo-finance-business.css">--%>
-<%--    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/owl.css">--%>
-
     <link href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/> " rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/assets/css/fontawesome.css"/> " rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/assets/css/templatemo-finance-business.css"/> " rel="stylesheet" type="text/css">
@@ -30,7 +22,7 @@
 <body>
 
 <div class="">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="background-color: #a4c639">
         <div class="container">
             <a class="navbar-brand" href="/Macbook_war/home"><h2 style="color: black">MACBOOK STORE</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
