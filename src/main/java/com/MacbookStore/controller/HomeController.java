@@ -48,4 +48,9 @@ public class HomeController {
     public String servicePage() {
         return "service";
     }
+
+    @RequestMapping(value = "/newest", method = RequestMethod.GET)
+    public String newestPage() {
+        return "newest";
+    }
 }

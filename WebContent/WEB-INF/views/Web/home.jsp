@@ -7,38 +7,13 @@
         <div class="item item-1">
             <div class="img-fill">
                 <div class="text-content">
-                    <h6>we are ready to help you</h6>
-                    <h4>Financial Analysis<br>&amp; Consulting</h4>
-                    <p>This finance HTML template is 101% free of charge provided by TemplateMo for everyone. You can download, edit and use this layout for your business website.</p>
-                    <a href="/Macbook_war/contact" class="filled-button">contact us</a>
+                    <h6>Our newest product</h6>
+                    <h4>MACBOOK PRO 16 INCH<br>2021</h4>
+                    <p>Say something about this product</p>
+                    <a href="/Macbook_war/newest" class="filled-button">More </a>
                 </div>
             </div>
         </div>
-        <!-- // Item -->
-        <!-- Item -->
-        <div class="item item-2">
-            <div class="img-fill">
-                <div class="text-content">
-                    <h6>we are here to support you</h6>
-                    <h4>Accounting<br>&amp; Management</h4>
-                    <p>You are allowed to use this template for your company websites. You are NOT allowed to re-distribute this template ZIP file on any template download website. Please contact TemplateMo for more detail.</p>
-                    <a href="/Macbook_war/services" class="filled-button">our services</a>
-                </div>
-            </div>
-        </div>
-        <!-- // Item -->
-        <!-- Item -->
-        <div class="item item-3">
-            <div class="img-fill">
-                <div class="text-content">
-                    <h6>we have a solid background</h6>
-                    <h4>Market Analysis<br>&amp; Statistics</h4>
-                    <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate mi. Sed nec cursus augue. Phasellus lacinia ac sapien vitae dapibus. Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
-                    <a href="/Macbook_war/about" class="filled-button">learn more</a>
-                </div>
-            </div>
-        </div>
-        <!-- // Item -->
     </div>
 </div>
 <!-- Banner Ends Here -->

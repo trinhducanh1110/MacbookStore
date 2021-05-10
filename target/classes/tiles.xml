@@ -15,5 +15,8 @@
     <definition name="contact" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/contact.jsp"/>
     </definition>
+    <definition name="newest" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/newest.jsp"/>
+    </definition>
 
 </tiles-definitions>
