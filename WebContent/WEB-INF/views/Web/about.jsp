@@ -5,8 +5,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>About Us</h1>
-                <span>We have over 20 years of experience</span>
+                <h1 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">About Us</h1>
+                <span style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">Deadline is coming. Fear is surrounding us. In the foreground is just Darkness
+                    <br>But we don't scare!!! Because....
+                    <br><h5>Magic Winx Enchantix!! Transfirgue!!</h5>
+                </span>
             </div>
         </div>
     </div>
@@ -18,16 +21,16 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <h2>Our team <em>members</em></h2>
-                    <span>Suspendisse a ante in neque iaculis lacinia</span>
+                    <span>Surprise moth** fuc***</span>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="team-item">
                     <img src="resources/assets/images/team_01.jpg" alt="">
                     <div class="down-content">
-                        <h4>William Smith</h4>
-                        <span>Co-Founder</span>
-                        <p>In sem sem, dapibus non lacus auctor, ornare sollicitudin lacus. Aliquam ipsum urna, semper quis.</p>
+                        <h4>Duc Anh Trinh</h4>
+                        <span>Security</span>
+                        <p>pera pera pera pera!!!!!</p>
                     </div>
                 </div>
             </div>
@@ -35,9 +38,9 @@
                 <div class="team-item">
                     <img src="resources/assets/images/team_02.jpg" alt="">
                     <div class="down-content">
-                        <h4>Mary Houston</h4>
-                        <span>Chief Marketing Officer</span>
-                        <p>In sem sem, dapibus non lacus auctor, ornare sollicitudin lacus. Aliquam ipsum urna, semper quis.</p>
+                        <h4>Gia Khanh Ho Tran</h4>
+                        <span>Chief</span>
+                        <p>Khanh's slogan: mắc ỉa quá</p>
                     </div>
                 </div>
             </div>
@@ -45,9 +48,9 @@
                 <div class="team-item">
                     <img src="resources/assets/images/team_03.jpg" alt="">
                     <div class="down-content">
-                        <h4>Paul Walker</h4>
-                        <span>Financial Analyst</span>
-                        <p>In sem sem, dapibus non lacus auctor, ornare sollicitudin lacus. Aliquam ipsum urna, semper quis.</p>
+                        <h4>Loc Hiep Tran</h4>
+                        <span>Cleaning Staff</span>ỏooooooooooo
+                        <p> :></p>
                     </div>
                 </div>
             </div>
