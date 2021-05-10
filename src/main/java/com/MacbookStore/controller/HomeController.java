@@ -7,20 +7,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String home() {
-        return "Web/home";
-    }
-    @RequestMapping(value = "/contact", method = RequestMethod.GET)
-    public String contact() {
-        return "Web/contact";
-    }
-    @RequestMapping(value = "/about", method = RequestMethod.GET)
-    public String about() {
-        return "Web/about";
-    }
-    @RequestMapping(value = "/services", method = RequestMethod.GET)
+//    @RequestMapping(value = "/home", method = RequestMethod.GET)
+//    public String home() {
+//        return "Web/home";
+//    }
+//    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+//    public String contact() {
+//        return "Web/contact";
+//    }
+//    @RequestMapping(value = "/about", method = RequestMethod.GET)
+//    public String about() {
+//        return "Web/about";
+//    }
+//    @RequestMapping(value = "/services", method = RequestMethod.GET)
+//    public String services() {
+//        return "Web/services";
+//    }
+
+    @RequestMapping(value = "/base", method = RequestMethod.GET)
     public String services() {
-        return "Web/services";
+        return "base-definition";
     }
 }
