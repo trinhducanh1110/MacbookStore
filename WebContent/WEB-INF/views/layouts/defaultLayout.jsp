@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <title>Home</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/> " rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/assets/css/fontawesome.css"/> " rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/assets/css/templatemo-finance-business.css"/> " rel="stylesheet" type="text/css">
@@ -24,26 +25,78 @@
 <div class="">
     <nav class="navbar navbar-expand-lg" style="background-color: #a4c639">
         <div class="container">
-            <a class="navbar-brand" href="/Macbook_war/home"><h2 style="color: black">MACBOOK STORE</h2></a>
+            <a class="navbar-brand" href="/MacbookStore/home"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a style="color: black" class="nav-link" href="/Macbook_war/home">Home
+                        <a style="color: black" class="nav-link" href="/MacbookStore/home">HOME
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/Macbook_war/about">About Us</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                            MACBOOK NEW
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2020</a>
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2019</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2020</a>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2019</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                            MACBOOK OLD
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2020</a>
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2019</a>
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2018</a>
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2017</a>
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2016</a>
+                            <a class="dropdown-item" href="#">MACBOOK PRO 2015</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2020</a>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2019</a>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2018</a>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2017</a>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2016</a>
+                            <a class="dropdown-item" href="#">MACBOOK AIR 2015</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                            ACCESSORIES
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">KEYBOARD</a>
+                            <a class="dropdown-item" href="#">MOUSE</a>
+                            <a class="dropdown-item" href="#">CHARGER</a>
+                            <a class="dropdown-item" href="#">SHOCKPROOF BAG</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/Macbook_war/service">Our Services</a>
+                        <a style="color: black" class="nav-link" href="/MacbookStore/about">ABOUT US</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a style="color: black" class="nav-link" href="/MacbookStore/service">SERVICE</a>
+                    </li>
+                    -->
+                    <li class="nav-item">
+                        <a style="color: black" class="nav-link" href="/MacbookStore/contact">CONTACT US</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/Macbook_war/contact">Contact Us</a>
+                        <a style="color: black" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-shopping-cart"></i></a>
                     </li>
+                    <li class="nav-item">
+                        <a style="color: black" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
+                    </li>
+
                 </ul>
             </div>
         </div>

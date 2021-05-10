@@ -6,6 +6,9 @@
         <!-- Item -->
         <div class="item item-1">
             <div class="img-fill">
+                <div class="container"><br/>
+                    <a class="navbar-brand" href="/MacbookStore/home"><h2 STYLE="color: black" ><i class="fab fa-apple"></i> MACBOOK STORE</h2></a>
+                </div>
                 <div class="text-content">
                     <h6>Our newest product</h6>
                     <h4>MACBOOK PRO 16 INCH<br>2021</h4>
@@ -37,37 +40,40 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Financial <em>Services</em></h2>
-                    <span>Aliquam id urna imperdiet libero mollis hendrerit</span>
+                    <h2>BEST SELLING <em>PRODUCT</em></h2>
+                    <span>...</span>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="http://localhost:8080/MacbookStore/src/assets/images/service_01.jpg" alt="">
+                    <img src="resources/assets/images/service_01.jpg" alt="">
                     <div class="down-content">
-                        <h4>Digital Currency</h4>
-                        <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                        <a href="" class="filled-button">Read More</a>
+                        <h4>MACBOOK PRO 2020</h4>
+                        <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
+                        <a href="" class="btn btn-outline-dark ">Read More</a>
+                        <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/service_02.jpg" alt="">
+                    <img src="resources/assets/images/service_02.jpg" alt="">
                     <div class="down-content">
-                        <h4>Market Analysis</h4>
-                        <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                        <a href="" class="filled-button">Read More</a>
+                        <h4>MACBOOK PRO 2020</h4>
+                        <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
+                        <a href="" class="btn btn-outline-dark ">Read More</a>
+                        <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/service_03.jpg" alt="">
+                    <img src="resources/assets/images/service_03.jpg" alt="">
                     <div class="down-content">
-                        <h4>Historical Data</h4>
-                        <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                        <a href="" class="filled-button">Read More</a>
+                        <h4>MACBOOK PRO 2020</h4>
+                        <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
+                        <a href="" class="btn btn-outline-dark ">Read More</a>
+                        <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                     </div>
                 </div>
             </div>

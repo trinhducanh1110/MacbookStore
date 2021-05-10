@@ -300,7 +300,6 @@ header .navbar {
 	font-size: 15px;
 	font-weight: 300;
 	letter-spacing: 0.5px;
-	color: #fff;
 	transition: all 0.5s;
 	margin-top: 5px;
 }
@@ -309,8 +308,10 @@ header .navbar {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-	color: #a4c639;
 	border-bottom: 3px solid #a4c639;
+}
+.dropdown:hover> .dropdown-menu {
+	display: block;
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
@@ -341,8 +342,7 @@ header .navbar {
   width: 100%;
   display: block;
   overflow: hidden;
-  position: relative;
-  text-align: center
+  position: relative
 }
 
 .img-fill img {
