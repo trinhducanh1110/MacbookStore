@@ -13,13 +13,13 @@
 
     <title>Home</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://localhost:8080/MacbookStore/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<%--    <!-- Bootstrap core CSS -->--%>
+<%--    <link href="http://localhost:8080/MacbookStore/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--%>
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/templatemo-finance-business.css">
-    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/owl.css">
+<%--    <!-- Additional CSS Files -->--%>
+<%--    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/fontawesome.css">--%>
+<%--    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/templatemo-finance-business.css">--%>
+<%--    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/owl.css">--%>
 
     <link href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/> " rel="stylesheet" type="text/css">
     <link href="<c:url value="/resources/assets/css/fontawesome.css"/> " rel="stylesheet" type="text/css">
