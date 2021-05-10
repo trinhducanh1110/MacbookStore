@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.MacbookStore")
@@ -23,7 +23,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         viewResolver.setExposeContextBeansAsAttributes(true);
         return viewResolver;
     }
-
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
+    }
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
