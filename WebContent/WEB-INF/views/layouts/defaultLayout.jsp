@@ -53,25 +53,25 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/MacbookStore/home"><h2>Finance Business</h2></a>
+            <a class="navbar-brand" href="/Macbook_war/home"><h2>Finance Business</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/MacbookStore/contact">Home
+                        <a class="nav-link" href="/Macbook_war/home">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/MacbookStore/about">About Us</a>
+                        <a class="nav-link" href="/Macbook_war/about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Our Services</a>
+                        <a class="nav-link" href="/Macbook_war/service">Our Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/MacbookStore/contact">Contact Us</a>
+                        <a class="nav-link" href="/Macbook_war/contact">Contact Us</a>
                     </li>
                 </ul>
             </div>

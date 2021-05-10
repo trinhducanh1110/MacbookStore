@@ -3,8 +3,17 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-    <definition name="base-definition" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="home" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/home.jsp"/>
+    </definition>
+    <definition name="about" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/about.jsp"/>
+    </definition>
+    <definition name="service" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/services.jsp"/>
+    </definition>
+    <definition name="contact" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/contact.jsp"/>
     </definition>
 
 </tiles-definitions>

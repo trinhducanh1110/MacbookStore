@@ -24,8 +24,28 @@ public class HomeController {
 //        return "Web/services";
 //    }
 
-    @RequestMapping(value = "/base", method = RequestMethod.GET)
-    public String services() {
-        return "base-definition";
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String defaultPage() {
+        return "home";
+    }
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String homePage() {
+        return "home";
+    }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    public String contactPage() {
+        return "contact";
+    }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String aboutPage() {
+        return "about";
+    }
+
+    @RequestMapping(value = "/service", method = RequestMethod.GET)
+    public String servicePage() {
+        return "service";
     }
 }
