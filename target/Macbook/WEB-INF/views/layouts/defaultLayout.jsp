@@ -23,7 +23,7 @@
 <body>
 
 <div class="">
-    <nav class="navbar navbar-expand-lg" style="background-color: #a4c639">
+    <nav class="navbar navbar-expand-lg" style="background-color: black">
         <div class="container">
             <a class="navbar-brand" href="/MacbookStore/home"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +32,12 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a style="color: black" class="nav-link" href="/MacbookStore/home">HOME
+                        <a style="color: white" class="nav-link" href="/MacbookStore/home">HOME
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             MACBOOK NEW
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,7 +49,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             MACBOOK OLD
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,7 +69,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             ACCESSORIES
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -80,7 +80,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/MacbookStore/about">ABOUT US</a>
+                        <a style="color: white" class="nav-link" href="/MacbookStore/about">ABOUT US</a>
                     </li>
                     <!--
                     <li class="nav-item">
@@ -88,13 +88,13 @@
                     </li>
                     -->
                     <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/MacbookStore/contact">CONTACT US</a>
+                        <a style="color: white" class="nav-link" href="/MacbookStore/contact">CONTACT US</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-shopping-cart"></i></a>
+                        <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-shopping-cart"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a style="color: black" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
+                        <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
 
                 </ul>
@@ -177,7 +177,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p>Copyright &copy; 2020 Financial Business Co., Ltd.
+                <p>Copyright &copy; 2020 Thiết kế web Hồ Trần Gia Khánh - 1811063361
 
                     - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
             </div>
