@@ -14,23 +14,20 @@
     <title>Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://localhost:8080/MacbookStore/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:8080/MacbookStore/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/assets/css/templatemo-finance-business.css">
-    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/assets/css/owl.css">
+    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="http://localhost:8080/MacbookStore/resources/assets/css/owl.css">
+
+    <link href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/> " rel="stylesheet" type="text/css">
+    <link href="<c:url value="/resources/assets/css/fontawesome.css"/> " rel="stylesheet" type="text/css">
+    <link href="<c:url value="/resources/assets/css/templatemo-finance-business.css"/> " rel="stylesheet" type="text/css">
+    <link href="<c:url value="/resources/assets/css/owl.css"/> " rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
 
 <div class="sub-header">
     <div class="container">
