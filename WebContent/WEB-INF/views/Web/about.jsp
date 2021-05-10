@@ -8,7 +8,7 @@
                 <h1 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">About Us</h1>
                 <span style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">Deadline is coming. Fear is surrounding us. In the foreground is just Darkness
                     <br>But we don't scare!!! Because....
-                    <br><h5>Magic Winx Enchantix!!! Transfirgue!!!</h5>
+                    <br><h5>Magic Winx Enchantix!!! Transfirgueeeeee!!!</h5>
                 </span>
             </div>
         </div>
