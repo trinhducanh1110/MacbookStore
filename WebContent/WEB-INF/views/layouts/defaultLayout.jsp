@@ -96,6 +96,9 @@
                     <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
+                    <li class="nav-item">
+                        <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
+                    </li>
 
                 </ul>
             </div>

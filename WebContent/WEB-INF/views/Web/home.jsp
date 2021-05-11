@@ -13,23 +13,8 @@
                     <h6>Our newest product</h6>
                     <h4 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">MACBOOK PRO 16 INCH <br>2021</h4>
                     <p style="color: #6c4646">Say something about this product</p>
-                    <a href="/Macbook_war/newest" class="filled-button">More </a>
+                    <a href="/MacbookStore/newest" class="filled-button">More </a>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Banner Ends Here -->
-
-<div class="request-form">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h4>Request a call back right now ?</h4>
-                <span>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</span>
-            </div>
-            <div class="col-md-4">
-                <a href="/Macbook_war/contact" class="border-button">Contact Us</a>
             </div>
         </div>
     </div>

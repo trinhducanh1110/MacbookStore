@@ -1,28 +1,15 @@
 package com.MacbookStore.controller;
 
+import com.MacbookStore.model.Customer;
+import com.MacbookStore.model.CustomerQuery;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 @Controller
 public class HomeController {
-
-//    @RequestMapping(value = "/home", method = RequestMethod.GET)
-//    public String home() {
-//        return "Web/home";
-//    }
-//    @RequestMapping(value = "/contact", method = RequestMethod.GET)
-//    public String contact() {
-//        return "Web/contact";
-//    }
-//    @RequestMapping(value = "/about", method = RequestMethod.GET)
-//    public String about() {
-//        return "Web/about";
-//    }
-//    @RequestMapping(value = "/services", method = RequestMethod.GET)
-//    public String services() {
-//        return "Web/services";
-//    }
+    CustomerQuery query = new CustomerQuery();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String defaultPage() {
@@ -54,8 +41,31 @@ public class HomeController {
         return "newest";
     }
 
+<<<<<<< HEAD
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
     public String detailPage() {
         return "detail";
     }
+=======
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage() {
+        return "login";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String registerPage() {
+        return "register";
+    }
+
+
+    @RequestMapping(value = "",method = RequestMethod.POST)
+    public boolean tryLogin(Customer customer){
+        boolean result = false;
+        if(query.tryLogin(customer)){
+
+        }
+        return result;
+    }
+
+>>>>>>> fc3f2e5f82f694b4a56d38081f560ef8446f8503
 }
