@@ -18,5 +18,7 @@
     <definition name="newest" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/newest.jsp"/>
     </definition>
-
+    <definition name="detail" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/detail.jsp"/>
+    </definition>
 </tiles-definitions>

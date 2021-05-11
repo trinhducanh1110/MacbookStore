@@ -281,7 +281,7 @@ header .navbar {
 	color: #a4c639!important;
 }
 .navbar .navbar-brand {
-	float: 	left;
+	text-align: center;
 	margin-top: 12px;
 	outline: none;
 }
@@ -1066,7 +1066,7 @@ footer .contact-form button.filled-button:hover {
 
 .page-heading {
 	text-align: center;
-	background-image: url(../images/page-heading-bg.jpg);
+	background-image: url(../images/winx_enchantix.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;

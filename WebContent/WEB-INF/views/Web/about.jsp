@@ -39,8 +39,8 @@
                     <img src="resources/assets/images/team_02.jpg" alt="">
                     <div class="down-content">
                         <h4>Gia Khanh Ho Tran</h4>
-                        <span>Chief</span>
-                        <p>Khanh's slogan: mắc ỉa quá</p>
+                        <span>MasterChief</span>
+                        <p>Khanh's slogan: Failure does not mean success </p>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="down-content">
                         <h4>Loc Hiep Tran</h4>
                         <span>Cleaning Staff</span>ỏooooooooooo
-                        <p> :></p>
+                        <p> A person who does not play is one who does not fail </p>
                     </div>
                 </div>
             </div>

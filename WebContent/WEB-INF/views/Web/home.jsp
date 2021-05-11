@@ -51,7 +51,9 @@
                             <div class="row">
                                 <div class="col-md-4 d-block w-100">
                                     <div class="service-item">
-                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                        <a href="/MacbookStore/detail">
+                                            <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                        </a>
                                         <div class="down-content">
                                             <h4>MACBOOK PRO 2020</h4>
                                             <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>

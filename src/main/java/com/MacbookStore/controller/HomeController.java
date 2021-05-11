@@ -53,4 +53,9 @@ public class HomeController {
     public String newestPage() {
         return "newest";
     }
+
+    @RequestMapping(value = "/detail", method = RequestMethod.GET)
+    public String detailPage() {
+        return "detail";
+    }
 }

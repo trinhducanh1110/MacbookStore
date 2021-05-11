@@ -281,7 +281,7 @@ header .navbar {
 	color: #a4c639!important;
 }
 .navbar .navbar-brand {
-	float: 	left;
+	text-align: center;
 	margin-top: 12px;
 	outline: none;
 }

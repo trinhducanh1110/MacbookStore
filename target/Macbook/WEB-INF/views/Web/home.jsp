@@ -11,8 +11,8 @@
                 </div>
                 <div class="text-content">
                     <h6>Our newest product</h6>
-                    <h4>MACBOOK PRO 16 INCH<br>2021</h4>
-                    <p>Say something about this product</p>
+                    <h4 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">MACBOOK PRO 16 INCH <br>2021</h4>
+                    <p style="color: #6c4646">Say something about this product</p>
                     <a href="/Macbook_war/newest" class="filled-button">More </a>
                 </div>
             </div>
@@ -51,7 +51,9 @@
                             <div class="row">
                                 <div class="col-md-4 d-block w-100">
                                     <div class="service-item">
-                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                        <a href="/MacbookStore/detail">
+                                            <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                        </a>
                                         <div class="down-content">
                                             <h4>MACBOOK PRO 2020</h4>
                                             <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
