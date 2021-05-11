@@ -11,8 +11,8 @@
                 </div>
                 <div class="text-content">
                     <h6>Our newest product</h6>
-                    <h4>MACBOOK PRO 16 INCH<br>2021</h4>
-                    <p>Say something about this product</p>
+                    <h4 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">MACBOOK PRO 16 INCH <br>2021</h4>
+                    <p style="color: #6c4646">Say something about this product</p>
                     <a href="/Macbook_war/newest" class="filled-button">More </a>
                 </div>
             </div>
