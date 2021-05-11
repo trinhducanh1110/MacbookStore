@@ -18,5 +18,11 @@
     <definition name="newest" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/newest.jsp"/>
     </definition>
+    <definition name="login" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/login.jsp"/>
+    </definition>
+    <definition name="register" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/register.jsp"/>
+    </definition>
 
 </tiles-definitions>
