@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Customer {
 
-    public int CustomerID;
+    public int CustomerID ;
 
     public String FirstName;
 

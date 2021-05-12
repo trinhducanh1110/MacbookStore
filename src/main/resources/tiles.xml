@@ -18,11 +18,9 @@
     <definition name="newest" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/newest.jsp"/>
     </definition>
-<<<<<<< HEAD
     <definition name="detail" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/detail.jsp"/>
     </definition>
-=======
     <definition name="login" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/login.jsp"/>
     </definition>
@@ -30,5 +28,4 @@
         <put-attribute name="body" value="/WEB-INF/views/Web/register.jsp"/>
     </definition>
 
->>>>>>> fc3f2e5f82f694b4a56d38081f560ef8446f8503
 </tiles-definitions>

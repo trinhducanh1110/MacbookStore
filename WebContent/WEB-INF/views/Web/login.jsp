@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <form method="post" action="">
+            <form method="post" action="/login">
                 <div class="col-md-4">
 
                     <h3 style="text-align: center">
