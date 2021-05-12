@@ -1,7 +1,8 @@
 package com.MacbookStore.model;
 
 //import com.sun.source.tree.BinaryTree;
-
+import org.springframework.data.mongodb.core.mapping.Document;
+@Document(collection = "Product")
 public class Product {
     private String id;
     private String productName;
