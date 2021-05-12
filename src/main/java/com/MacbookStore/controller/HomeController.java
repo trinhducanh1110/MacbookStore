@@ -1,5 +1,6 @@
 package com.MacbookStore.controller;
 
+import com.MacbookStore.model.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -53,8 +54,7 @@ public class HomeController {
     public String newestPage() {
         return "newest";
     }
-<<<<<<< Updated upstream
-=======
+
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {
@@ -76,5 +76,5 @@ public class HomeController {
         return result;
     }
 
->>>>>>> Stashed changes
+
 }
