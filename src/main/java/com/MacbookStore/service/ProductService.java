@@ -2,9 +2,9 @@ package com.MacbookStore.service;
 
 
 import com.MacbookStore.repository.ProductRepository;
-import com.rolex.web.model.Product;
-import com.rolex.web.repository.ProductRepository;
-import com.rolex.web.viewmodel.ProductViewModel;
+import com.MacbookStore.model.Product;
+import com.MacbookStore.repository.ProductRepository;
+import com.MacbookStore.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,8 +25,8 @@ public class ProductService {
         productRepository.insert(product);
     }
 
-    public List<Product> sortProductByCollectionID(int collectionID) {
+    /*public List<Product> sortProductByCollectionID(int collectionID) {
         return productRepository.findByCollectionID(collectionID);
-    }
+    }*/
 
 }

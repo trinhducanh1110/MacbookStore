@@ -29,18 +29,34 @@
                     <span>...</span>
                 </div>
             </div>
+            <c:forEach var="item" items="${product}">
+                ${item.productName} nó nằm ở đây
+            </c:forEach>
             <div class="col-md-12">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
+                                <c:forEach var="item" items="${product}">
                                 <div class="col-md-4 d-block w-100">
                                     <div class="service-item">
                                         <a href="/MacbookStore/detail">
                                             <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
                                         </a>
                                         <div class="down-content">
-                                            <h4>MACBOOK PRO 2020</h4>
+                                            <h4>${item.getProductName}</h4>
+                                            <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
+                                            <a href="" class="btn btn-outline-dark ">Read More</a>
+                                            <a href="" class="btn btn-outline-dark ">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </c:forEach>
+                                <!--<div class="col-md-4 d-block w-100">
+                                    <div class="service-item">
+                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                        <div class="down-content">
+                                            <h4>MACBOOK PRO 2021</h4>
                                             <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
                                             <a href="" class="btn btn-outline-dark ">Read More</a>
                                             <a href="" class="btn btn-outline-dark ">Add To Cart</a>
@@ -51,24 +67,14 @@
                                     <div class="service-item">
                                         <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
                                         <div class="down-content">
-                                            <h4>MACBOOK PRO 2020</h4>
+                                            <h4>MACBOOK PRO 2022</h4>
                                             <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
                                             <a href="" class="btn btn-outline-dark ">Read More</a>
                                             <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-block w-100">
-                                    <div class="service-item">
-                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
-                                        <div class="down-content">
-                                            <h4>MACBOOK PRO 2020</h4>
-                                            <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                                            <a href="" class="btn btn-outline-dark ">Read More</a>
-                                            <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                -->
                             </div>
                         </div>
                         <div class="carousel-item">

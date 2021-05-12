@@ -5,6 +5,8 @@ package com.MacbookStore.model;
 public class Product {
     private String id;
     private String productName;
+    private String user;
+    private String pass;
 
     public String getId() {
         return id;
@@ -20,5 +22,13 @@ public class Product {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }

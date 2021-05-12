@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
     CustomerQuery query = new CustomerQuery();
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/", method = RequestMethod.GET)
     public String defaultPage() {
         return "home";
-    }
+    }*/
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String homePage() {
