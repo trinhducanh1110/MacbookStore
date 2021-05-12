@@ -53,4 +53,28 @@ public class HomeController {
     public String newestPage() {
         return "newest";
     }
+<<<<<<< Updated upstream
+=======
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage() {
+        return "login";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String registerPage() {
+        return "register";
+    }
+
+
+    @RequestMapping(value = "/tryLogin",method = RequestMethod.POST)
+    public boolean tryLogin(Customer customer){
+        boolean result = false;
+//        if(query.tryLogin(customer)){
+//
+//        }
+        return result;
+    }
+
+>>>>>>> Stashed changes
 }
