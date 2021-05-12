@@ -29,10 +29,7 @@
                     <span>...</span>
                 </div>
             </div>
-<%--            <c:forEach var="item" items="${product}">--%>
-<%--                <h1>have an item</h1>--%>
-<%--                ${item.productName}--%>
-<%--            </c:forEach>--%>
+
             <div class="col-md-12">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
