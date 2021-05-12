@@ -41,12 +41,11 @@ public class HomeController {
         return "newest";
     }
 
-<<<<<<< HEAD
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
     public String detailPage() {
         return "detail";
     }
-=======
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {
         return "login";
@@ -61,11 +60,11 @@ public class HomeController {
     @RequestMapping(value = "",method = RequestMethod.POST)
     public boolean tryLogin(Customer customer){
         boolean result = false;
-        if(query.tryLogin(customer)){
-
-        }
+//        if(query.tryLogin(customer)){
+//
+//        }
         return result;
     }
 
->>>>>>> fc3f2e5f82f694b4a56d38081f560ef8446f8503
+
 }
