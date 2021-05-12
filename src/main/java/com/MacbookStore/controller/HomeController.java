@@ -57,14 +57,4 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value = "",method = RequestMethod.POST)
-    public boolean tryLogin(Customer customer){
-        boolean result = false;
-//        if(query.tryLogin(customer)){
-//
-//        }
-        return result;
-    }
-
-
 }
