@@ -2,7 +2,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <div style="padding-top: 60px; padding-bottom: 60px">
-    <br>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -41,10 +40,6 @@
 
                     <label>colorID</label>
                     <input class="col-md-12" type="text" id="colorID" name="colorID">
-                    <br/>
-
-                    <label></label>
-                    <input class="col-md-12" type="text" id="" name="">
                     <br/>
 
                     <label>cpuID</label>
