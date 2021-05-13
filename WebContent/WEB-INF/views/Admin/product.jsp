@@ -1,18 +1,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 
-<div class="container">
-    <a href="#" style="text-decoration: none; color: black;float: left">
+<div class="">
+    <div style="text-align: center">
+    <a style="text-align: center" href="#" style="text-decoration: none; color: black;float: left">
         <div class="btn btn-outline-danger">
             Back
         </div>
     </a>
 
-    <a href="#" style="text-decoration: none; color: black">
+    <a style="text-align: center" href="#" style="text-decoration: none; color: black">
         <div class="btn btn-outline-success">
             Add Macbook
         </div>
     </a>
+    </div>
     <table class="table">
         <tr>
             <th>
