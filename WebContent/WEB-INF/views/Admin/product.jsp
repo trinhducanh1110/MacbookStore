@@ -3,13 +3,13 @@
 
 <div class="">
     <div style="text-align: center">
-    <a style="text-align: center" href="#" style="text-decoration: none; color: black;float: left">
+    <a style="text-align: center" href="/MacbookStore/admin/home" style="text-decoration: none; color: black;float: left">
         <div class="btn btn-outline-danger">
             Back
         </div>
     </a>
 
-    <a style="text-align: center" href="#" style="text-decoration: none; color: black">
+    <a style="text-align: center" href="/MacbookStore/admin/insertProductForm" style="text-decoration: none; color: black">
         <div class="btn btn-outline-success">
             Add Macbook
         </div>

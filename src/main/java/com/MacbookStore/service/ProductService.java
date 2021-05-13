@@ -19,12 +19,12 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public void saveProduct(Product product) {
+    public void insertProduct(Product product) {
         productRepository.insert(product);
     }
 
-    /*public List<Product> sortProductByCollectionID(int collectionID) {
-        return productRepository.findByCollectionID(collectionID);
-    }*/
+    public void editProduct(Product product) { productRepository.save(product); }
+
+    public void deleteProduct(Product product) { productRepository.delete(product); }
 
 }

@@ -1,13 +1,14 @@
 package com.MacbookStore.controller;
 
+import com.MacbookStore.model.Product;
 import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 public class AdminController {
@@ -31,6 +32,22 @@ public class AdminController {
     public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
         model.addAttribute("productList");
         return "admin1Product";
+    }
+
+    @GetMapping("/admin/insertProductForm")
+    public String insertProductForm(Model model){
+        model.addAttribute("product", new Product());
+        return "adminInsertProduct";
+    }
+
+    @PostMapping("/admin/insertProductSubmit")
+    public String insertProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model){
+        if(br.hasErrors()){
+            return "error";
+        }
+        productService.insertProduct(product);
+        model.addAttribute("product", productService.getAllProduct());
+        return "adminProduct";
     }
 
 
