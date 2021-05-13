@@ -96,9 +96,16 @@
                     <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
-                    </li>
+                    <c:if test="${currentUser != null}">
+                        <li class="nav-item">
+                            <a style="..." class="nav-link" href="#">Hello ${currentUser.username}</a>
+                        </li>
+                    </c:if>
+                    <c:if test="${currentUser == null}">
+                        <li class="nav-item">
+                            <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
+                        </li>
+                    </c:if>
 
                 </ul>
             </div>
