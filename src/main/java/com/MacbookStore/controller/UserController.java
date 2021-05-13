@@ -33,10 +33,12 @@ public class UserController {
         if(br.hasErrors()){
             return "error";
         }
-        if(customerService.getUser(customer)){
+        if(customerService.checkAccount(customer)){
             model.addAttribute("currentUser", customer);
             return "home";
         }
+        String error = "username or password was wrong";
+        model.addAttribute("error", error);
         return "login";
     }
 

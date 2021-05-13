@@ -3,42 +3,29 @@ package com.MacbookStore.model;
 //import com.sun.source.tree.BinaryTree;
 
 import java.util.Date;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "Customer")
 public class Customer {
 
-    public int CustomerID ;
+    private String username ;
 
-    public String FirstName;
+    private String password;
 
-    public String LastName;
-
-    public String Account ;
-
-    public String Password;
-
-    public String Email;
-
-    public Date Birth;
-
-    public String  Address;
-
-    public String PhoneNumber;
-
-
-    public Customer() {
-
+    public String getUsername() {
+        return username;
     }
 
-    public Customer(int CustomerID, String FirstName, String LastName, String Account, String Password, String Email, Date Birth, String Address, String PhoneNumber) {
-        this.CustomerID = CustomerID;
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Account = Account;
-        this.Password = Password;
-        this.Email = Email;
-        this.Birth = Birth;
-        this.Address = Address;
-        this.PhoneNumber = PhoneNumber;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }
