@@ -26,117 +26,28 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <h2>BEST SELLING <em>PRODUCT</em></h2>
-                    <span>...</span>
+                    <span></span>
                 </div>
             </div>
-
             <div class="col-md-12">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-4 d-block w-100">
-                                    <div class="service-item">
-                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
-                                        <div class="down-content">
-                                            <h4>MACBOOK PRO 2021</h4>
-                                            <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                                            <a href="" class="btn btn-outline-dark ">Read More</a>
-                                            <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                                        </div>
-                                    </div>
+                <div class="row">
+                    <c:forEach var="item" items="${product}">
+                        <div class="col-md-4 d-block w-100">
+                            <div class="service-item">
+                                <a href="/MacbookStore/detail">
+                                    <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                </a>
+                                <div class="down-content">
+                                    <h4>${item.productName}</h4><p style="font-weight: bold">Price: ${item.price}</p>
+                                    <p>${item.cpuID} - ${item.ramID} - ${item.hardDriveID} - ${item.displayCardID} <br/> ${item.colorID} - ${item.displayID} - ${item.yearID} - ${item.status} </p>
+                                    <a href="" class="btn btn-outline-dark ">Read More</a>
+                                    <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                                 </div>
-                                <div class="col-md-4 d-block w-100">
-                                    <div class="service-item">
-                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
-                                        <div class="down-content">
-                                            <h4>MACBOOK PRO 2021</h4>
-                                            <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                                            <a href="" class="btn btn-outline-dark ">Read More</a>
-                                            <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-block w-100">
-                                    <div class="service-item">
-                                        <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
-                                        <div class="down-content">
-                                            <h4>MACBOOK PRO 2022</h4>
-                                            <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                                            <a href="" class="btn btn-outline-dark ">Read More</a>
-                                            <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <c:forEach var="item" items="${product}">
-                                    <div class="col-md-4 d-block w-100">
-                                        <div class="service-item">
-                                            <a href="/MacbookStore/detail">
-                                                <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
-                                            </a>
-                                            <div class="down-content">
-                                                <h4>${item.productName}</h4>
-                                                <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                                                <a href="" class="btn btn-outline-dark ">Read More</a>
-                                                <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </c:forEach>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    </c:forEach>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="resources/assets/images/service_01.jpg" alt="">
-                    <div class="down-content">
-                        <h4>MACBOOK PRO 2020</h4>
-                        <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                        <a href="" class="btn btn-outline-dark ">Read More</a>
-                        <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="resources/assets/images/service_02.jpg" alt="">
-                    <div class="down-content">
-                        <h4>MACBOOK PRO 2020</h4>
-                        <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                        <a href="" class="btn btn-outline-dark ">Read More</a>
-                        <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-item">
-                    <img src="resources/assets/images/service_03.jpg" alt="">
-                    <div class="down-content">
-                        <h4>MACBOOK PRO 2020</h4>
-                        <p>VGA - CPU - RAM - HARDDRIVE - DISPLAYCARD - COLOR - DISPLAY - YEAR - STATUS </p>
-                        <a href="" class="btn btn-outline-dark ">Read More</a>
-                        <a href="" class="btn btn-outline-dark ">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 </div>
