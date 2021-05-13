@@ -42,6 +42,21 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                            CONFIGURATION
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/MacbookStore/admin/cpu">CPU</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/color">COLOR</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/display">DISPLAY</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/displaycard">DISPLAY CARD</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/group">GROUP</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/harddrive">HARD DRIVE</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/ram">RAM</a>
+                            <a class="dropdown-item" href="/MacbookStore/admin/year">YEAR</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             ACCESSORIES
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
