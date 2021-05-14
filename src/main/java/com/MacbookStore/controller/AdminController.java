@@ -27,6 +27,10 @@ public class AdminController {
     private final GroupService groupService;
     @Autowired
     private final HardDriveService hardDriveService;
+    @Autowired
+    private final RamService ramService;
+    @Autowired
+    private final YearService yearService;
     public AdminController() {
         productService = new ProductService();
         cpuService = new CpuService();
@@ -35,6 +39,8 @@ public class AdminController {
         displayCardService = new DisplayCardService();
         groupService = new GroupService();
         hardDriveService = new HardDriveService();
+        ramService = new RamService();
+        yearService = new YearService();
     }
     //1
     @GetMapping("/admin/home")
@@ -77,6 +83,16 @@ public class AdminController {
         model.addAttribute("harddrive",hardDriveService.getAllHardDrive());
         return "adminHardDrive";
     }
+    @GetMapping("/admin/ram")
+    public String ramForm(Model model){
+        model.addAttribute("ram",ramService.getAllRam());
+        return "adminRam";
+    }
+    @GetMapping("/admin/year")
+    public String yearForm(Model model){
+        model.addAttribute("year",yearService.getAllYear());
+        return "adminYear";
+    }
     //2
     @GetMapping("/admin/product/{productName}")
     public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
@@ -113,6 +129,16 @@ public class AdminController {
         model.addAttribute("hardDriveList");
         return "admin1HardDrive";
     }
+    @GetMapping("/admin/ram/{ramName}")
+    public String ramListByCollectionID(@PathVariable("ramName") String ramName, Model model) {
+        model.addAttribute("ramList");
+        return "admin1Ram";
+    }
+    @GetMapping("/admin/year/{yearName}")
+    public String yearListByCollectionID(@PathVariable("yearName") String yearName, Model model) {
+        model.addAttribute("yearList");
+        return "admin1Year";
+    }
     //3
     @GetMapping("/admin/insertProductForm")
     public String insertProductForm(Model model){
@@ -148,6 +174,16 @@ public class AdminController {
     public String insertHardDriveForm(Model model){
         model.addAttribute("harddrive", new HardDrive());
         return "adminInsertHardDrive";
+    }
+    @GetMapping("/admin/insertRamForm")
+    public String insertRamForm(Model model){
+        model.addAttribute("ram", new RAM());
+        return "adminInsertRam";
+    }
+    @GetMapping("/admin/insertYearForm")
+    public String insertYearForm(Model model){
+        model.addAttribute("year", new Year());
+        return "adminInsertYear";
     }
     //4
     @PostMapping("/admin/insertProductSubmit")
@@ -212,6 +248,24 @@ public class AdminController {
         hardDriveService.insertHardDrive(hardDrive);
         model.addAttribute("harddrive", hardDriveService.getAllHardDrive());
         return "adminHardDrive";
+    }
+    @PostMapping("/admin/insertRamSubmit")
+    public String insertRamSubmit(@Valid @ModelAttribute("ram") RAM ram, BindingResult br, Model model){
+        if(br.hasErrors()){
+            return "error";
+        }
+        ramService.insertRam(ram);
+        model.addAttribute("ram", ramService.getAllRam());
+        return "adminRam";
+    }
+    @PostMapping("/admin/insertYearSubmit")
+    public String insertYearSubmit(@Valid @ModelAttribute("year") Year year, BindingResult br, Model model){
+        if(br.hasErrors()){
+            return "error";
+        }
+        yearService.insertYear(year);
+        model.addAttribute("year", yearService.getAllYear());
+        return "adminYear";
     }
 
 }

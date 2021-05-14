@@ -80,6 +80,20 @@
     <definition name="adminInsertHardDrive" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertHardDrive.jsp"/>
     </definition>
+    <!-- Ram -->
+    <definition name="adminRam" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/ram.jsp"/>
+    </definition>
+    <definition name="adminInsertRam" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertRam.jsp"/>
+    </definition>
+    <!-- Year -->
+    <definition name="adminYear" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/year.jsp"/>
+    </definition>
+    <definition name="adminInsertYear" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertYear.jsp"/>
+    </definition>
 
 
 </tiles-definitions>
