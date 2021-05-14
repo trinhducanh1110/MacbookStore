@@ -25,6 +25,8 @@ public class AdminController {
     private final DisplayCardService displayCardService;
     @Autowired
     private final GroupService groupService;
+    @Autowired
+    private final HardDriveService hardDriveService;
     public AdminController() {
         productService = new ProductService();
         cpuService = new CpuService();
@@ -32,6 +34,7 @@ public class AdminController {
         displayService = new DisplayService();
         displayCardService = new DisplayCardService();
         groupService = new GroupService();
+        hardDriveService = new HardDriveService();
     }
     //1
     @GetMapping("/admin/home")
@@ -69,6 +72,11 @@ public class AdminController {
         model.addAttribute("group",groupService.getAllGroup());
         return "adminGroup";
     }
+    @GetMapping("/admin/harddrive")
+    public String hardDriveForm(Model model){
+        model.addAttribute("harddrive",hardDriveService.getAllHardDrive());
+        return "adminHardDrive";
+    }
     //2
     @GetMapping("/admin/product/{productName}")
     public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
@@ -100,6 +108,11 @@ public class AdminController {
         model.addAttribute("groupList");
         return "admin1Group";
     }
+    @GetMapping("/admin/harddrive/{hardDriveName}")
+    public String hardDriveListByCollectionID(@PathVariable("hardDriveName") String hardDriveName, Model model) {
+        model.addAttribute("hardDriveList");
+        return "admin1HardDrive";
+    }
     //3
     @GetMapping("/admin/insertProductForm")
     public String insertProductForm(Model model){
@@ -130,6 +143,11 @@ public class AdminController {
     public String insertGroupForm(Model model){
         model.addAttribute("group", new Group());
         return "adminInsertGroup";
+    }
+    @GetMapping("/admin/insertHardDriveForm")
+    public String insertHardDriveForm(Model model){
+        model.addAttribute("harddrive", new HardDrive());
+        return "adminInsertHardDrive";
     }
     //4
     @PostMapping("/admin/insertProductSubmit")
@@ -185,6 +203,15 @@ public class AdminController {
         groupService.insertGroup(group);
         model.addAttribute("group", groupService.getAllGroup());
         return "adminGroup";
+    }
+    @PostMapping("/admin/insertHardDriveSubmit")
+    public String insertHardDriveSubmit(@Valid @ModelAttribute("harddrive") HardDrive hardDrive, BindingResult br, Model model){
+        if(br.hasErrors()){
+            return "error";
+        }
+        hardDriveService.insertHardDrive(hardDrive);
+        model.addAttribute("harddrive", hardDriveService.getAllHardDrive());
+        return "adminHardDrive";
     }
 
 }

@@ -73,6 +73,13 @@
     <definition name="adminInsertGroup" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertGroup.jsp"/>
     </definition>
+    <!-- HardDrive -->
+    <definition name="adminHardDrive" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/harddrive.jsp"/>
+    </definition>
+    <definition name="adminInsertHardDrive" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertHardDrive.jsp"/>
+    </definition>
 
 
 </tiles-definitions>
