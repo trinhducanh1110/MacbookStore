@@ -38,12 +38,33 @@
     <definition name="adminInsertProduct" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertProduct.jsp"/>
     </definition>
-
+    <!-- CPU -->
     <definition name="adminCpu" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/cpu.jsp"/>
     </definition>
     <definition name="adminInsertCpu" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertCpu.jsp"/>
+    </definition>
+    <!-- Color -->
+    <definition name="adminColor" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/color.jsp"/>
+    </definition>
+    <definition name="adminInsertColor" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertColor.jsp"/>
+    </definition>
+    <!-- Display -->
+    <definition name="adminDisplay" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/display.jsp"/>
+    </definition>
+    <definition name="adminInsertDisplay" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertDisplay.jsp"/>
+    </definition>
+    <!-- DisplayCard -->
+    <definition name="adminDisplayCard" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/displaycard.jsp"/>
+    </definition>
+    <definition name="adminInsertDisplayCard" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertDisplayCard.jsp"/>
     </definition>
 
 
