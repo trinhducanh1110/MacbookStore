@@ -66,6 +66,13 @@
     <definition name="adminInsertDisplayCard" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertDisplayCard.jsp"/>
     </definition>
+    <!-- Group -->
+    <definition name="adminGroup" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/group.jsp"/>
+    </definition>
+    <definition name="adminInsertGroup" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertGroup.jsp"/>
+    </definition>
 
 
 </tiles-definitions>

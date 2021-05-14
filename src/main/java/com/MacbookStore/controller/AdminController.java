@@ -23,12 +23,15 @@ public class AdminController {
     private final DisplayService displayService;
     @Autowired
     private final DisplayCardService displayCardService;
+    @Autowired
+    private final GroupService groupService;
     public AdminController() {
         productService = new ProductService();
         cpuService = new CpuService();
         colorService = new ColorService();
         displayService = new DisplayService();
         displayCardService = new DisplayCardService();
+        groupService = new GroupService();
     }
     //1
     @GetMapping("/admin/home")
@@ -61,6 +64,11 @@ public class AdminController {
         model.addAttribute("displaycard",displayCardService.getAllDisplayCard());
         return "adminDisplayCard";
     }
+    @GetMapping("/admin/group")
+    public String groupForm(Model model){
+        model.addAttribute("group",groupService.getAllGroup());
+        return "adminGroup";
+    }
     //2
     @GetMapping("/admin/product/{productName}")
     public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
@@ -87,6 +95,11 @@ public class AdminController {
         model.addAttribute("displayCardList");
         return "admin1DisplayCard";
     }
+    @GetMapping("/admin/group/{groupName}")
+    public String groupListByCollectionID(@PathVariable("groupName") String groupName, Model model) {
+        model.addAttribute("groupList");
+        return "admin1Group";
+    }
     //3
     @GetMapping("/admin/insertProductForm")
     public String insertProductForm(Model model){
@@ -104,14 +117,19 @@ public class AdminController {
         return "adminInsertColor";
     }
     @GetMapping("/admin/insertDisplayForm")
-    public String displayColorForm(Model model){
+    public String insertDisplayColorForm(Model model){
         model.addAttribute("display", new Display());
         return "adminInsertDisplay";
     }
     @GetMapping("/admin/insertDisplayCardForm")
-    public String displayCardColorForm(Model model){
+    public String insertDisplayCardColorForm(Model model){
         model.addAttribute("displaycard", new DisplayCard());
         return "adminInsertDisplayCard";
+    }
+    @GetMapping("/admin/insertGroupForm")
+    public String insertGroupForm(Model model){
+        model.addAttribute("group", new Group());
+        return "adminInsertGroup";
     }
     //4
     @PostMapping("/admin/insertProductSubmit")
@@ -158,6 +176,15 @@ public class AdminController {
         displayCardService.insertDisplayCard(displaycard);
         model.addAttribute("displaycard", displayCardService.getAllDisplayCard());
         return "adminDisplayCard";
+    }
+    @PostMapping("/admin/insertGroupSubmit")
+    public String insertGroupSubmit(@Valid @ModelAttribute("group") Group group, BindingResult br, Model model){
+        if(br.hasErrors()){
+            return "error";
+        }
+        groupService.insertGroup(group);
+        model.addAttribute("group", groupService.getAllGroup());
+        return "adminGroup";
     }
 
 }
