@@ -13,5 +13,7 @@ import java.util.List;
 @Transactional
 @Repository
 public interface CpuRepository extends MongoRepository<CPU, String> {
-
+    CPU findByCpuID(String cpuID);
+    CPU findByCpuName(String cpuName);
+    void deleteByCpuID(String cpuID);
 }

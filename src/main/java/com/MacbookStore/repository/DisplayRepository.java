@@ -12,5 +12,7 @@ import java.util.List;
 @Transactional
 @Repository
 public interface DisplayRepository extends MongoRepository<Display, String> {
-
+    Display findByDisplayID(String displayID);
+    Display findByDisplayName(String displayName);
+    void deleteByDisplayID(String displayID);
 }
