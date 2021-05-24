@@ -1,6 +1,7 @@
 package com.MacbookStore.repository;
 
 
+import com.MacbookStore.model.HardDrive;
 import com.MacbookStore.model.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -13,5 +14,7 @@ import java.util.List;
 @Transactional
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String> {
-
+    Product findByProductID(String productID);
+    Product findByProductName(String productName);
+    void deleteByProductID(String productID);
 }

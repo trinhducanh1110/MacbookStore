@@ -13,5 +13,7 @@ import java.util.List;
 @Transactional
 @Repository
 public interface RamRepository extends MongoRepository<RAM, String> {
-
+    RAM findByRamID(String ramID);
+    RAM findByRamName(String ramName);
+    void deleteByRamID(String ramID);
 }

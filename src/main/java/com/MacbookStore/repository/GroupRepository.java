@@ -13,5 +13,7 @@ import java.util.List;
 @Transactional
 @Repository
 public interface GroupRepository extends MongoRepository<Group, String> {
-
+    Group findByGroupID(String groupID);
+    Group findByGroupName(String groupName);
+    void deleteByGroupID(String groupID);
 }
