@@ -47,10 +47,7 @@ public class HomeController {
         return "newest";
     }
 
-    @RequestMapping(value = "/detail", method = RequestMethod.GET)
-    public String detailPage() {
-        return "detail";
-    }
+
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {

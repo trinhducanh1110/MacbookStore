@@ -14,7 +14,5 @@ import java.util.List;
 @Transactional
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String> {
-    Product findByProductID(String productID);
-    Product findByProductName(String productName);
-    void deleteByProductID(String productID);
+    Product findFirstById(String productID);
 }

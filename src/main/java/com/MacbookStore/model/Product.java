@@ -23,6 +23,7 @@ public class Product {
     private String productID;
     private String yearID;
     private String ramID;
+    private String image;
 
 
     public String getId() {
@@ -152,5 +153,13 @@ public class Product {
 
     public void setProductID(String productID) {
         this.productID = productID;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

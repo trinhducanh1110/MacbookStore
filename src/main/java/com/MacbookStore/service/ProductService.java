@@ -19,6 +19,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    public Product get1Product(String productId) {
+        return productRepository.findFirstById(productId);
+    }
+
     public void insertProduct(Product product) {
         productRepository.insert(product);
     }

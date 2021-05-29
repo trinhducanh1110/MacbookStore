@@ -21,9 +21,9 @@ public class ProductController {
         return "home";
     }
 
-    @GetMapping("/product/{productName}")
-    public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
-        model.addAttribute("productList");
-        return "product";
+    @GetMapping("/detail/{id}")
+    public String productListByCollectionID(@PathVariable("id") String id, Model model) {
+        model.addAttribute("product", productService.get1Product(id));
+        return "detail";
     }
 }

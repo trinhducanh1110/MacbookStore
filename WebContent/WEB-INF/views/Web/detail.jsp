@@ -13,14 +13,14 @@
 <!--Nội Dung-->
 <div class="main-content">
     <div class="container">
-        <h3><b>Name - GroupId YearId DisplayId - CpuId/RamId/HardDriveId - Status</b></h3><br/>
-
+        <h3><b>${product.productName} - ${product.groupID} ${product.yearID} ${product.displayID} - ${product.cpuID}/${product.ramID}/${product.hardDriveID} - ${product.status}</b></h3><br/>
+        <img src="resources/assets/images/macbookpro2020-silver13.jpg" alt="">
         <div class="row">
             <div class="col-md-5">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="...">
+                            <img src="${product.getImage()}" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
                             <img src="resources/assets/images/1.jpg" class="d-block w-100" alt="...">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             <div class="col-md-4">
-                <h4 style="color: red; text-align: center;font-weight: bold"><b>PRICE: $$$$ VND</b></h4>
+                <h4 style="color: red; text-align: center;font-weight: bold"><b>PRICE:  ${product.getPrice()}   VND</b></h4>
                 <div id="Datmua">
                     <b>
                         <a href="" style="color: #ffffff;text-align: center" class="btn btn-dark col-md-12">
