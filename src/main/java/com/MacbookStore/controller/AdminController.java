@@ -268,4 +268,18 @@ public class AdminController {
         return "adminYear";
     }
 
+
+
+
+    @GetMapping("/admin/product/delete/{productId}")
+    public String deleteProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        productService.deleteProduct(productId);
+        model.addAttribute("product", productService.getAllProduct());
+        return "adminProduct";
+    }
+
 }

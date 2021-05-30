@@ -115,8 +115,12 @@
                 ${item.yearID}
             </td>
             <td>
-                <input type="button" value="Edit" class="btn btn-warning">
-                <input type="button" value="Delete" class="btn btn-outline-danger">
+                <a href="#">
+                    <input type="button" value="Edit" class="btn btn-warning">
+                </a>
+                <a href="/MacbookStore/admin/product/delete/${item.id}">
+                    <input type="button" value="Delete" class="btn btn-outline-danger">
+                </a>
             </td>
         </tr>
         </c:forEach>
