@@ -35,8 +35,12 @@
     <definition name="adminProduct" extends="adminHome">
     <put-attribute name="body" value="/WEB-INF/views/Admin/product.jsp"/>
     </definition>
+    <!-- Product -->
     <definition name="adminInsertProduct" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertProduct.jsp"/>
+    </definition>
+    <definition name="adminEditProduct" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editProduct.jsp"/>
     </definition>
     <!-- CPU -->
     <definition name="adminCpu" extends="adminHome">

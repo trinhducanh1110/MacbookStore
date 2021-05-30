@@ -6,16 +6,16 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <form class="col-md-4" method="post" action="/MacbookStore/admin/insertProductSubmit">
+            <form class="col-md-4" method="post" action="/MacbookStore/admin/updateProductSubmit">
                 <div class="row">
                     <h3 class="col-md-12" style="text-align: center">
-                        Insert New Product
+                        Update Product
                     </h3>
                     <br>
-                    <span style="color: #ff0000"></span>
+                    <span style="color: red"></span>
 
                     <label>productName</label>
-                    <input class="col-md-12" type="text" id="productName" name="productName">
+                    <input class="col-md-12" type="text" id="productName" name="productName" value="${product.productName}">
                     <br/>
 
                     <label>Description</label>
@@ -27,51 +27,51 @@
                     <br/>
 
                     <label>Sold</label>
-                    <input class="col-md-12" type="text" id="Sold" name="Sold">
+                    <input class="col-md-12" type="text" id="Sold" name="Sold" >
                     <br/>
 
                     <label>Status</label>
-                    <input class="col-md-12" type="text" id="Status" name="Status">
+                    <input class="col-md-12" type="text" id="Status" name="Status" >
                     <br/>
 
                     <label>Stock</label>
-                    <input class="col-md-12" type="text" id="Stock" name="Stock">
+                    <input class="col-md-12" type="text" id="Stock" name="Stock" >
                     <br/>
 
                     <label>colorID</label>
-                    <input class="col-md-12" type="text" id="colorID" name="colorID">
+                    <input class="col-md-12" type="text" id="colorID" name="colorID" value="${product.colorID}">
                     <br/>
 
                     <label>cpuID</label>
-                    <input class="col-md-12" type="text" id="cpuID" name="cpuID">
+                    <input class="col-md-12" type="text" id="cpuID" name="cpuID" value="${product.cpuID}">
                     <br/>
 
                     <label>displayCardID</label>
-                    <input class="col-md-12" type="text" id="displayCardID" name="displayCardID">
+                    <input class="col-md-12" type="text" id="displayCardID" name="displayCardID" value="${product.displayCardID}">
                     <br/>
 
                     <label>displayID</label>
-                    <input class="col-md-12" type="text" id="displayID" name="displayID">
+                    <input class="col-md-12" type="text" id="displayID" name="displayID" value="${product.displayID}">
                     <br/>
 
                     <label>groupID</label>
-                    <input class="col-md-12" type="text" id="groupID" name="groupID">
+                    <input class="col-md-12" type="text" id="groupID" name="groupID" value="${product.groupID}">
                     <br/>
 
                     <label>hardDriveID</label>
-                    <input class="col-md-12" type="text" id="hardDriveID" name="hardDriveID">
+                    <input class="col-md-12" type="text" id="hardDriveID" name="hardDriveID" value="${product.hardDriveID}">
                     <br/>
 
                     <label>productID</label>
-                    <input class="col-md-12" type="text" id="productID" name="productID">
+                    <input class="col-md-12" type="text" id="productID" name="productID" value="${product.productID}">
                     <br/>
 
                     <label>yearID</label>
-                    <input class="col-md-12" type="text" id="yearID" name="yearID">
+                    <input class="col-md-12" type="text" id="yearID" name="yearID" value="${product.yearID}">
                     <br/>
 
                     <label>ramID</label>
-                    <input class="col-md-12" type="text" id="ramID" name="ramID">
+                    <input class="col-md-12" type="text" id="ramID" name="ramID" value="${product.ramID}">
                     <br/>
 
                     <div class="col-md-12" style="text-align: center">

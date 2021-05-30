@@ -115,7 +115,7 @@
                 ${item.yearID}
             </td>
             <td>
-                <a href="#">
+                <a href="/MacbookStore/admin/product/edit/${item.id}">
                     <input type="button" value="Edit" class="btn btn-warning">
                 </a>
                 <a href="/MacbookStore/admin/product/delete/${item.id}">

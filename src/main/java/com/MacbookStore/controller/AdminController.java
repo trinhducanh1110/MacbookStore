@@ -48,6 +48,8 @@ public class AdminController {
         return "adminHome";
     }
 
+// -------------------------------------------------- list view all --------------------------------------------------
+
     @GetMapping("/admin/product")
     public String productForm(Model model){
         model.addAttribute("product",productService.getAllProduct());
@@ -93,7 +95,9 @@ public class AdminController {
         model.addAttribute("year",yearService.getAllYear());
         return "adminYear";
     }
-    //2
+
+// -------------------------------------------------- list view by .. --------------------------------------------------
+
     @GetMapping("/admin/product/{productName}")
     public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
         model.addAttribute("productList");
@@ -139,7 +143,9 @@ public class AdminController {
         model.addAttribute("yearList");
         return "admin1Year";
     }
-    //3
+
+// -------------------------------------------------- insert form --------------------------------------------------
+
     @GetMapping("/admin/insertProductForm")
     public String insertProductForm(Model model){
         model.addAttribute("product", new Product());
@@ -185,7 +191,9 @@ public class AdminController {
         model.addAttribute("year", new Year());
         return "adminInsertYear";
     }
-    //4
+
+// -------------------------------------------------- insert submit --------------------------------------------------
+
     @PostMapping("/admin/insertProductSubmit")
     public String insertProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model){
         if(br.hasErrors()){
@@ -268,8 +276,32 @@ public class AdminController {
         return "adminYear";
     }
 
+// -------------------------------------------------- return update view --------------------------------------------------
 
+    @GetMapping("/admin/product/edit/{productId}")
+    public String editProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("product", productService.get1Product(productId));
+        return "adminEditProduct";
+    }
 
+// -------------------------------------------------- update submit --------------------------------------------------
+
+    @PostMapping("/MacbookStore/admin/editProductSubmit")
+    public String editProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        productService.insertProduct(product);
+        model.addAttribute("product", productService.getAllProduct());
+        return "adminProduct";
+    }
+
+// -------------------------------------------------- delete --------------------------------------------------
 
     @GetMapping("/admin/product/delete/{productId}")
     public String deleteProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model)
