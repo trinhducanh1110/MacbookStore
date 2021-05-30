@@ -290,7 +290,7 @@ public class AdminController {
 
 // -------------------------------------------------- update submit --------------------------------------------------
 
-    @PostMapping("/MacbookStore/admin/editProductSubmit")
+    @PostMapping("/admin/editProductSubmit")
     public String editProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model)
     {
         if(br.hasErrors()){

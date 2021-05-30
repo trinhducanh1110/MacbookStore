@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <form class="col-md-4" method="post" action="/MacbookStore/admin/updateProductSubmit">
+            <form class="col-md-4" method="post" action="/MacbookStore/admin/editProductSubmit">
                 <div class="row">
                     <h3 class="col-md-12" style="text-align: center">
                         Update Product
