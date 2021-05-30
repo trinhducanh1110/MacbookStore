@@ -35,7 +35,7 @@
                         <div class="col-md-4 d-block w-100">
                             <div class="service-item">
                                 <a href="/MacbookStore/detail/${item.id}">
-                                    <img src="resources/assets/images/macbookpro2020-silver13.jpg" class="d-block w-100" alt="">
+                                    <img src="${item.image}" class="d-block w-100" alt="">
                                 </a>
                                 <div class="down-content">
                                     <h4>${item.productName}</h4><p style="font-weight: bold">Price: ${item.price}</p>
