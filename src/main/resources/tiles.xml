@@ -49,6 +49,9 @@
     <definition name="adminInsertCpu" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertCpu.jsp"/>
     </definition>
+    <definition name="adminEditCpu" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editCpu.jsp"/>
+    </definition>
     <!-- Color -->
     <definition name="adminColor" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/color.jsp"/>
