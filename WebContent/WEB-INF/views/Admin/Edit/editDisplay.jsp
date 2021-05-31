@@ -6,20 +6,20 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <form class="col-md-4" method="post" action="/MacbookStore/admin/editCpuSubmit">
+            <form class="col-md-4" method="post" action="/MacbookStore/admin/editDisplaySubmit">
                 <div class="row">
                     <h3 class="col-md-12" style="text-align: center">
-                        Update CPU
+                        Update Display
                     </h3>
                     <br>
                     <span style="color: red"></span>
-                    <input class="col-md-12" type="text" id="id" name="id" value="${cpu.id}" hidden>
-                    <label>Cpu ID</label>
-                    <input class="col-md-12" type="text" id="cpuID" name="cpuID" value="${cpu.cpuID}">
+                    <input class="col-md-12" type="text" id="id" name="id" value="${display.id}" hidden>
+                    <label>Display ID</label>
+                    <input class="col-md-12" type="text" id="displayID" name="displayID" value="${display.displayID}">
                     <br/>
 
-                    <label>Cpu Name</label>
-                    <input class="col-md-12" type="text" id="cpuName" name="cpuName" value="${cpu.cpuName}">
+                    <label>Display Name</label>
+                    <input class="col-md-12" type="text" id="displayName" name="displayName" value="${display.displayName}">
                     <br/>
 
                     <div class="col-md-12" style="text-align: center">

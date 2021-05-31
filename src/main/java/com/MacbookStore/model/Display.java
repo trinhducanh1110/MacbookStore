@@ -5,17 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Display")
 public class Display {
-    private String _id;
+    private String id;
     private String displayID;
     private String displayName;
-
-    public String get_id() {
-        return _id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
-    }
 
     public String getDisplayID() {
         return displayID;
@@ -31,5 +23,13 @@ public class Display {
 
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

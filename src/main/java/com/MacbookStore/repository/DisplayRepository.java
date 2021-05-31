@@ -1,5 +1,6 @@
 package com.MacbookStore.repository;
 
+import com.MacbookStore.model.Color;
 import com.MacbookStore.model.Display;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,6 @@ import java.util.List;
 @Transactional
 @Repository
 public interface DisplayRepository extends MongoRepository<Display, String> {
-    Display findByDisplayID(String displayID);
-    Display findByDisplayName(String displayName);
-    void deleteByDisplayID(String displayID);
+    Display findFirstById(String displayID);
+    void deleteById(String displayID);
 }

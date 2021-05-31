@@ -296,6 +296,24 @@ public class AdminController {
         model.addAttribute("cpu", cpuService.get1Cpu(cpuId));
         return "adminEditCpu";
     }
+    @GetMapping("/admin/color/edit/{colorId}")
+    public String editColor(@Valid @ModelAttribute("colorId") String colorId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("color", colorService.get1Color(colorId));
+        return "adminEditColor";
+    }
+    @GetMapping("/admin/display/edit/{displayId}")
+    public String editDisplay(@Valid @ModelAttribute("displayId") String displayId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("display", displayService.get1Display(displayId));
+        return "adminEditDisplay";
+    }
 
 // -------------------------------------------------- update submit --------------------------------------------------
 
@@ -315,9 +333,29 @@ public class AdminController {
         if(br.hasErrors()){
             return "error";
         }
-        cpuService.insertCpu(cpu);
+        cpuService.updateCpu(cpu);
         model.addAttribute("cpu", cpuService.getAllCpu());
         return "adminCpu";
+    }
+    @PostMapping("/admin/editColorSubmit")
+    public String editColorSubmit(@Valid @ModelAttribute("color") Color color, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        colorService.updateColor(color);
+        model.addAttribute("color", colorService.getAllColor());
+        return "adminColor";
+    }
+    @PostMapping("/admin/editDisplaySubmit")
+    public String editDisplaySubmit(@Valid @ModelAttribute("display") Display display, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        displayService.updateDisplay(display);
+        model.addAttribute("display", displayService.getAllDisplay());
+        return "adminDisplay";
     }
 
 // -------------------------------------------------- delete --------------------------------------------------
@@ -341,6 +379,26 @@ public class AdminController {
         cpuService.deleteCpu(cpuId);
         model.addAttribute("cpu", cpuService.getAllCpu());
         return "adminCpu";
+    }
+    @GetMapping("/admin/color/delete/{colorId}")
+    public String deleteColor(@Valid @ModelAttribute("colorId") String colorId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        colorService.deleteColor(colorId);
+        model.addAttribute("color", colorService.getAllColor());
+        return "adminColor";
+    }
+    @GetMapping("/admin/display/delete/{displayId}")
+    public String deleteDisplay(@Valid @ModelAttribute("displayId") String displayId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        displayService.deleteDisplay(displayId);
+        model.addAttribute("display", displayService.getAllDisplay());
+        return "adminDisplay";
     }
 
 }

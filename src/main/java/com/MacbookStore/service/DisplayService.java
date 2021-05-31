@@ -1,5 +1,6 @@
 package com.MacbookStore.service;
 
+import com.MacbookStore.model.CPU;
 import com.MacbookStore.model.Color;
 import com.MacbookStore.model.Display;
 import com.MacbookStore.repository.DisplayRepository;
@@ -18,13 +19,16 @@ public class  DisplayService {
     public List<Display> getAllDisplay() {
         return displayRepository.findAll();
     }
+    public Display get1Display(String displayId) {
+        return displayRepository.findFirstById(displayId);
+    }
 
     public void insertDisplay(Display display) {
         displayRepository.insert(display);
     }
 
-    public void editDisplay(Display display) { displayRepository.save(display); }
+    public void updateDisplay(Display display) { displayRepository.save(display); }
 
-    public void deleteDisplay(Display display) { displayRepository.delete(display); }
+    public void deleteDisplay(String displayId) { displayRepository.deleteById(displayId); }
 
 }

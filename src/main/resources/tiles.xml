@@ -59,12 +59,18 @@
     <definition name="adminInsertColor" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertColor.jsp"/>
     </definition>
+    <definition name="adminEditColor" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editColor.jsp"/>
+    </definition>
     <!-- Display -->
     <definition name="adminDisplay" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/display.jsp"/>
     </definition>
     <definition name="adminInsertDisplay" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertDisplay.jsp"/>
+    </definition>
+    <definition name="adminEditDisplay" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editDisplay.jsp"/>
     </definition>
     <!-- DisplayCard -->
     <definition name="adminDisplayCard" extends="adminHome">

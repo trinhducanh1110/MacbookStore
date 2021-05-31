@@ -27,7 +27,7 @@ public class  CpuService {
         cpuRepository.insert(cpu);
     }
 
-    public void editCpu(CPU cpu) { cpuRepository.save(cpu); }
+    public void updateCpu(CPU cpu) { cpuRepository.save(cpu); }
 
     public void deleteCpu(String cpuId) { cpuRepository.deleteById(cpuId); }
 

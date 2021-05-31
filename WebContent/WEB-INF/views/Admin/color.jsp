@@ -35,7 +35,7 @@
         <c:forEach var="item" items="${color}">
             <tr>
                 <td>
-                        ${item._id}
+                        ${item.id}
                 </td>
                 <td>
                         ${item.colorID}
@@ -45,8 +45,12 @@
                 </td>
 
                 <td>
-                    <input type="button" value="Edit" class="btn btn-warning">
-                    <input type="button" value="Delete" class="btn btn-outline-danger">
+                    <a href="/MacbookStore/admin/color/edit/${item.id}">
+                        <input type="button" value="Edit" class="btn btn-warning">
+                    </a>
+                    <a href="/MacbookStore/admin/color/delete/${item.id}">
+                        <input type="button" value="Delete" class="btn btn-outline-danger">
+                    </a>
                 </td>
             </tr>
         </c:forEach>
