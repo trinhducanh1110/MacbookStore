@@ -296,7 +296,7 @@ public class AdminController {
         if(br.hasErrors()){
             return "error";
         }
-        productService.insertProduct(product);
+        productService.updateProduct(product);
         model.addAttribute("product", productService.getAllProduct());
         return "adminProduct";
     }

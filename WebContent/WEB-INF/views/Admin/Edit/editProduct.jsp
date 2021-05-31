@@ -13,7 +13,7 @@
                     </h3>
                     <br>
                     <span style="color: red"></span>
-
+                    <input class="col-md-12" type="text" id="id" name="id" value="${product.id}" hidden>
                     <label>productName</label>
                     <input class="col-md-12" type="text" id="productName" name="productName" value="${product.productName}">
                     <br/>
