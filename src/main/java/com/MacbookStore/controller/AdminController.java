@@ -287,6 +287,15 @@ public class AdminController {
         model.addAttribute("product", productService.get1Product(productId));
         return "adminEditProduct";
     }
+    @GetMapping("/admin/cpu/edit/{cpuId}")
+    public String editCpu(@Valid @ModelAttribute("cpuId") String cpuId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("cpu", cpuService.get1Cpu(cpuId));
+        return "adminEditCpu";
+    }
 
 // -------------------------------------------------- update submit --------------------------------------------------
 
@@ -300,6 +309,16 @@ public class AdminController {
         model.addAttribute("product", productService.getAllProduct());
         return "adminProduct";
     }
+    @PostMapping("/admin/editCpuSubmit")
+    public String editCpuSubmit(@Valid @ModelAttribute("cpu") CPU cpu, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        cpuService.insertCpu(cpu);
+        model.addAttribute("cpu", cpuService.getAllCpu());
+        return "adminCpu";
+    }
 
 // -------------------------------------------------- delete --------------------------------------------------
 
@@ -312,6 +331,16 @@ public class AdminController {
         productService.deleteProduct(productId);
         model.addAttribute("product", productService.getAllProduct());
         return "adminProduct";
+    }
+    @GetMapping("/admin/cpu/delete/{cpuId}")
+    public String deleteCpu(@Valid @ModelAttribute("cpuId") String cpuId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        cpuService.deleteCpu(cpuId);
+        model.addAttribute("cpu", cpuService.getAllCpu());
+        return "adminCpu";
     }
 
 }
