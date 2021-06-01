@@ -1,5 +1,6 @@
 package com.MacbookStore.service;
 
+import com.MacbookStore.model.Group;
 import com.MacbookStore.model.HardDrive;
 import com.MacbookStore.repository.HardDriveRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,16 @@ public class  HardDriveService {
     public List<HardDrive> getAllHardDrive() {
         return hardDriveRepository.findAll();
     }
+    public HardDrive get1HardDrive(String hardDriveId) {
+        return hardDriveRepository.findFirstById(hardDriveId);
+    }
 
     public void insertHardDrive(HardDrive hardDrive) {
         hardDriveRepository.insert(hardDrive);
     }
 
-    public void editHardDrive(HardDrive hardDrive) { hardDriveRepository.save(hardDrive); }
+    public void updateHardDrive(HardDrive hardDrive) { hardDriveRepository.save(hardDrive); }
 
-    public void deleteHardDrive(HardDrive hardDrive) { hardDriveRepository.delete(hardDrive); }
+    public void deleteHardDrive(String hardDriveId) { hardDriveRepository.deleteById(hardDriveId); }
 
 }

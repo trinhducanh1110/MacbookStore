@@ -1,6 +1,7 @@
 package com.MacbookStore.repository;
 
 
+import com.MacbookStore.model.DisplayCard;
 import com.MacbookStore.model.Group;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -13,7 +14,6 @@ import java.util.List;
 @Transactional
 @Repository
 public interface GroupRepository extends MongoRepository<Group, String> {
-    Group findByGroupID(String groupID);
-    Group findByGroupName(String groupName);
-    void deleteByGroupID(String groupID);
+    Group findFirstById(String groupID);
+    void deleteById(String groupID);
 }

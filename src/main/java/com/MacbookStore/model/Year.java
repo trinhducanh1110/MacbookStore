@@ -5,17 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Year")
 public class Year {
-    private String _id;
+    private String id;
     private String yearID;
     private String yearName;
-
-    public String get_id() {
-        return _id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
-    }
 
     public String getYearID() {
         return yearID;
@@ -31,5 +23,13 @@ public class Year {
 
     public void setYearName(String yearName) {
         this.yearName = yearName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -35,7 +35,7 @@
         <c:forEach var="item" items="${displaycard}">
             <tr>
                 <td>
-                        ${item._id}
+                        ${item.id}
                 </td>
                 <td>
                         ${item.displayCardID}
@@ -45,8 +45,12 @@
                 </td>
 
                 <td>
-                    <input type="button" value="Edit" class="btn btn-warning">
-                    <input type="button" value="Delete" class="btn btn-outline-danger">
+                    <a href="/MacbookStore/admin/displayCard/edit/${item.id}">
+                        <input type="button" value="Edit" class="btn btn-warning">
+                    </a>
+                    <a href="/MacbookStore/admin/displayCard/delete/${item.id}">
+                        <input type="button" value="Delete" class="btn btn-outline-danger">
+                    </a>
                 </td>
             </tr>
         </c:forEach>

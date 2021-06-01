@@ -21,12 +21,16 @@ public class  DisplayCardService {
         return displayCardRepository.findAll();
     }
 
+    public DisplayCard get1DisplayCard(String displayCardId) {
+        return displayCardRepository.findFirstById(displayCardId);
+    }
+
     public void insertDisplayCard(DisplayCard displayCard) {
         displayCardRepository.insert(displayCard);
     }
 
-    public void editDisplayCard(DisplayCard displayCard) { displayCardRepository.save(displayCard); }
+    public void updateDisplayCard(DisplayCard displayCard) { displayCardRepository.save(displayCard); }
 
-    public void deleteDisplayCard(DisplayCard displayCard) { displayCardRepository.delete(displayCard); }
+    public void deleteDisplayCard(String displayCardId) { displayCardRepository.deleteById(displayCardId); }
 
 }

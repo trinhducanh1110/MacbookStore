@@ -314,6 +314,51 @@ public class AdminController {
         model.addAttribute("display", displayService.get1Display(displayId));
         return "adminEditDisplay";
     }
+    @GetMapping("/admin/displayCard/edit/{displayCardId}")
+    public String editDisplayCard(@Valid @ModelAttribute("displayCardId") String displayCardId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("displaycard", displayCardService.get1DisplayCard(displayCardId));
+        return "adminEditDisplayCard";
+    }
+    @GetMapping("/admin/group/edit/{groupId}")
+    public String editGroup(@Valid @ModelAttribute("groupId") String groupId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("group", groupService.get1Group(groupId));
+        return "adminEditGroup";
+    }
+    @GetMapping("/admin/hardDrive/edit/{hardDriveId}")
+    public String editHardDrive(@Valid @ModelAttribute("hardDriveId") String hardDriveId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("harddrive", hardDriveService.get1HardDrive(hardDriveId));
+        return "adminEditHardDrive";
+    }
+    @GetMapping("/admin/ram/edit/{ramId}")
+    public String editRam(@Valid @ModelAttribute("ramId") String ramId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("ram", ramService.get1Ram(ramId));
+        return "adminEditRam";
+    }
+    @GetMapping("/admin/year/edit/{yearId}")
+    public String editYear(@Valid @ModelAttribute("yearId") String yearId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("year", yearService.get1Year(yearId));
+        return "adminEditYear";
+    }
 
 // -------------------------------------------------- update submit --------------------------------------------------
 
@@ -357,6 +402,56 @@ public class AdminController {
         model.addAttribute("display", displayService.getAllDisplay());
         return "adminDisplay";
     }
+    @PostMapping("/admin/editDisplayCardSubmit")
+    public String editDisplayCardSubmit(@Valid @ModelAttribute("displaycard") DisplayCard displayCard, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        displayCardService.updateDisplayCard(displayCard);
+        model.addAttribute("displaycard", displayCardService.getAllDisplayCard());
+        return "adminDisplayCard";
+    }
+    @PostMapping("/admin/editGroupSubmit")
+    public String editGroupSubmit(@Valid @ModelAttribute("group") Group group, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        groupService.updateGroup(group);
+        model.addAttribute("group", groupService.getAllGroup());
+        return "adminGroup";
+    }
+    @PostMapping("/admin/editHardDriveSubmit")
+    public String editHardDriveSubmit(@Valid @ModelAttribute("harddrive") HardDrive hardDrive, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        hardDriveService.updateHardDrive(hardDrive);
+        model.addAttribute("harddrive", hardDriveService.getAllHardDrive());
+        return "adminHardDrive";
+    }
+    @PostMapping("/admin/editRamSubmit")
+    public String editRamSubmit(@Valid @ModelAttribute("ram") RAM ram, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        ramService.updateRam(ram);
+        model.addAttribute("ram", ramService.getAllRam());
+        return "adminRam";
+    }
+    @PostMapping("/admin/editYearSubmit")
+    public String editYearSubmit(@Valid @ModelAttribute("year") Year year, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        yearService.updateYear(year);
+        model.addAttribute("year", yearService.getAllYear());
+        return "adminYear";
+    }
 
 // -------------------------------------------------- delete --------------------------------------------------
 
@@ -399,6 +494,56 @@ public class AdminController {
         displayService.deleteDisplay(displayId);
         model.addAttribute("display", displayService.getAllDisplay());
         return "adminDisplay";
+    }
+    @GetMapping("/admin/displayCard/delete/{displayCardId}")
+    public String deleteDisplayCard(@Valid @ModelAttribute("displayCardId") String displayCardId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        displayCardService.deleteDisplayCard(displayCardId);
+        model.addAttribute("displaycard", displayCardService.getAllDisplayCard());
+        return "adminDisplayCard";
+    }
+    @GetMapping("/admin/group/delete/{groupId}")
+    public String deleteGroup(@Valid @ModelAttribute("groupId") String groupId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        groupService.deleteGroup(groupId);
+        model.addAttribute("group", groupService.getAllGroup());
+        return "adminGroup";
+    }
+    @GetMapping("/admin/hardDrive/delete/{hardDriveId}")
+    public String deleteHardDrive(@Valid @ModelAttribute("hardDriveId") String hardDriveId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        hardDriveService.deleteHardDrive(hardDriveId);
+        model.addAttribute("harddrive", hardDriveService.getAllHardDrive());
+        return "adminHardDrive";
+    }
+    @GetMapping("/admin/ram/delete/{ramId}")
+    public String deleteRam(@Valid @ModelAttribute("ramId") String ramId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        ramService.deleteRam(ramId);
+        model.addAttribute("ram", ramService.getAllRam());
+        return "adminRam";
+    }
+    @GetMapping("/admin/year/delete/{yearId}")
+    public String deleteYearm(@Valid @ModelAttribute("yearId") String yearId, BindingResult br, Model model)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        yearService.deleteYear(yearId);
+        model.addAttribute("year", yearService.getAllYear());
+        return "adminYear";
     }
 
 }

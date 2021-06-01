@@ -1,5 +1,6 @@
 package com.MacbookStore.repository;
 
+import com.MacbookStore.model.Display;
 import com.MacbookStore.model.DisplayCard;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,6 @@ import java.util.List;
 @Transactional
 @Repository
 public interface DisplayCardRepository extends MongoRepository<DisplayCard, String> {
-    DisplayCard findByDisplayCardID(String displayCardID);
-    DisplayCard findByDisplayCardName(String displayCardName);
-    void deleteByDisplayCardID(String displayCartID);
+    DisplayCard findFirstById(String displayCardID);
+    void deleteById(String displayCardID);
 }

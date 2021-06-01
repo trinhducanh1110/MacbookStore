@@ -79,12 +79,18 @@
     <definition name="adminInsertDisplayCard" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertDisplayCard.jsp"/>
     </definition>
+    <definition name="adminEditDisplayCard" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editDisplayCard.jsp"/>
+    </definition>
     <!-- Group -->
     <definition name="adminGroup" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/group.jsp"/>
     </definition>
     <definition name="adminInsertGroup" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertGroup.jsp"/>
+    </definition>
+    <definition name="adminEditGroup" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editGroup.jsp"/>
     </definition>
     <!-- HardDrive -->
     <definition name="adminHardDrive" extends="adminHome">
@@ -93,6 +99,9 @@
     <definition name="adminInsertHardDrive" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertHardDrive.jsp"/>
     </definition>
+    <definition name="adminEditHardDrive" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editHardDrive.jsp"/>
+    </definition>
     <!-- Ram -->
     <definition name="adminRam" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/ram.jsp"/>
@@ -100,12 +109,18 @@
     <definition name="adminInsertRam" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertRam.jsp"/>
     </definition>
+    <definition name="adminEditRam" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editRam.jsp"/>
+    </definition>
     <!-- Year -->
     <definition name="adminYear" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/year.jsp"/>
     </definition>
     <definition name="adminInsertYear" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertYear.jsp"/>
+    </definition>
+    <definition name="adminEditYear" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editYear.jsp"/>
     </definition>
 
 

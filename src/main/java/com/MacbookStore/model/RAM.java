@@ -5,17 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "RAM")
 public class RAM {
-    private String _id;
+    private String id;
     private String ramID;
     private String ramName;
-
-    public String get_id() {
-        return _id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
-    }
 
     public String getRamID() {
         return ramID;
@@ -31,5 +23,13 @@ public class RAM {
 
     public void setRamName(String ramName) {
         this.ramName = ramName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

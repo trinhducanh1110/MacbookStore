@@ -1,5 +1,6 @@
 package com.MacbookStore.repository;
 
+import com.MacbookStore.model.Group;
 import com.MacbookStore.model.HardDrive;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,6 @@ import java.util.List;
 @Transactional
 @Repository
 public interface HardDriveRepository extends MongoRepository<HardDrive, String> {
-    HardDrive findByHardDriveID(String hardDriveID);
-    HardDrive findByHardDriveName(String hardDriveName);
-    void deleteByHardDriveID(String hardDriveID);
+    HardDrive findFirstById(String hardDriveID);
+    void deleteById(String hardDriveID);
 }

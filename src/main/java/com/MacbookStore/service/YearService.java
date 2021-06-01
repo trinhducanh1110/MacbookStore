@@ -1,5 +1,6 @@
 package com.MacbookStore.service;
 
+import com.MacbookStore.model.RAM;
 import com.MacbookStore.model.Year;
 import com.MacbookStore.repository.YearRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,16 @@ public class  YearService {
         return yearRepository.findAll();
     }
 
+    public Year get1Year(String yearId) {
+        return yearRepository.findFirstById(yearId);
+    }
+
     public void insertYear(Year year) {
         yearRepository.insert(year);
     }
 
-    public void editYear(Year year) { yearRepository.save(year); }
+    public void updateYear(Year year) { yearRepository.save(year); }
 
-    public void deleteYear(Year year) { yearRepository.delete(year); }
+    public void deleteYear(String yearId) { yearRepository.deleteById(yearId); }
 
 }
