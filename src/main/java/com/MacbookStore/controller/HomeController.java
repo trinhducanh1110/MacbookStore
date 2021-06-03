@@ -1,7 +1,5 @@
 package com.MacbookStore.controller;
 
-import com.MacbookStore.model.Customer;
-import com.MacbookStore.model.CustomerQuery;
 import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -45,18 +43,5 @@ public class HomeController {
     public String newestPage() {
         return "newest";
     }
-
-
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage() {
-        return "login";
-    }
-
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String registerPage() {
-        return "register";
-    }
-
 
 }

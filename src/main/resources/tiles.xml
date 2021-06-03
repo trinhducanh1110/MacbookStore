@@ -30,13 +30,18 @@
     <definition name="macbookByCategory" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/macbookByCategory.jsp"/>
     </definition>
-
+    <definition name="error" extends="home">
+        <put-attribute name="body" value="/WEB-INF/views/Web/error.jsp"/>
+    </definition>
 
 
 
 
     <definition name="adminHome" template="/WEB-INF/views/layouts/adminLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Admin/home.jsp"/>
+    </definition>
+    <definition name="adminLogin" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/login.jsp"/>
     </definition>
 
     <definition name="adminProduct" extends="adminHome">

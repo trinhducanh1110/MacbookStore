@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <form class="col-md-4" method="post" action="/MacbookStore/user/login-submit">
+            <form class="col-md-4" method="post" action="/MacbookStore/admin/login-submit">
                 <div class="row">
                     <h3 class="col-md-12" style="text-align: center">
                         Login
@@ -14,12 +14,12 @@
                     <br>
                     <span style="color: red"></span>
                     <label>Username</label>
-                        <input class="col-md-12" type="text" id="Username" name="Username">
+                    <input class="col-md-12" type="text" id="Username" name="Username">
                     <br/>
                     <label>Password</label>
-                        <input class="col-md-12" type="password" id="Password" name="Password">
+                    <input class="col-md-12" type="password" id="Password" name="Password">
                     <br/>
-                    <a href="/MacbookStore/user/register">Don't have an account? Sign up now</a>
+                    <a href="/MacbookStore/register">Don't have an account? Sign up now</a>
                     <br/>
                     <br/>
                     <c:forEach var="item" items="${error}" >

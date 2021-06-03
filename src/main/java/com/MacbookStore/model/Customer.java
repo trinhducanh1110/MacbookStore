@@ -14,6 +14,16 @@ public class Customer {
 
     private String customerName;
 
+    private String Email;
+
+    private String phoneNumber;
+
+    private Date Birth;
+
+    private String Address;
+
+
+
     public String getUsername() {
         return username;
     }
@@ -36,5 +46,37 @@ public class Customer {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public Date getBirth() {
+        return Birth;
+    }
+
+    public void setBirth(Date birth) {
+        Birth = birth;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }

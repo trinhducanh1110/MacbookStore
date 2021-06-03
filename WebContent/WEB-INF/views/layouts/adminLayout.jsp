@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-<%@ page session="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +33,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a style="color: white" class="nav-link" href="/MacbookStore/home">GO TO USER's PAGE
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/admin/home">HOME
                             <span class="sr-only">(current)</span>
                         </a>
@@ -41,7 +46,7 @@
                         <a style="color: white" class="nav-link" href="/MacbookStore/admin/product">PRODUCT</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             CONFIGURATION
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,7 +61,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             ACCESSORIES
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,9 +71,22 @@
                             <a class="dropdown-item" href="/MacbookStore/admin/bag">SHOCKPROOF BAG</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a style="..." class="nav-link" href="/MacbookStore/admin/login">Login</a>
-                    </li>
+                    <c:if test="${sessionScope.admin == null}">
+                        <li class="nav-item">
+                            <a style="..." class="nav-link" href="/MacbookStore/admin/login">Login</a>
+                        </li>
+                    </c:if>
+                    <c:if test="${sessionScope.admin.length() != null}">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdmin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                                Hello ${sessionScope.admin}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Manage</a>
+                                <a class="dropdown-item" href="/MacbookStore/admin/logout">Log out</a>
+                            </div>
+                        </li>
+                    </c:if>
                 </ul>
             </div>
         </div>

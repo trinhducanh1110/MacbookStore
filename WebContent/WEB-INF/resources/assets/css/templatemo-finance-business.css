@@ -1060,8 +1060,7 @@ footer .contact-form button.filled-button:hover {
 
 .page-heading {
 	text-align: center;
-	/*background-image: url(../images/winx_enchantix.jpg);*/
-	background-image: url(https://laptop4u.vn/wp-content/uploads/2020/05/loi-ban-phim-macbook-pro-co-tu-khac-phuc-duoc-khong2.jpg);
+	background-image: url(../images/about_us_background.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;

@@ -1,6 +1,7 @@
 package com.MacbookStore.controller;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
+import com.MacbookStore.model.Customer;
 import com.MacbookStore.service.CustomerService;
 import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 
 import javax.validation.Valid;
+import java.text.ParseException;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private final CustomerService customerService;
@@ -24,14 +27,22 @@ public class UserController {
         productService = new ProductService();
     }
 
+    private boolean checkCurrentUser(HttpSession session){
+        if(session.getAttribute("user") != null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
-    @RequestMapping("/user/loginForm")
+    @RequestMapping("/login")
     public String loginForm(Model model){
         model.addAttribute("customer", new CustomerViewModel());
         return "login";
     }
 
-    @PostMapping("/user/login-submit")
+    @PostMapping("/login-submit")
     public String tryLogin(@Valid @ModelAttribute("customer") CustomerViewModel customer, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
@@ -48,11 +59,25 @@ public class UserController {
             return "login";
         }
     }
-
-    @GetMapping("/user/logout")
-    public String loginSuccess(HttpSession session){
+    @GetMapping("/logout")
+    public String loginSuccess(HttpSession session, Model model){
         session.setAttribute("user", null);
+        model.addAttribute("product",productService.getAllProduct());
         return "home";
+    }
+
+    @RequestMapping("/register")
+    public String registerForm(Model model){
+        model.addAttribute("customer", new CustomerViewModel());
+        return "register";
+    }
+    @PostMapping("/register-submit")
+    public String tryRegister(@Valid @ModelAttribute("customer") CustomerViewModel customer, BindingResult br) throws ParseException {
+        if(br.hasErrors()){
+            return "error";
+        }
+        customerService.insertCustomer(customer);
+        return "login";
     }
 
 }

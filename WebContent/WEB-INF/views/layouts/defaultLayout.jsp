@@ -97,7 +97,7 @@
                     </li>
                     <c:if test="${sessionScope.user.length() == null}">
                         <li class="nav-item">
-                            <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
+                            <a style="..." class="nav-link" href="/MacbookStore/user/login">Login</a>
                         </li>
                     </c:if>
                     <c:if test="${sessionScope.user.length() != null}">

@@ -1,5 +1,6 @@
 package com.MacbookStore.controller;
 
+import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.model.*;
 import com.MacbookStore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +9,14 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 @Controller
 public class AdminController {
 
+    @Autowired
+    private final AdminAccountService adminAccountService;
     @Autowired
     private final ProductService productService;
     @Autowired
@@ -32,6 +36,7 @@ public class AdminController {
     @Autowired
     private final YearService yearService;
     public AdminController() {
+        adminAccountService = new AdminAccountService();
         productService = new ProductService();
         cpuService = new CpuService();
         colorService = new ColorService();
@@ -48,50 +53,89 @@ public class AdminController {
         return "adminHome";
     }
 
+// -------------------------------------------------- account --------------------------------------------------
+
+    @RequestMapping("/admin/login")
+    public String loginForm(Model model){
+        model.addAttribute(new CustomerViewModel());
+        return "adminLogin";
+    }
+    @PostMapping("/admin/login-submit")
+    public String tryLogin(@Valid @ModelAttribute("customer") CustomerViewModel customer, BindingResult br, Model model, HttpSession session){
+        if(br.hasErrors()){
+            return "error";
+        }
+        if(adminAccountService.checkAdminAccount(customer)){
+            session.setAttribute("admin", customer.getUsername());
+            return "adminHome";
+        }
+        else{
+            String error = "username or password was wrong";
+            model.addAttribute("error", error);
+            return "adminLogin";
+        }
+    }
+    @GetMapping("/admin/logout")
+    public String loginSuccess(HttpSession session, Model model){
+        session.setAttribute("admin", null);
+        return "adminHome";
+    }
+    public boolean checkAdmin(HttpSession session){
+        if(session.getAttribute("admin") != null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 // -------------------------------------------------- list view all --------------------------------------------------
 
     @GetMapping("/admin/product")
-    public String productForm(Model model){
+    public String productForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("product",productService.getAllProduct());
         return "adminProduct";
     }
     @GetMapping("/admin/cpu")
-    public String cpuForm(Model model){
+    public String cpuForm(Model model, HttpSession session){
         model.addAttribute("cpu",cpuService.getAllCpu());
         return "adminCpu";
     }
     @GetMapping("/admin/color")
-    public String colorForm(Model model){
+    public String colorForm(Model model, HttpSession session){
         model.addAttribute("color",colorService.getAllColor());
         return "adminColor";
     }
     @GetMapping("/admin/display")
-    public String displayForm(Model model){
+    public String displayForm(Model model, HttpSession session){
         model.addAttribute("display",displayService.getAllDisplay());
         return "adminDisplay";
     }
     @GetMapping("/admin/displaycard")
-    public String displayCardForm(Model model){
+    public String displayCardForm(Model model, HttpSession session){
         model.addAttribute("displaycard",displayCardService.getAllDisplayCard());
         return "adminDisplayCard";
     }
     @GetMapping("/admin/group")
-    public String groupForm(Model model){
+    public String groupForm(Model model, HttpSession session){
         model.addAttribute("group",groupService.getAllGroup());
         return "adminGroup";
     }
     @GetMapping("/admin/harddrive")
-    public String hardDriveForm(Model model){
+    public String hardDriveForm(Model model, HttpSession session){
         model.addAttribute("harddrive",hardDriveService.getAllHardDrive());
         return "adminHardDrive";
     }
     @GetMapping("/admin/ram")
-    public String ramForm(Model model){
+    public String ramForm(Model model, HttpSession session){
         model.addAttribute("ram",ramService.getAllRam());
         return "adminRam";
     }
     @GetMapping("/admin/year")
-    public String yearForm(Model model){
+    public String yearForm(Model model, HttpSession session){
         model.addAttribute("year",yearService.getAllYear());
         return "adminYear";
     }
@@ -99,7 +143,7 @@ public class AdminController {
 // -------------------------------------------------- list view by .. --------------------------------------------------
 
     @GetMapping("/admin/product/{productName}")
-    public String productListByCollectionID(@PathVariable("productName") String productName, Model model) {
+    public String productListByCollectionID(@PathVariable("productName") String productName, Model model, HttpSession session) {
         model.addAttribute("productList");
         return "admin1Product";
     }
@@ -147,47 +191,47 @@ public class AdminController {
 // -------------------------------------------------- insert form --------------------------------------------------
 
     @GetMapping("/admin/insertProductForm")
-    public String insertProductForm(Model model){
+    public String insertProductForm(Model model, HttpSession session){
         model.addAttribute("product", new Product());
         return "adminInsertProduct";
     }
     @GetMapping("/admin/insertCpuForm")
-    public String insertCpuForm(Model model){
+    public String insertCpuForm(Model model, HttpSession session){
         model.addAttribute("cpu", new CPU());
         return "adminInsertCpu";
     }
     @GetMapping("/admin/insertColorForm")
-    public String insertColorForm(Model model){
+    public String insertColorForm(Model model, HttpSession session){
         model.addAttribute("color", new Color());
         return "adminInsertColor";
     }
     @GetMapping("/admin/insertDisplayForm")
-    public String insertDisplayColorForm(Model model){
+    public String insertDisplayColorForm(Model model, HttpSession session){
         model.addAttribute("display", new Display());
         return "adminInsertDisplay";
     }
     @GetMapping("/admin/insertDisplayCardForm")
-    public String insertDisplayCardColorForm(Model model){
+    public String insertDisplayCardColorForm(Model model, HttpSession session){
         model.addAttribute("displaycard", new DisplayCard());
         return "adminInsertDisplayCard";
     }
     @GetMapping("/admin/insertGroupForm")
-    public String insertGroupForm(Model model){
+    public String insertGroupForm(Model model, HttpSession session){
         model.addAttribute("group", new Group());
         return "adminInsertGroup";
     }
     @GetMapping("/admin/insertHardDriveForm")
-    public String insertHardDriveForm(Model model){
+    public String insertHardDriveForm(Model model, HttpSession session){
         model.addAttribute("harddrive", new HardDrive());
         return "adminInsertHardDrive";
     }
     @GetMapping("/admin/insertRamForm")
-    public String insertRamForm(Model model){
+    public String insertRamForm(Model model, HttpSession session){
         model.addAttribute("ram", new RAM());
         return "adminInsertRam";
     }
     @GetMapping("/admin/insertYearForm")
-    public String insertYearForm(Model model){
+    public String insertYearForm(Model model, HttpSession session){
         model.addAttribute("year", new Year());
         return "adminInsertYear";
     }
@@ -195,7 +239,7 @@ public class AdminController {
 // -------------------------------------------------- insert submit --------------------------------------------------
 
     @PostMapping("/admin/insertProductSubmit")
-    public String insertProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model){
+    public String insertProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -204,7 +248,7 @@ public class AdminController {
         return "adminProduct";
     }
     @PostMapping("/admin/insertCpuSubmit")
-    public String insertCpuSubmit(@Valid @ModelAttribute("cpu") CPU cpu, BindingResult br, Model model){
+    public String insertCpuSubmit(@Valid @ModelAttribute("cpu") CPU cpu, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -213,7 +257,7 @@ public class AdminController {
         return "adminCpu";
     }
     @PostMapping("/admin/insertColorSubmit")
-    public String insertColorSubmit(@Valid @ModelAttribute("color") Color color, BindingResult br, Model model){
+    public String insertColorSubmit(@Valid @ModelAttribute("color") Color color, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -222,7 +266,7 @@ public class AdminController {
         return "adminColor";
     }
     @PostMapping("/admin/insertDisplaySubmit")
-    public String insertDisplaySubmit(@Valid @ModelAttribute("display") Display display, BindingResult br, Model model){
+    public String insertDisplaySubmit(@Valid @ModelAttribute("display") Display display, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -231,7 +275,7 @@ public class AdminController {
         return "adminDisplay";
     }
     @PostMapping("/admin/insertDisplayCardSubmit")
-    public String insertDisplayCardSubmit(@Valid @ModelAttribute("displaycard") DisplayCard displaycard, BindingResult br, Model model){
+    public String insertDisplayCardSubmit(@Valid @ModelAttribute("displaycard") DisplayCard displaycard, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -240,7 +284,7 @@ public class AdminController {
         return "adminDisplayCard";
     }
     @PostMapping("/admin/insertGroupSubmit")
-    public String insertGroupSubmit(@Valid @ModelAttribute("group") Group group, BindingResult br, Model model){
+    public String insertGroupSubmit(@Valid @ModelAttribute("group") Group group, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -249,7 +293,7 @@ public class AdminController {
         return "adminGroup";
     }
     @PostMapping("/admin/insertHardDriveSubmit")
-    public String insertHardDriveSubmit(@Valid @ModelAttribute("harddrive") HardDrive hardDrive, BindingResult br, Model model){
+    public String insertHardDriveSubmit(@Valid @ModelAttribute("harddrive") HardDrive hardDrive, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -258,7 +302,7 @@ public class AdminController {
         return "adminHardDrive";
     }
     @PostMapping("/admin/insertRamSubmit")
-    public String insertRamSubmit(@Valid @ModelAttribute("ram") RAM ram, BindingResult br, Model model){
+    public String insertRamSubmit(@Valid @ModelAttribute("ram") RAM ram, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -267,7 +311,7 @@ public class AdminController {
         return "adminRam";
     }
     @PostMapping("/admin/insertYearSubmit")
-    public String insertYearSubmit(@Valid @ModelAttribute("year") Year year, BindingResult br, Model model){
+    public String insertYearSubmit(@Valid @ModelAttribute("year") Year year, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
@@ -279,7 +323,7 @@ public class AdminController {
 // -------------------------------------------------- return update view --------------------------------------------------
 
     @GetMapping("/admin/product/edit/{productId}")
-    public String editProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model)
+    public String editProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -288,7 +332,7 @@ public class AdminController {
         return "adminEditProduct";
     }
     @GetMapping("/admin/cpu/edit/{cpuId}")
-    public String editCpu(@Valid @ModelAttribute("cpuId") String cpuId, BindingResult br, Model model)
+    public String editCpu(@Valid @ModelAttribute("cpuId") String cpuId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -297,7 +341,7 @@ public class AdminController {
         return "adminEditCpu";
     }
     @GetMapping("/admin/color/edit/{colorId}")
-    public String editColor(@Valid @ModelAttribute("colorId") String colorId, BindingResult br, Model model)
+    public String editColor(@Valid @ModelAttribute("colorId") String colorId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -306,7 +350,7 @@ public class AdminController {
         return "adminEditColor";
     }
     @GetMapping("/admin/display/edit/{displayId}")
-    public String editDisplay(@Valid @ModelAttribute("displayId") String displayId, BindingResult br, Model model)
+    public String editDisplay(@Valid @ModelAttribute("displayId") String displayId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -315,7 +359,7 @@ public class AdminController {
         return "adminEditDisplay";
     }
     @GetMapping("/admin/displayCard/edit/{displayCardId}")
-    public String editDisplayCard(@Valid @ModelAttribute("displayCardId") String displayCardId, BindingResult br, Model model)
+    public String editDisplayCard(@Valid @ModelAttribute("displayCardId") String displayCardId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -324,7 +368,7 @@ public class AdminController {
         return "adminEditDisplayCard";
     }
     @GetMapping("/admin/group/edit/{groupId}")
-    public String editGroup(@Valid @ModelAttribute("groupId") String groupId, BindingResult br, Model model)
+    public String editGroup(@Valid @ModelAttribute("groupId") String groupId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -333,7 +377,7 @@ public class AdminController {
         return "adminEditGroup";
     }
     @GetMapping("/admin/hardDrive/edit/{hardDriveId}")
-    public String editHardDrive(@Valid @ModelAttribute("hardDriveId") String hardDriveId, BindingResult br, Model model)
+    public String editHardDrive(@Valid @ModelAttribute("hardDriveId") String hardDriveId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -342,7 +386,7 @@ public class AdminController {
         return "adminEditHardDrive";
     }
     @GetMapping("/admin/ram/edit/{ramId}")
-    public String editRam(@Valid @ModelAttribute("ramId") String ramId, BindingResult br, Model model)
+    public String editRam(@Valid @ModelAttribute("ramId") String ramId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -351,7 +395,7 @@ public class AdminController {
         return "adminEditRam";
     }
     @GetMapping("/admin/year/edit/{yearId}")
-    public String editYear(@Valid @ModelAttribute("yearId") String yearId, BindingResult br, Model model)
+    public String editYear(@Valid @ModelAttribute("yearId") String yearId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -363,7 +407,7 @@ public class AdminController {
 // -------------------------------------------------- update submit --------------------------------------------------
 
     @PostMapping("/admin/editProductSubmit")
-    public String editProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model)
+    public String editProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -373,7 +417,7 @@ public class AdminController {
         return "adminProduct";
     }
     @PostMapping("/admin/editCpuSubmit")
-    public String editCpuSubmit(@Valid @ModelAttribute("cpu") CPU cpu, BindingResult br, Model model)
+    public String editCpuSubmit(@Valid @ModelAttribute("cpu") CPU cpu, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -383,7 +427,7 @@ public class AdminController {
         return "adminCpu";
     }
     @PostMapping("/admin/editColorSubmit")
-    public String editColorSubmit(@Valid @ModelAttribute("color") Color color, BindingResult br, Model model)
+    public String editColorSubmit(@Valid @ModelAttribute("color") Color color, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -393,7 +437,7 @@ public class AdminController {
         return "adminColor";
     }
     @PostMapping("/admin/editDisplaySubmit")
-    public String editDisplaySubmit(@Valid @ModelAttribute("display") Display display, BindingResult br, Model model)
+    public String editDisplaySubmit(@Valid @ModelAttribute("display") Display display, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -403,7 +447,7 @@ public class AdminController {
         return "adminDisplay";
     }
     @PostMapping("/admin/editDisplayCardSubmit")
-    public String editDisplayCardSubmit(@Valid @ModelAttribute("displaycard") DisplayCard displayCard, BindingResult br, Model model)
+    public String editDisplayCardSubmit(@Valid @ModelAttribute("displaycard") DisplayCard displayCard, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -413,7 +457,7 @@ public class AdminController {
         return "adminDisplayCard";
     }
     @PostMapping("/admin/editGroupSubmit")
-    public String editGroupSubmit(@Valid @ModelAttribute("group") Group group, BindingResult br, Model model)
+    public String editGroupSubmit(@Valid @ModelAttribute("group") Group group, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -423,7 +467,7 @@ public class AdminController {
         return "adminGroup";
     }
     @PostMapping("/admin/editHardDriveSubmit")
-    public String editHardDriveSubmit(@Valid @ModelAttribute("harddrive") HardDrive hardDrive, BindingResult br, Model model)
+    public String editHardDriveSubmit(@Valid @ModelAttribute("harddrive") HardDrive hardDrive, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -433,7 +477,7 @@ public class AdminController {
         return "adminHardDrive";
     }
     @PostMapping("/admin/editRamSubmit")
-    public String editRamSubmit(@Valid @ModelAttribute("ram") RAM ram, BindingResult br, Model model)
+    public String editRamSubmit(@Valid @ModelAttribute("ram") RAM ram, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -443,7 +487,7 @@ public class AdminController {
         return "adminRam";
     }
     @PostMapping("/admin/editYearSubmit")
-    public String editYearSubmit(@Valid @ModelAttribute("year") Year year, BindingResult br, Model model)
+    public String editYearSubmit(@Valid @ModelAttribute("year") Year year, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -456,7 +500,7 @@ public class AdminController {
 // -------------------------------------------------- delete --------------------------------------------------
 
     @GetMapping("/admin/product/delete/{productId}")
-    public String deleteProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model)
+    public String deleteProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -466,7 +510,7 @@ public class AdminController {
         return "adminProduct";
     }
     @GetMapping("/admin/cpu/delete/{cpuId}")
-    public String deleteCpu(@Valid @ModelAttribute("cpuId") String cpuId, BindingResult br, Model model)
+    public String deleteCpu(@Valid @ModelAttribute("cpuId") String cpuId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -476,7 +520,7 @@ public class AdminController {
         return "adminCpu";
     }
     @GetMapping("/admin/color/delete/{colorId}")
-    public String deleteColor(@Valid @ModelAttribute("colorId") String colorId, BindingResult br, Model model)
+    public String deleteColor(@Valid @ModelAttribute("colorId") String colorId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -486,7 +530,7 @@ public class AdminController {
         return "adminColor";
     }
     @GetMapping("/admin/display/delete/{displayId}")
-    public String deleteDisplay(@Valid @ModelAttribute("displayId") String displayId, BindingResult br, Model model)
+    public String deleteDisplay(@Valid @ModelAttribute("displayId") String displayId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -496,7 +540,7 @@ public class AdminController {
         return "adminDisplay";
     }
     @GetMapping("/admin/displayCard/delete/{displayCardId}")
-    public String deleteDisplayCard(@Valid @ModelAttribute("displayCardId") String displayCardId, BindingResult br, Model model)
+    public String deleteDisplayCard(@Valid @ModelAttribute("displayCardId") String displayCardId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -506,7 +550,7 @@ public class AdminController {
         return "adminDisplayCard";
     }
     @GetMapping("/admin/group/delete/{groupId}")
-    public String deleteGroup(@Valid @ModelAttribute("groupId") String groupId, BindingResult br, Model model)
+    public String deleteGroup(@Valid @ModelAttribute("groupId") String groupId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -516,7 +560,7 @@ public class AdminController {
         return "adminGroup";
     }
     @GetMapping("/admin/hardDrive/delete/{hardDriveId}")
-    public String deleteHardDrive(@Valid @ModelAttribute("hardDriveId") String hardDriveId, BindingResult br, Model model)
+    public String deleteHardDrive(@Valid @ModelAttribute("hardDriveId") String hardDriveId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -526,7 +570,7 @@ public class AdminController {
         return "adminHardDrive";
     }
     @GetMapping("/admin/ram/delete/{ramId}")
-    public String deleteRam(@Valid @ModelAttribute("ramId") String ramId, BindingResult br, Model model)
+    public String deleteRam(@Valid @ModelAttribute("ramId") String ramId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
@@ -536,7 +580,7 @@ public class AdminController {
         return "adminRam";
     }
     @GetMapping("/admin/year/delete/{yearId}")
-    public String deleteYearm(@Valid @ModelAttribute("yearId") String yearId, BindingResult br, Model model)
+    public String deleteYearm(@Valid @ModelAttribute("yearId") String yearId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
