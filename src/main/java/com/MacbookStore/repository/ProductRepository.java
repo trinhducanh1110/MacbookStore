@@ -15,7 +15,6 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String> {
     List<Product> findAllByStatusAndYearIDAndGroupID(String status, String year, String group);
-    List<Product> findAllByGroupID(String group);
     Product findFirstById(String productID);
     void deleteById(String productID);
 }

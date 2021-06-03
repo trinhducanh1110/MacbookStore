@@ -31,7 +31,13 @@ public class ProductController {
     @GetMapping("/category/{status}/{groupId}/{year}")
     public String macbookNewByStatusAndYear(@Valid @PathVariable("status") String status,@Valid @PathVariable("groupId") String groupId, @Valid @PathVariable("year") String year, Model model){
         model.addAttribute("product", productService.getMacBookProductByCategory(status, year, groupId));
-        String title = status+" Macbook "+groupId+" "+year;
+        String title = "";
+        if(groupId == "MP"){
+            title = status+" Macbook "+groupId+" "+year;
+        }
+        if(groupId == "MA"){
+            title = status+" Macbook "+groupId+" "+year;
+        }
         model.addAttribute("title", title);
         return "macbookByCategory";
     }

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import com.MacbookStore.service.ProductService;
 
 import javax.servlet.http.HttpSession;
 
@@ -36,8 +35,8 @@ public class UserController {
             return "error";
         }
         if(customerService.checkAccount(customer)){
-            session.setAttribute("user", customer.getCustomerName());
-            model.addAttribute("currentUser", customer.getCustomerName());
+            session.setAttribute("user", customer.getUsername());
+            model.addAttribute("currentUser", customer.getUsername());
             model.addAttribute("product",productService.getAllProduct());
             return "home";
         }

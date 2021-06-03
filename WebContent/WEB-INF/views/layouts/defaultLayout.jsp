@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-<%@ page session="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,14 +95,14 @@
                     <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
-                    <c:if test="${sessionScope.get(user) != null}">
-                        <li class="nav-item">
-                            <a style="..." class="nav-link" href="#">Hello ${sessionScope.get(user)}</a>
-                        </li>
-                    </c:if>
-                    <c:if test="${sessionScope.user == null}">
+                    <c:if test="${sessionScope.user.length() == null}">
                         <li class="nav-item">
                             <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
+                        </li>
+                    </c:if>
+                    <c:if test="${sessionScope.user.length() != null}">
+                        <li class="nav-item">
+                            <a style="..." class="nav-link" href="#">Hello ${sessionScope.user}</a>
                         </li>
                     </c:if>
 

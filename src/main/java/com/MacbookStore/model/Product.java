@@ -128,7 +128,7 @@ public class Product {
     }
 
     public void setStatus(String status) {
-        status = status;
+        this.status = status;
     }
 
     public String getYearID() {
