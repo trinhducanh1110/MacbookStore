@@ -8,7 +8,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <title>Home</title>
@@ -121,37 +120,67 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 footer-item">
-                <h4>Finance Business</h4>
-                <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
+                <h4>MACBOOK STORE</h4>
+                <br>
+                Showroom 1: 214 Le Van Viet Street, District 9, HCMC
+                <br>
+                <br>
+                Showroom 2: 214 Nguyen Trai Street, District 1, HCMC
+                <br>
+                <br>
+                Tax code: 010999999
+                <br>
+                <br>
+                Working time: 9.00 to 21.00 (Sunday and Saturday included)
+                <br>
+                <br>
+                Hotline:
+                <br>
+                Showroom 1: 0977 728 880
+                Showroom 2: 0931 728 880
+                <br>
+                <br>
+                Service quality feedback:
+                <br>
+                097 640 0401
                 <ul class="social-icons">
-                    <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    <li><a rel="nofollow" href="https://fb.com/apple" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/apple"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.apple.com/"><i class="fa fa-apple"></i></a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-item">
-                <h4>Useful Links</h4>
-                <ul class="menu-list">
-                    <li><a href="#">Vivamus ut tellus mi</a></li>
-                    <li><a href="#">Nulla nec cursus elit</a></li>
-                    <li><a href="#">Vulputate sed nec</a></li>
-                    <li><a href="#">Cursus augue hasellus</a></li>
-                    <li><a href="#">Lacinia ac sapien</a></li>
+                <h4>MACBOOK REPAIR SERVICE</h4>
+                MBService (Warranty - Service)
+                <br>
+                <br>
+                Address: D8 Nguyen Trai Street, District 1, HCMC
+                <br>
+                <br>
+                Working time: 08.30 to 17.30 (Sunday and holidays excepted)
+                <br>
+                <br>
+                Hotline: 0923575777
+                <br>
+                <br>
+                <ul class="fa">
+                    <i class="fa fa-credit-card" style="font-size:36px"></i>
+                    <i class="fa fa-cc-visa" style="font-size:36px"></i>
+                    <i class="fa fa-cc-mastercard" style="font-size:36px"></i>
+                    <i class="fa fa-cc-paypal" style="font-size:36px"></i>
                 </ul>
             </div>
             <div class="col-md-3 footer-item">
-                <h4>Additional Pages</h4>
+                <h4>ADDITIONALS PAGES</h4>
                 <ul class="menu-list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">How We Work</a></li>
-                    <li><a href="#">Quick Support</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="/MacbookStore/about">About Us</a></li>
+                    <li><a href="/MacbookStore/service">How We Work</a></li>
+                    <li><a href="/MacbookStore/contact">Contact Us</a></li>
+                    <li><a href="/MacbookStore/newest">Newest</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-item last-item">
-                <h4>Contact Us</h4>
+                <h4>CONTACT US</h4>
                 <div class="contact-form">
                     <form id="contact footer-contact" action="" method="post">
                         <div class="row">
@@ -187,9 +216,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p>Copyright &copy; 2020 Thiết kế web Hồ Trần Gia Khánh - 1811063361
+                <p>Copyright &copy; 2020 MACBOOKSTORE
 
-                    - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+                    - Design: 18DTHJB1</p>
             </div>
         </div>
     </div>
