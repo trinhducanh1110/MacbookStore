@@ -49,7 +49,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             OLD MACBOOK
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,7 +69,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                             ACCESSORIES
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -96,12 +96,12 @@
                     <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
-                    <c:if test="${sessionScope.currentUser != null}">
+                    <c:if test="${sessionScope.get(user) != null}">
                         <li class="nav-item">
-                            <a style="..." class="nav-link" href="#">Hello ${sessionScope.currentUser}</a>
+                            <a style="..." class="nav-link" href="#">Hello ${sessionScope.get(user)}</a>
                         </li>
                     </c:if>
-                    <c:if test="${sessionScope.currentUser == null}">
+                    <c:if test="${sessionScope.user == null}">
                         <li class="nav-item">
                             <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
                         </li>

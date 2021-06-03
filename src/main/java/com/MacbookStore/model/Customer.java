@@ -12,6 +12,8 @@ public class Customer {
 
     private String password;
 
+    private String customerName;
+
     public String getUsername() {
         return username;
     }
@@ -28,4 +30,11 @@ public class Customer {
         this.password = password;
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
 }

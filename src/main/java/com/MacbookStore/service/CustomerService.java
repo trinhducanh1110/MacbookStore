@@ -1,6 +1,7 @@
 package com.MacbookStore.service;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
+import com.MacbookStore.model.Customer;
 import com.MacbookStore.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,10 @@ public class CustomerService {
     }
     public boolean findPassword(String password){
         return customerRepository.findByPassword(password) == null;
+    }
+    public String getCustomerName(String username){
+        Customer temp = customerRepository.findByUsername(username);
+        return temp.getCustomerName();
     }
 
 }

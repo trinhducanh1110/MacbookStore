@@ -3,6 +3,7 @@ package com.MacbookStore.ViewModel;
 public class CustomerViewModel {
     private String Username;
     private String Password;
+    private String customerName;
 
     public String getUsername() {
         return Username;
@@ -18,5 +19,13 @@ public class CustomerViewModel {
 
     public void setPassword(String password) {
         Password = password;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 }

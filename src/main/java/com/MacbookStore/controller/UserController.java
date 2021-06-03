@@ -2,11 +2,13 @@ package com.MacbookStore.controller;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.service.CustomerService;
+import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import com.MacbookStore.service.ProductService;
 
 import javax.servlet.http.HttpSession;
 
@@ -16,8 +18,11 @@ import javax.validation.Valid;
 public class UserController {
     @Autowired
     private final CustomerService customerService;
+    @Autowired
+    private final ProductService productService;
     public UserController(){
         customerService = new CustomerService();
+        productService = new ProductService();
     }
     @RequestMapping("/user/loginForm")
     public String loginForm(Model model){
@@ -31,13 +36,16 @@ public class UserController {
             return "error";
         }
         if(customerService.checkAccount(customer)){
-            session.setAttribute("currentUser", customer.getUsername());
+            session.setAttribute("user", customer.getCustomerName());
+            model.addAttribute("currentUser", customer.getCustomerName());
+            model.addAttribute("product",productService.getAllProduct());
             return "home";
         }
-        String error = "username or password was wrong";
-        model.addAttribute("error", error);
-        session.setAttribute("currentUser", "null");
-        return "login";
+        else{
+            String error = "username or password was wrong";
+            model.addAttribute("error", error);
+            return "login";
+        }
     }
 
     @GetMapping("/login-success")

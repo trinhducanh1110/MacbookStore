@@ -26,4 +26,16 @@ public class ProductController {
         model.addAttribute("product", productService.get1Product(id));
         return "detail";
     }
+    @GetMapping("/new/{year}")
+    public String macbookNewByStatusAndYear(@PathVariable("year") String year, Model model){
+        model.addAttribute("product", productService.getMacBookProductByCategory("New", year));
+        model.addAttribute("title", "new");
+        return "macbookByCategory";
+    }
+    @GetMapping("/old/{year}")
+    public String macbookOldByStatusAndYear(@PathVariable("year") String year, Model model){
+        model.addAttribute("product", productService.getMacBookProductByCategory("Old", year));
+        model.addAttribute("title", "old");
+        return "macbookByCategory";
+    }
 }

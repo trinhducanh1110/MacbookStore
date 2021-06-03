@@ -12,7 +12,7 @@ public class Product {
     private String Description;
     private String Price;
     private String Sold;
-    private String Status;
+    private String status;
     private String Stock;
     private String colorID;
     private String cpuID;
@@ -124,11 +124,11 @@ public class Product {
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
+        status = status;
     }
 
     public String getYearID() {
