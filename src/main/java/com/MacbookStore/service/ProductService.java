@@ -3,6 +3,8 @@ package com.MacbookStore.service;
 
 import com.MacbookStore.repository.ProductRepository;
 import com.MacbookStore.model.Product;
+import com.MacbookStore.model.Year;
+import com.MacbookStore.repository.YearRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +16,8 @@ import java.util.List;
 public class ProductService {
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private YearRepository yearRepository;
 
     public List<Product> getAllProduct() {
         return productRepository.findAll();
@@ -31,8 +35,9 @@ public class ProductService {
 
     public void updateProduct(Product product) { productRepository.save(product); }
 
-    public List<Product> getMacBookProductByCategory(String status, String year){
-        return productRepository.findByStatusAndYearID(status, year);
+    public List<Product> getMacBookProductByCategory(String status, String yearName){
+        Year yearId = yearRepository.findFirstByYearName(yearName);
+        return productRepository.findAllByStatusAndYearID(status, yearId.getYearID());
     }
 
 }

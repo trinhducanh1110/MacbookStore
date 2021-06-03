@@ -29,13 +29,13 @@ public class ProductController {
     @GetMapping("/new/{year}")
     public String macbookNewByStatusAndYear(@PathVariable("year") String year, Model model){
         model.addAttribute("product", productService.getMacBookProductByCategory("New", year));
-        model.addAttribute("title", "new");
+        model.addAttribute("title", "New");
         return "macbookByCategory";
     }
     @GetMapping("/old/{year}")
     public String macbookOldByStatusAndYear(@PathVariable("year") String year, Model model){
         model.addAttribute("product", productService.getMacBookProductByCategory("Old", year));
-        model.addAttribute("title", "old");
+        model.addAttribute("title", "Old");
         return "macbookByCategory";
     }
 }

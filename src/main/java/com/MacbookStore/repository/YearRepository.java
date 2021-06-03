@@ -17,4 +17,5 @@ import java.util.List;
 public interface YearRepository extends MongoRepository<Year, String> {
     Year findFirstById(String yearID);
     void deleteById(String yearID);
+    Year findFirstByYearName(String yearName);
 }

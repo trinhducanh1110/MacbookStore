@@ -27,6 +27,13 @@
     <definition name="register" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/register.jsp"/>
     </definition>
+    <definition name="macbookByCategory" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/Web/macbookByCategory.jsp"/>
+    </definition>
+
+
+
+
 
     <definition name="adminHome" template="/WEB-INF/views/layouts/adminLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Admin/home.jsp"/>
