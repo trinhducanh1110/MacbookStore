@@ -40,11 +40,11 @@
                             NEW MACBOOK
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2020</a>
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2019</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/New/MP/2020">MACBOOK PRO 2020</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/New/MP/2019">MACBOOK PRO 2019</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2020</a>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2019</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/New/MA/2020">MACBOOK AIR 2020</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/New/MA/2019">MACBOOK AIR 2019</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -52,19 +52,19 @@
                             OLD MACBOOK
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2020</a>
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2019</a>
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2018</a>
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2017</a>
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2016</a>
-                            <a class="dropdown-item" href="#">MACBOOK PRO 2015</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MP/2020">MACBOOK PRO 2020</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MP/2019">MACBOOK PRO 2019</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MP/2018">MACBOOK PRO 2018</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MP/2017">MACBOOK PRO 2017</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MP/2016">MACBOOK PRO 2016</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MP/2015">MACBOOK PRO 2015</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2020</a>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2019</a>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2018</a>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2017</a>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2016</a>
-                            <a class="dropdown-item" href="#">MACBOOK AIR 2015</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MA/2020">MACBOOK AIR 2020</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MA/2019">MACBOOK AIR 2019</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MA/2018">MACBOOK AIR 2018</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MA/2017">MACBOOK AIR 2017</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MA/2016">MACBOOK AIR 2016</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/Old/MA/2015">MACBOOK AIR 2015</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

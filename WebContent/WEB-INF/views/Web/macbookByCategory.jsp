@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>${title} Macbook ${year}</h2>
+                    <h2>${title}</h2>
                     <span></span>
                 </div>
             </div>

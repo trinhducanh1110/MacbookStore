@@ -19,8 +19,7 @@ public class ProductController {
 
     @GetMapping("/")
     public String home(Model model) {
-        //model.addAttribute("product",productService.getAllProduct());
-        model.addAttribute("product", productService.getMacBookProductByCategory("Old", "2015"));
+        model.addAttribute("product",productService.getAllProduct());
         return "home";
     }
 
@@ -29,17 +28,12 @@ public class ProductController {
         model.addAttribute("product", productService.get1Product(id));
         return "detail";
     }
-    @GetMapping("/category/{status}/{year}")
-    public String macbookNewByStatusAndYear(@Valid @PathVariable("status") String status, @Valid @PathVariable("year") String year, Model model){
-        model.addAttribute("product", productService.getMacBookProductByCategory(status, year));
-        model.addAttribute("title", status);
-        model.addAttribute("year", year);
+    @GetMapping("/category/{status}/{groupId}/{year}")
+    public String macbookNewByStatusAndYear(@Valid @PathVariable("status") String status,@Valid @PathVariable("groupId") String groupId, @Valid @PathVariable("year") String year, Model model){
+        model.addAttribute("product", productService.getMacBookProductByCategory(status, year, groupId));
+        String title = status+" Macbook "+groupId+" "+year;
+        model.addAttribute("title", title);
         return "macbookByCategory";
     }
-    @GetMapping("/cate/{status}")
-    public String macbookOldByStatusAndYear(@Valid @PathVariable("status") String status, Model model){
-        model.addAttribute("product", productService.getMacBookProductByStatus(status));
-        model.addAttribute("title", status);
-        return "macbookByCategory";
-    }
+
 }

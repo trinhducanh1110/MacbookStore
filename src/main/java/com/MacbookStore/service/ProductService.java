@@ -35,13 +35,9 @@ public class ProductService {
 
     public void updateProduct(Product product) { productRepository.save(product); }
 
-    public List<Product> getMacBookProductByCategory(String status, String yearName){
+    public List<Product> getMacBookProductByCategory(String status, String yearName, String groupId){
         Year yearId = yearRepository.findFirstByYearName(yearName);
-        return productRepository.findAllByStatusAndYearID(status, yearId.getYearID());
-    }
-
-    public List<Product> getMacBookProductByStatus(String status){
-        return productRepository.findAllByStatus(status);
+        return productRepository.findAllByStatusAndYearIDAndGroupID(status, yearId.getYearID(), groupId);
     }
 
 }
