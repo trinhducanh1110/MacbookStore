@@ -96,12 +96,12 @@
                     <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
-                    <c:if test="${currentUser != null}">
+                    <c:if test="${sessionScope.currentUser != null}">
                         <li class="nav-item">
-                            <a style="..." class="nav-link" href="#">Hello ${currentUser.username}</a>
+                            <a style="..." class="nav-link" href="#">Hello ${sessionScope.currentUser}</a>
                         </li>
                     </c:if>
-                    <c:if test="${currentUser == null}">
+                    <c:if test="${sessionScope.currentUser == null}">
                         <li class="nav-item">
                             <a style="..." class="nav-link" href="/MacbookStore/login">Login</a>
                         </li>

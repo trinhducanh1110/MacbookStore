@@ -1,17 +1,14 @@
 package com.MacbookStore.controller;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
-import com.MacbookStore.model.CustomerQuery;
 import com.MacbookStore.service.CustomerService;
-import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 import javax.validation.Valid;
 
@@ -29,17 +26,23 @@ public class UserController {
     }
 
     @PostMapping("/user/login-submit")
-    public String tryLogin(@Valid @ModelAttribute("registerViewModel") CustomerViewModel customer, BindingResult br, Model model){
+    public String tryLogin(@Valid @ModelAttribute("customer") CustomerViewModel customer, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
             return "error";
         }
         if(customerService.checkAccount(customer)){
-            model.addAttribute("currentUser", customer);
+            session.setAttribute("currentUser", customer.getUsername());
             return "home";
         }
         String error = "username or password was wrong";
         model.addAttribute("error", error);
+        session.setAttribute("currentUser", "null");
         return "login";
+    }
+
+    @GetMapping("/login-success")
+    public String loginSuccess(){
+        return "loginSuccess";
     }
 
 }
