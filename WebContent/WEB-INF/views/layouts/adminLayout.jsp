@@ -79,18 +79,98 @@
     <tiles:insertAttribute name="body"/>
 </div>
 
+
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-md-3 footer-item">
-                <h4>Finance Business</h4>
-                <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
+                <h4>MACBOOK STORE</h4>
+                <br>
+                Showroom 1: 214 Le Van Viet Street, District 9, HCMC
+                <br>
+                <br>
+                Showroom 2: 214 Nguyen Trai Street, District 1, HCMC
+                <br>
+                <br>
+                Tax code: 010999999
+                <br>
+                <br>
+                Working time: 9.00 to 21.00 (Sunday and Saturday included)
+                <br>
+                <br>
+                Hotline:
+                <br>
+                Showroom 1: 0977 728 880
+                Showroom 2: 0931 728 880
+                <br>
+                <br>
+                Service quality feedback:
+                <br>
+                097 640 0401
                 <ul class="social-icons">
-                    <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    <li><a rel="nofollow" href="https://fb.com/apple" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/apple"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.apple.com/"><i class="fa fa-apple"></i></a></li>
                 </ul>
+            </div>
+            <div class="col-md-3 footer-item">
+                <h4>MACBOOK REPAIR SERVICE</h4>
+                MBService (Warranty - Service)
+                <br>
+                <br>
+                Address: D8 Nguyen Trai Street, District 1, HCMC
+                <br>
+                <br>
+                Working time: 08.30 to 17.30 (Sunday and holidays excepted)
+                <br>
+                <br>
+                Hotline: 0923575777
+                <br>
+                <br>
+                <ul class="fa">
+                    <i class="fa fa-credit-card" style="font-size:36px"></i>
+                    <i class="fa fa-cc-visa" style="font-size:36px"></i>
+                    <i class="fa fa-cc-mastercard" style="font-size:36px"></i>
+                    <i class="fa fa-cc-paypal" style="font-size:36px"></i>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-item">
+                <h4>ADDITIONALS PAGES</h4>
+                <ul class="menu-list">
+                    <li><a href="/MacbookStore/about">About Us</a></li>
+                    <li><a href="/MacbookStore/service">How We Work</a></li>
+                    <li><a href="/MacbookStore/contact">Contact Us</a></li>
+                    <li><a href="/MacbookStore/newest">Newest</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-item last-item">
+                <h4>CONTACT US</h4>
+                <div class="contact-form">
+                    <form id="contact footer-contact" action="" method="post">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <fieldset>
+                                    <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
