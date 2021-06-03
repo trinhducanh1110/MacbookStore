@@ -40,4 +40,8 @@ public class ProductService {
         return productRepository.findAllByStatusAndYearID(status, yearId.getYearID());
     }
 
+    public List<Product> getMacBookProductByStatus(String status){
+        return productRepository.findAllByStatus(status);
+    }
+
 }

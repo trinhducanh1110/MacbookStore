@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.validation.Valid;
+
 
 @Controller
 public class ProductController {
@@ -17,7 +19,8 @@ public class ProductController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("product",productService.getAllProduct());
+        //model.addAttribute("product",productService.getAllProduct());
+        model.addAttribute("product", productService.getMacBookProductByCategory("Old", "2015"));
         return "home";
     }
 
@@ -26,16 +29,17 @@ public class ProductController {
         model.addAttribute("product", productService.get1Product(id));
         return "detail";
     }
-    @GetMapping("/new/{year}")
-    public String macbookNewByStatusAndYear(@PathVariable("year") String year, Model model){
-        model.addAttribute("product", productService.getMacBookProductByCategory("New", year));
-        model.addAttribute("title", "New");
+    @GetMapping("/category/{status}/{year}")
+    public String macbookNewByStatusAndYear(@Valid @PathVariable("status") String status, @Valid @PathVariable("year") String year, Model model){
+        model.addAttribute("product", productService.getMacBookProductByCategory(status, year));
+        model.addAttribute("title", status);
+        model.addAttribute("year", year);
         return "macbookByCategory";
     }
-    @GetMapping("/old/{year}")
-    public String macbookOldByStatusAndYear(@PathVariable("year") String year, Model model){
-        model.addAttribute("product", productService.getMacBookProductByCategory("Old", year));
-        model.addAttribute("title", "Old");
+    @GetMapping("/cate/{status}")
+    public String macbookOldByStatusAndYear(@Valid @PathVariable("status") String status, Model model){
+        model.addAttribute("product", productService.getMacBookProductByStatus(status));
+        model.addAttribute("title", status);
         return "macbookByCategory";
     }
 }
