@@ -14,6 +14,46 @@
         </div>
     </div>
 </div>
+<br>
+<br>
+<div class="introduction">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Our <em>missions</em></h2>
+                    <br>
+                    <p>Thanks to the continuous development of the technology industry, we are enjoying the myriad of benefits it brings.
+                        A big brand that everyone knows, every season this brand releases a new product that the whole world has to watch, none other than Apple.
+                        Macbook Store was born with the mission to become a bridge to bring Vietnamese users to access the products of Apple more easily, conveniently and safely.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Our <em>vision</em></h2>
+                    <br>
+                    <p>Not stopping at selling Apple products, Macbook Store in the near future wishes to become the leading brand in Vietnam for Apple products including product and solution supply chain stores, communication channels.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Core values <em>of MacbookStore</em></h2>
+                    <br>
+                    <p><strong>Quality comes first -</strong> With a world leading brand like Apple, MacbookStore is responsible for always ensuring the best experience in terms of product quality, worthy of class.</p>
+                    <p><strong>Trust -</strong> For MacbookStore, the word "credibility" is a guideline for all actions and a measure of MacbookStore's value in the market.</p>
+                    <p><strong>Friendly, attentive -</strong> Besides quality products, coming to MacbookStore, customers also enjoy enjoyable shopping experiences with friendly, honest staff and professional environment.</p>
+                    <p><strong>Excellent after-sales service -</strong> After owning Apple products at MacbookStore, customers also enjoy after-sales service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="team">
     <div class="container">
@@ -21,7 +61,6 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <h2>Our team <em>members</em></h2>
-                    <span>Surprise moth** fuc***</span>
                 </div>
             </div>
             <div class="col-md-4">
@@ -49,7 +88,7 @@
                     <img src="resources/assets/images/team_03.jpg" alt="">
                     <div class="down-content">
                         <h4>Loc Hiep Tran</h4>
-                        <span>Cleaning Staff</span>ỏooooooooooo
+                        <span>Cleaning Staff</span>
                         <p> A person who does not play is one who does not fail </p>
                     </div>
                 </div>
