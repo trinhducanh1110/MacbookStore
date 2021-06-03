@@ -12,7 +12,7 @@
                 <div class="text-content">
                     <h6>Our newest product</h6>
                     <h4 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">MACBOOK PRO 16 INCH <br>2021</h4>
-                    <p style="color: #6c4646">Say something about this product</p>
+                    <p style="color: #6c4646">This Macbook is incredible</p>
                     <a href="/MacbookStore/newest" class="filled-button">More </a>
                 </div>
             </div>
@@ -51,7 +51,7 @@
     </div>
 </div>
 </div>
-
+<%--
 <div class="fun-facts">
     <div class="container">
         <div class="row">
@@ -94,8 +94,8 @@
             </div>
         </div>
     </div>
-</div>
-
+</div>--%>
+<%--
 <div class="more-info">
     <div class="container">
         <div class="row">
@@ -120,8 +120,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>--%>
 
+<%--
 <div class="testimonials">
     <div class="container">
         <div class="row">
@@ -175,81 +176,4 @@
         </div>
     </div>
 </div>
-
-<div class="callback-form">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Request a <em>call back</em></h2>
-                    <span>Etiam suscipit ante a odio consequat</span>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="contact-form">
-                    <form id="contact" action="" method="post">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="name" type="text" class="form-control" placeholder="Full Name" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-4 col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="email" type="text" class="form-control" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-4 col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="subject" type="text" class="form-control" placeholder="Subject" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" placeholder="Your Message" required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button type="submit" class="border-button">Send Message</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="partners">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="owl-partners owl-carousel">
-
-                    <div class="partner-item">
-                        <img src="assets/images/client-01.png" title="1" alt="1">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/client-01.png" title="2" alt="2">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/client-01.png" title="3" alt="3">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/client-01.png" title="4" alt="4">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/client-01.png" title="5" alt="5">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+--%>
