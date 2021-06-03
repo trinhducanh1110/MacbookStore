@@ -23,6 +23,8 @@ public class UserController {
         customerService = new CustomerService();
         productService = new ProductService();
     }
+
+
     @RequestMapping("/user/loginForm")
     public String loginForm(Model model){
         model.addAttribute("customer", new CustomerViewModel());

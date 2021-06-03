@@ -6,28 +6,28 @@
     <definition name="home" template="/WEB-INF/views/layouts/defaultLayout.jsp">
         <put-attribute name="body" value="/WEB-INF/views/Web/home.jsp"/>
     </definition>
-    <definition name="about" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="about" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/about.jsp"/>
     </definition>
-    <definition name="service" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="service" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/services.jsp"/>
     </definition>
-    <definition name="contact" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="contact" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/contact.jsp"/>
     </definition>
-    <definition name="newest" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="newest" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/newest.jsp"/>
     </definition>
-    <definition name="detail" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="detail" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/detail.jsp"/>
     </definition>
-    <definition name="login" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="login" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/login.jsp"/>
     </definition>
-    <definition name="register" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="register" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/register.jsp"/>
     </definition>
-    <definition name="macbookByCategory" template="/WEB-INF/views/layouts/defaultLayout.jsp">
+    <definition name="macbookByCategory" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/macbookByCategory.jsp"/>
     </definition>
 
