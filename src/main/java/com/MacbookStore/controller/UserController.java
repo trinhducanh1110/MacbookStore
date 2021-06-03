@@ -47,9 +47,10 @@ public class UserController {
         }
     }
 
-    @GetMapping("/login-success")
-    public String loginSuccess(){
-        return "loginSuccess";
+    @GetMapping("/user/logout")
+    public String loginSuccess(HttpSession session){
+        session.setAttribute("user", null);
+        return "home";
     }
 
 }

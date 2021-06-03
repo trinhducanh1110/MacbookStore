@@ -101,8 +101,15 @@
                         </li>
                     </c:if>
                     <c:if test="${sessionScope.user.length() != null}">
-                        <li class="nav-item">
-                            <a style="..." class="nav-link" href="#">Hello ${sessionScope.user}</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+                                Hello ${sessionScope.user}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Manage</a>
+                                <a class="dropdown-item" href="#">Orders</a>
+                                <a class="dropdown-item" href="/MacbookStore/user/logout">Log out</a>
+                            </div>
                         </li>
                     </c:if>
 
