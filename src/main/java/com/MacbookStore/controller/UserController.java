@@ -67,6 +67,7 @@ public class UserController {
         session.setAttribute("user", null);
         session.setAttribute("customer", null);
         session.setAttribute("customerId", null);
+        session.setAttribute("cartSize", 0);
         model.addAttribute("product",productService.getAllProduct());
         return "home";
     }

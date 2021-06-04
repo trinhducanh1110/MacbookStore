@@ -60,7 +60,7 @@
                 <h4 style="color: #ff0000; text-align: center;font-weight: bold"><b>PRICE:  ${product.getPrice()}   VND</b></h4>
                 <div id="Datmua">
                     <b>
-                        <a href="" style="color: #ffffff;text-align: center" class="btn btn-dark col-md-12">
+                        <a href="/MacbookStore/cart/add/${product.getId()}" style="color: #ffffff;text-align: center" class="btn btn-dark col-md-12">
                             Add To Cart<br /> (Delivery or pick up at the store)
                         </a>
                     </b>

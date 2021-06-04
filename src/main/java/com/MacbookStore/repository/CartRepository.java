@@ -12,4 +12,5 @@ import java.util.List;
 public interface CartRepository extends MongoRepository<Cart, String> {
     List<Cart> findAllByCustomerId(String customerId);
     void deleteByCustomerId(String customerId);
+    Cart findFirstByCustomerIdAndProductId(String customerId, String productId);
 }
