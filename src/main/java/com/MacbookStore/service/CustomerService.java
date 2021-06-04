@@ -38,7 +38,7 @@ public class CustomerService {
     }
     public String getCustomerId(String username){
         Customer temp = customerRepository.findByUsername(username);
-        return temp.get_id();
+        return temp.getId();
     }
     public void insertCustomer(CustomerViewModel customer) throws ParseException {
         Customer temp = new Customer();
@@ -55,5 +55,21 @@ public class CustomerService {
         temp.setPhoneNumber(customer.getPhoneNumber());
         customerRepository.insert(temp);
     }
+
+    public List<Customer> getAllCustomer() {
+        return customerRepository.findAll();
+    }
+
+    public Customer get1Customer(String id) {
+        return customerRepository.findFirstById(id);
+    }
+
+    public void insertCustomer(Customer customer) {
+        customerRepository.insert(customer);
+    }
+
+    public void deleteCustomer(String id) { customerRepository.deleteById(id); }
+
+    public void updateCustomer(Customer customer) { customerRepository.save(customer); }
 
 }

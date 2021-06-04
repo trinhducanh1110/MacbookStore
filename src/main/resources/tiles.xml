@@ -55,10 +55,20 @@
         <put-attribute name="body" value="/WEB-INF/views/Admin/login.jsp"/>
     </definition>
 
-    <definition name="adminProduct" extends="adminHome">
-    <put-attribute name="body" value="/WEB-INF/views/Admin/product.jsp"/>
+    <!-- Customer -->
+    <definition name="adminCustomer" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/customer.jsp"/>
+    </definition>
+    <definition name="adminInsertCustomer" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/insertCustomer.jsp"/>
+    </definition>
+    <definition name="adminEditCustomer" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/Edit/editCustomter.jsp"/>
     </definition>
     <!-- Product -->
+    <definition name="adminProduct" extends="adminHome">
+        <put-attribute name="body" value="/WEB-INF/views/Admin/product.jsp"/>
+    </definition>
     <definition name="adminInsertProduct" extends="adminHome">
         <put-attribute name="body" value="/WEB-INF/views/Admin/insertProduct.jsp"/>
     </definition>

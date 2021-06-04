@@ -1,13 +1,11 @@
 package com.MacbookStore.controller;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
-import com.MacbookStore.model.Cart;
-import com.MacbookStore.model.Customer;
-import com.MacbookStore.model.Order;
-import com.MacbookStore.model.OrderDetail;
+import com.MacbookStore.model.*;
 import com.MacbookStore.service.CartService;
 import com.MacbookStore.service.OrderDetailService;
 import com.MacbookStore.service.OrderService;
+import com.MacbookStore.service.ProductService;
 import org.mvel2.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,11 +31,14 @@ public class CartController{
     private final OrderService orderService;
     @Autowired
     private final OrderDetailService orderDetailService;
+    @Autowired
+    private final ProductService productService;
 
     public CartController(){
         cartService = new CartService();
         orderService = new OrderService();
         orderDetailService = new OrderDetailService();
+        productService = new ProductService();
     }
 
     public int total(HttpSession session){
@@ -67,15 +68,38 @@ public class CartController{
         }
         List<Cart> cartList = cartService.findAllByCustomerId((String)session.getAttribute("customerId"));
         session.setAttribute("cart", cartList);
+        session.setAttribute("cartSize", cartList.size());
         return "cart";
     }
 
     @GetMapping("/add/{productId}")
-    public String addToCart(@Valid @ModelAttribute("_id") String _id, BindingResult br, HttpSession session){
+    public String addToCart(@Valid @ModelAttribute("productId") String _id, BindingResult br, HttpSession session){
+        if(br.hasErrors()){
+            return "error";
+        }
         if(!checkCurrentUser(session)){
             return "login";
         }
-        return "";
+
+        Cart cart = cartService.findFirstByCustomerIdAndProductId((String)session.getAttribute("customerId"), _id);
+        if(cart == null){
+            cart = new Cart();
+            Product product = productService.get1Product(_id);
+            cart.setProductId(_id);
+            cart.setPrice(Integer.parseInt(product.getPrice()));
+            cart.setProductName(product.getProductName());
+            cart.setQuantity(1);
+            cart.setCustomerId((String)session.getAttribute("customerId"));
+            cartService.insert(cart);
+        }
+        else{
+            cart.setQuantity(cart.getQuantity() + 1);
+            cartService.save(cart);
+        }
+        List<Cart> cartList = cartService.findAllByCustomerId((String)session.getAttribute("customerId"));
+        session.setAttribute("cart", cartList);
+        session.setAttribute("cartSize", cartList.size());
+        return "redirect:/";
     }
 
     @GetMapping("/delete/{_id}")

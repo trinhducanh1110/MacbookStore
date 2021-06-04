@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Customer")
 public class Customer {
-    private String _id;
+    private String id;
 
     private String username ;
 
@@ -15,13 +15,13 @@ public class Customer {
 
     private String customerName;
 
-    private String Email;
+    private String email;
 
     private String phoneNumber;
 
-    private Date Birth;
+    private Date birth;
 
-    private String Address;
+    private String address;
 
 
 
@@ -49,22 +49,6 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    public Date getBirth() {
-        return Birth;
-    }
-
-    public void setBirth(Date birth) {
-        Birth = birth;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -73,19 +57,36 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
-    public String get_id() {
-        return _id;
+    public Date getBirth() {
+        return birth;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

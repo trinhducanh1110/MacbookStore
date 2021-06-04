@@ -35,6 +35,8 @@ public class AdminController {
     private final RamService ramService;
     @Autowired
     private final YearService yearService;
+    @Autowired
+    private final CustomerService customerService;
     public AdminController() {
         adminAccountService = new AdminAccountService();
         productService = new ProductService();
@@ -46,6 +48,7 @@ public class AdminController {
         hardDriveService = new HardDriveService();
         ramService = new RamService();
         yearService = new YearService();
+        customerService = new CustomerService();
     }
     //1
     @GetMapping("/admin/home")
@@ -90,7 +93,14 @@ public class AdminController {
     }
 
 // -------------------------------------------------- list view all --------------------------------------------------
-
+    @GetMapping("/admin/customer")
+    public String customerForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
+        model.addAttribute("customer",customerService.getAllCustomer());
+        return "adminCustomer";
+    }
     @GetMapping("/admin/product")
     public String productForm(Model model, HttpSession session){
         if(!checkAdmin(session)){
@@ -165,7 +175,11 @@ public class AdminController {
     }
 
 // -------------------------------------------------- list view by .. --------------------------------------------------
-
+    @GetMapping("/admin/customer/{username}")
+    public String customertListByCollectionID(@PathVariable("id") String id, Model model, HttpSession session) {
+        model.addAttribute("customertList");
+        return "admin1Customer";
+    }
     @GetMapping("/admin/product/{productName}")
     public String productListByCollectionID(@PathVariable("productName") String productName, Model model, HttpSession session) {
         model.addAttribute("productList");
@@ -213,7 +227,11 @@ public class AdminController {
     }
 
 // -------------------------------------------------- insert form --------------------------------------------------
-
+    @GetMapping("/admin/insertCustomerForm")
+    public String insertCustomerForm(Model model, HttpSession session){
+        model.addAttribute("customer", new Customer());
+        return "adminInsertCustomer";
+    }
     @GetMapping("/admin/insertProductForm")
     public String insertProductForm(Model model, HttpSession session){
         model.addAttribute("product", new Product());
@@ -261,7 +279,15 @@ public class AdminController {
     }
 
 // -------------------------------------------------- insert submit --------------------------------------------------
-
+    @PostMapping("/admin/insertCustomerSubmit")
+    public String insertCustomerSubmit(@Valid @ModelAttribute("customer") Customer customer, BindingResult br, Model model, HttpSession session){
+        if(br.hasErrors()){
+            return "error";
+        }
+        customerService.insertCustomer(customer);
+        model.addAttribute("customer", customerService.getAllCustomer());
+        return "adminCustomer";
+    }
     @PostMapping("/admin/insertProductSubmit")
     public String insertProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model, HttpSession session){
         if(br.hasErrors()){
@@ -345,7 +371,15 @@ public class AdminController {
     }
 
 // -------------------------------------------------- return update view --------------------------------------------------
-
+    @GetMapping("/admin/product/edit/{id}")
+    public String editCustomer(@Valid @ModelAttribute("id") String id, BindingResult br, Model model, HttpSession session)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        model.addAttribute("id", customerService.get1Customer(id));
+        return "adminEditCustomer";
+    }
     @GetMapping("/admin/product/edit/{productId}")
     public String editProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model, HttpSession session)
     {
@@ -429,7 +463,16 @@ public class AdminController {
     }
 
 // -------------------------------------------------- update submit --------------------------------------------------
-
+    @PostMapping("/admin/editCustomerSubmit")
+    public String editCustomerSubmit(@Valid @ModelAttribute("customer") Customer customer, BindingResult br, Model model, HttpSession session)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        customerService.updateCustomer(customer);
+        model.addAttribute("customer", customerService.getAllCustomer());
+        return "adminCustomer";
+    }
     @PostMapping("/admin/editProductSubmit")
     public String editProductSubmit(@Valid @ModelAttribute("product") Product product, BindingResult br, Model model, HttpSession session)
     {
@@ -522,7 +565,16 @@ public class AdminController {
     }
 
 // -------------------------------------------------- delete --------------------------------------------------
-
+    @GetMapping("/admin/customer/delete/{id}")
+    public String deleteCustomer(@Valid @ModelAttribute("id") String id, BindingResult br, Model model, HttpSession session)
+    {
+        if(br.hasErrors()){
+            return "error";
+        }
+        customerService.deleteCustomer(id);
+        model.addAttribute("customer", customerService.getAllCustomer());
+        return "adminCustomer";
+    }
     @GetMapping("/admin/product/delete/{productId}")
     public String deleteProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model, HttpSession session)
     {
