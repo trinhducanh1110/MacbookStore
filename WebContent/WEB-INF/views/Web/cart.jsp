@@ -13,6 +13,7 @@
     <title>Title</title>
 </head>
 <body style="padding-bottom: 100px; padding-top: 20px">
+<form method="post" action="/MacbookStore/cart/checkout">
         <table border="1" style="margin-left: auto; margin-right: auto; padding-bottom: 20px">
             <tr>
                 <th>Product name</th>
@@ -38,5 +39,6 @@
         <div style="text-align: center">
             <button type="submit">Check out</button>
         </div>
+</form>
 </body>
 </html>

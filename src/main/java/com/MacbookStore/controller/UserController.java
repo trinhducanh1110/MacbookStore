@@ -49,6 +49,7 @@ public class UserController {
         }
         if(customerService.checkAccount(customer)){
             session.setAttribute("user", customer.getUsername());
+            session.setAttribute("customer", customerService.getCustomerByUsername(customer.getUsername()));
             String customerId = customerService.getCustomerId(customer.getUsername());
             session.setAttribute("customerId", customerId);
             model.addAttribute("currentUser", customer.getUsername());
@@ -64,6 +65,8 @@ public class UserController {
     @GetMapping("/logout")
     public String loginSuccess(HttpSession session, Model model){
         session.setAttribute("user", null);
+        session.setAttribute("customer", null);
+        session.setAttribute("customerId", null);
         model.addAttribute("product",productService.getAllProduct());
         return "home";
     }

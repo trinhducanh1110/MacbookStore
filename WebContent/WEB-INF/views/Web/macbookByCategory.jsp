@@ -2,7 +2,7 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 
 
-
+<div style="margin: 0">
 <div class="services">
     <div class="container">
         <div class="row">
@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <%--
 <div class="fun-facts">

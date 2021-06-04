@@ -36,7 +36,12 @@
     <definition name="cart" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/cart.jsp"/>
     </definition>
-
+    <definition name="checkout" extends="home">
+        <put-attribute name="body" value="/WEB-INF/views/Web/checkout.jsp"/>
+    </definition>
+    <definition name="successCheckout" extends="home">
+        <put-attribute name="body" value="/WEB-INF/views/Web/successCheckout.jsp"/>
+    </definition>
 
 
 

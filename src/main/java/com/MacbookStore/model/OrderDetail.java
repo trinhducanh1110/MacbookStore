@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "OrderDetail")
 public class OrderDetail {
     private String _id;
-    private String orderId;
+    private int orderId;
     private String productId;
     private String productName;
     private int price;
@@ -20,11 +20,11 @@ public class OrderDetail {
         this._id = _id;
     }
 
-    public String getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 

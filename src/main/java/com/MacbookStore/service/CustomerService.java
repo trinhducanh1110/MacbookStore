@@ -20,6 +20,9 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    public Customer getCustomerByUsername(String username){
+        return customerRepository.findByUsername(username);
+    }
     public boolean checkAccount(CustomerViewModel customer){
         boolean result = false;
         if(!findUsername(customer.getUsername()) && !findPassword(customer.getPassword())){

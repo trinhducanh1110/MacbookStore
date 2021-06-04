@@ -18,6 +18,13 @@ public class OrderService {
         return orderRepository.findAllByCustomerId(customerId);
     }
 
-    public void insertOrder(Order order){ orderRepository.insert(order);
+    public int getOrderId(){
+        Order temp = orderRepository.findDistinctFirstByOrderId();
+        int orderId = temp.getOrderId() + 1;
+        return orderId;
     }
+
+    public void insert(Order order){ orderRepository.insert(order);
+    }
+
 }
