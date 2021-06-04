@@ -30,6 +30,9 @@
     <definition name="macbookByCategory" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/macbookByCategory.jsp"/>
     </definition>
+    <definition name="accessoriesByCategory" extends="home">
+        <put-attribute name="body" value="/WEB-INF/views/Web/accessoriesByCategory.jsp"/>
+    </definition>
     <definition name="error" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/error.jsp"/>
     </definition>

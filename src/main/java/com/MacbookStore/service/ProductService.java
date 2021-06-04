@@ -39,5 +39,8 @@ public class ProductService {
         Year yearId = yearRepository.findFirstByYearName(yearName);
         return productRepository.findAllByStatusAndYearIDAndGroupID(status, yearId.getYearID(), groupId);
     }
+    public List<Product> getAccessoriesByCategory(String groupId){
+        return productRepository.findAllByGroupID( groupId);
+    }
 
 }

@@ -38,8 +38,31 @@ public class ProductController {
         if(groupId == "MA"){
             title = status+" Macbook "+groupId+" "+year;
         }
+
         model.addAttribute("title", title);
         return "macbookByCategory";
+    }
+    @GetMapping("/category/{groupId}")
+    public String macbookNewByStatusAndYear(@Valid @PathVariable("groupId") String groupId, Model model){
+        model.addAttribute("product", productService.getAccessoriesByCategory(groupId));
+        String title = "";
+        if(groupId == "MK"){
+            title = "Macgic KeyBoard";
+        }
+        if(groupId == "MM"){
+            title = "Macgic Mouse";
+        }
+        if(groupId == "TP"){
+            title = "Macgic Trackpad";
+        }
+        if(groupId == "CAP"){
+            title = "Charger";
+        }
+        if(groupId == "TUI"){
+            title = "Shockproof Bag";
+        }
+        model.addAttribute("title", title);
+        return "accessoriesByCategory";
     }
 
 }

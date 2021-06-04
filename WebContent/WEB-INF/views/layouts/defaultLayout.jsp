@@ -72,10 +72,11 @@
                             ACCESSORIES
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">KEYBOARD</a>
-                            <a class="dropdown-item" href="#">MOUSE</a>
-                            <a class="dropdown-item" href="#">CHARGER</a>
-                            <a class="dropdown-item" href="#">SHOCKPROOF BAG</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/MK">KEYBOARD</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/MM">MOUSE</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/TP">TRACKPAD</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/CAP">CHARGER</a>
+                            <a class="dropdown-item" href="/MacbookStore/category/TUI">SHOCKPROOF BAG</a>
                         </div>
                     </li>
                     <li class="nav-item">
