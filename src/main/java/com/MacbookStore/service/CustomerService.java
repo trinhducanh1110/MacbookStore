@@ -33,9 +33,9 @@ public class CustomerService {
     public boolean findPassword(String password){
         return customerRepository.findByPassword(password) == null;
     }
-    public String getCustomerName(String username){
+    public String getCustomerId(String username){
         Customer temp = customerRepository.findByUsername(username);
-        return temp.getCustomerName();
+        return temp.get_id();
     }
     public void insertCustomer(CustomerViewModel customer) throws ParseException {
         Customer temp = new Customer();

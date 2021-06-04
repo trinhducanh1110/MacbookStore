@@ -17,4 +17,7 @@ public class OrderService {
     public List<Order> getOrderDetailByCustomerId(String customerId){
         return orderRepository.findAllByCustomerId(customerId);
     }
+
+    public void insertOrder(Order order){ orderRepository.insert(order);
+    }
 }

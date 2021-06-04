@@ -49,6 +49,8 @@ public class UserController {
         }
         if(customerService.checkAccount(customer)){
             session.setAttribute("user", customer.getUsername());
+            String customerId = customerService.getCustomerId(customer.getUsername());
+            session.setAttribute("customerId", customerId);
             model.addAttribute("currentUser", customer.getUsername());
             model.addAttribute("product",productService.getAllProduct());
             return "home";

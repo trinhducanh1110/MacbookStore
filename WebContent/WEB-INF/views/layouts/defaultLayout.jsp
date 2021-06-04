@@ -90,17 +90,20 @@
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact">CONTACT US</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
-                    <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
                     </li>
                     <c:if test="${sessionScope.user.length() == null}">
+                        <li class="nav-item">
+                            <a style="color: white" class="nav-link" href="/MacbookStore/user/login"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
                         <li class="nav-item">
                             <a style="..." class="nav-link" href="/MacbookStore/user/login">Login</a>
                         </li>
                     </c:if>
                     <c:if test="${sessionScope.user.length() != null}">
+                        <li class="nav-item">
+                            <a style="color: white" class="nav-link" href="/MacbookStore/cart/"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                                 Hello ${sessionScope.user}
