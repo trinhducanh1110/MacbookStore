@@ -31,4 +31,9 @@ public class CartService {
     public void deleteCartByUser(String customerId){
         cartRepository.deleteByCustomerId(customerId);
     }
+    public Cart findFirstByCustomerIdAndProductId(String customerId, String productId){
+        return cartRepository.findFirstByCustomerIdAndProductId(customerId,productId);
+    }
+    public void insert(Cart cart){ cartRepository.insert(cart); }
+    public void save(Cart cart){ cartRepository.save(cart); }
 }
