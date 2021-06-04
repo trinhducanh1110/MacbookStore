@@ -11,4 +11,5 @@ import java.util.List;
 @Repository
 public interface CartRepository extends MongoRepository<Cart, String> {
     List<Cart> findAllByCustomerId(String customerId);
+    void deleteByCustomerId(String customerId);
 }
