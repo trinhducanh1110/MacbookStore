@@ -14,7 +14,6 @@
 <div class="main-content">
     <div class="container">
         <h3><b>${product.productName} - ${product.groupID} ${product.yearID} ${product.displayID} - ${product.cpuID}/${product.ramID}/${product.hardDriveID} - ${product.status}</b></h3><br/>
-        <img src="${product.image}" alt="">
         <div class="row">
             <div class="col-md-5">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -23,13 +22,13 @@
                             <img src="${product.image}" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="${product.image}" class="d-block w-100" alt="...">
+                            <img src="${product.image1}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="${product.image}" class="d-block w-100" alt="...">
+                            <img src="${product.image2}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="${product.image}" class="d-block w-100" alt="...">
+                            <img src="${product.image3}" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -47,13 +46,13 @@
                                 <img src="${product.image}" id="main" alt="#" class="img-fluid">
                         </div>
                         <div class="col-md-3">
-                                <img src="${product.image}" id="1" alt="#" class="img-fluid">
+                                <img src="${product.image1}" id="1" alt="#" class="img-fluid">
                         </div>
                         <div class="col-md-3">
-                                <img src="${product.image}" id="2" alt="#" class="img-fluid">
+                                <img src="${product.image2}" id="2" alt="#" class="img-fluid">
                         </div>
                         <div class="col-md-3">
-                                <img src="${product.image}" id="3" alt="#" class="img-fluid">
+                                <img src="${product.image3}" id="3" alt="#" class="img-fluid">
                         </div>
                     </div>
                 </div>

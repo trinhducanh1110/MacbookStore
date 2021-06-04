@@ -40,7 +40,7 @@
                                 <div class="down-content">
                                     <h4>${item.productName}</h4><p style="font-weight: bold">Price: ${item.price}</p>
                                     <p>${item.cpuID} - ${item.ramID} - ${item.hardDriveID} - ${item.displayCardID} <br/> ${item.colorID} - ${item.displayID} - ${item.yearID} - ${item.status} </p>
-                                    <a href="" class="btn btn-outline-dark ">Read More</a>
+                                    <a href="/MacbookStore/detail/${item.id}" class="btn btn-outline-dark ">Read More</a>
                                     <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                                 </div>
                             </div>
