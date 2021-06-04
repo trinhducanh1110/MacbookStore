@@ -9,11 +9,11 @@ import java.text.DecimalFormat;
 public class Product {
     private String id;
     private String productName;
-    private String Description;
-    private String Price;
-    private String Sold;
+    private String description;
+    private String price;
+    private String sold;
     private String status;
-    private String Stock;
+    private String stock;
     private String colorID;
     private String cpuID;
     private String displayCardID;
@@ -24,6 +24,9 @@ public class Product {
     private String yearID;
     private String ramID;
     private String image;
+    private String image1;
+    private String image2;
+    private String image3;
 
 
     public String getId() {
@@ -42,38 +45,6 @@ public class Product {
         this.productName = productName;
     }
 
-
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public String getPrice() {
-        return Price;
-    }
-
-    public void setPrice(String price) {
-        Price = price;
-    }
-
-    public String getStock() {
-        return Stock;
-    }
-
-    public void setStock(String stock) {
-        Stock = stock;
-    }
-
-    public String getSold() {
-        return Sold;
-    }
-
-    public void setSold(String sold) {
-        Sold = sold;
-    }
 
     public String getCpuID() {
         return cpuID;
@@ -161,5 +132,61 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getSold() {
+        return sold;
+    }
+
+    public void setSold(String sold) {
+        this.sold = sold;
+    }
+
+    public String getStock() {
+        return stock;
+    }
+
+    public void setStock(String stock) {
+        this.stock = stock;
+    }
+
+    public String getImage1() {
+        return image1;
+    }
+
+    public void setImage1(String image1) {
+        this.image1 = image1;
+    }
+
+    public String getImage2() {
+        return image2;
+    }
+
+    public void setImage2(String image2) {
+        this.image2 = image2;
+    }
+
+    public String getImage3() {
+        return image3;
+    }
+
+    public void setImage3(String image3) {
+        this.image3 = image3;
     }
 }
