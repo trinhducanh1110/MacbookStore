@@ -74,6 +74,21 @@
                     <input class="col-md-12" type="text" id="ramID" name="ramID">
                     <br/>
 
+                    <label>Image Main</label>
+                    <input class="col-md-12" type="text" id="image" name="image" >
+                    <br/>
+
+                    <label>Image 1</label>
+                    <input class="col-md-12" type="text" id="image1" name="image1">
+                    <br/>
+
+                    <label>Image 2</label>
+                    <input class="col-md-12" type="text" id="image2" name="image2">
+                    <br/>
+
+                    <label>Image 3</label>
+                    <input class="col-md-12" type="text" id="image3" name="image3">
+                    <br/>
                     <div class="col-md-12" style="text-align: center">
                         <button type="submit" class="btn btn-dark">Submit</button>
                     </div>

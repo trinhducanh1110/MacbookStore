@@ -19,23 +19,23 @@
                     <br/>
 
                     <label>Description</label>
-                    <input class="col-md-12" type="text" id="Description" name="Description">
+                    <input class="col-md-12" type="text" id="description" name="description" value="${product.description}">
                     <br/>
 
                     <label>Price</label>
-                    <input class="col-md-12" type="text" id="Price" name="Price">
+                    <input class="col-md-12" type="text" id="price" name="price" value="${product.price}">
                     <br/>
 
                     <label>Sold</label>
-                    <input class="col-md-12" type="text" id="Sold" name="Sold" >
+                    <input class="col-md-12" type="text" id="sold" name="sold" value="${product.sold}" >
                     <br/>
 
                     <label>Status</label>
-                    <input class="col-md-12" type="text" id="Status" name="Status" >
+                    <input class="col-md-12" type="text" id="status" name="status" value="${product.status}">
                     <br/>
 
                     <label>Stock</label>
-                    <input class="col-md-12" type="text" id="Stock" name="Stock" >
+                    <input class="col-md-12" type="text" id="stock" name="stock" value="${product.stock}" >
                     <br/>
 
                     <label>colorID</label>
@@ -72,6 +72,22 @@
 
                     <label>ramID</label>
                     <input class="col-md-12" type="text" id="ramID" name="ramID" value="${product.ramID}">
+                    <br/>
+
+                    <label>Image Main</label>
+                    <input class="col-md-12" type="text" id="image" name="image" value="${product.image}">
+                    <br/>
+
+                    <label>Image 1</label>
+                    <input class="col-md-12" type="text" id="image1" name="image1" value="${product.image1}">
+                    <br/>
+
+                    <label>Image 2</label>
+                    <input class="col-md-12" type="text" id="image2" name="image2" value="${product.image2}">
+                    <br/>
+
+                    <label>Image 3</label>
+                    <input class="col-md-12" type="text" id="image3" name="image3" value="${product.image3}">
                     <br/>
 
                     <div class="col-md-12" style="text-align: center">

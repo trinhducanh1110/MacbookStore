@@ -101,41 +101,65 @@ public class AdminController {
     }
     @GetMapping("/admin/cpu")
     public String cpuForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("cpu",cpuService.getAllCpu());
         return "adminCpu";
     }
     @GetMapping("/admin/color")
     public String colorForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("color",colorService.getAllColor());
         return "adminColor";
     }
     @GetMapping("/admin/display")
     public String displayForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("display",displayService.getAllDisplay());
         return "adminDisplay";
     }
     @GetMapping("/admin/displaycard")
     public String displayCardForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("displaycard",displayCardService.getAllDisplayCard());
         return "adminDisplayCard";
     }
     @GetMapping("/admin/group")
     public String groupForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("group",groupService.getAllGroup());
         return "adminGroup";
     }
     @GetMapping("/admin/harddrive")
     public String hardDriveForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("harddrive",hardDriveService.getAllHardDrive());
         return "adminHardDrive";
     }
     @GetMapping("/admin/ram")
     public String ramForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("ram",ramService.getAllRam());
         return "adminRam";
     }
     @GetMapping("/admin/year")
     public String yearForm(Model model, HttpSession session){
+        if(!checkAdmin(session)){
+            return "adminLogin";
+        }
         model.addAttribute("year",yearService.getAllYear());
         return "adminYear";
     }

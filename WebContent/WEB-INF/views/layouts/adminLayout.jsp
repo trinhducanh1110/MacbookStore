@@ -60,16 +60,8 @@
                             <a class="dropdown-item" href="/MacbookStore/admin/year">YEAR</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
-                            ACCESSORIES
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/MacbookStore/admin/keyboard">KEYBOARD</a>
-                            <a class="dropdown-item" href="/MacbookStore/admin/mouse">MOUSE</a>
-                            <a class="dropdown-item" href="/MacbookStore/admin/charger">CHARGER</a>
-                            <a class="dropdown-item" href="/MacbookStore/admin/bag">SHOCKPROOF BAG</a>
-                        </div>
+                    <li class="nav-item">
+                        <a style="color: white" class="nav-link" href="/MacbookStore/admin/customer">CUSTOMER</a>
                     </li>
                     <c:if test="${sessionScope.admin == null}">
                         <li class="nav-item">

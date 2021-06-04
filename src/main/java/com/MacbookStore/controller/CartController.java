@@ -75,6 +75,7 @@ public class CartController{
         if(!checkCurrentUser(session)){
             return "login";
         }
+        return "";
     }
 
     @GetMapping("/delete/{_id}")

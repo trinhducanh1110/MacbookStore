@@ -18,6 +18,9 @@
     <table class="table">
         <tr>
             <th>
+
+            </th>
+            <th>
                 Name
             </th>
             <th>
@@ -63,17 +66,34 @@
                 Year
             </th>
             <th>
-
+                Image Main
+            </th>
+            <th>
+                Image 1
+            </th>
+            <th>
+                Image 2
+            </th>
+            <th>
+                Image 3
             </th>
         </tr>
 
         <c:forEach var="item" items="${product}">
         <tr>
             <td>
+                <a href="/MacbookStore/admin/product/edit/${item.id}">
+                    <input type="button" value="Edit" class="btn btn-warning">
+                </a>
+                <a href="/MacbookStore/admin/product/delete/${item.id}">
+                    <input type="button" value="Delete" class="btn btn-outline-danger">
+                </a>
+            </td>
+            <td>
                 ${item.productName}
             </td>
             <td>
-
+                ${item.description}
             </td>
             <td>
                 ${item.price}
@@ -115,12 +135,16 @@
                 ${item.yearID}
             </td>
             <td>
-                <a href="/MacbookStore/admin/product/edit/${item.id}">
-                    <input type="button" value="Edit" class="btn btn-warning">
-                </a>
-                <a href="/MacbookStore/admin/product/delete/${item.id}">
-                    <input type="button" value="Delete" class="btn btn-outline-danger">
-                </a>
+                <img src="${item.image}" alt="" class="img-fluid">
+            </td>
+            <td>
+                <img src="${item.image1}" alt="" class="img-fluid">
+            </td>
+            <td>
+                <img src="${item.image2}" alt="" class="img-fluid">
+            </td>
+            <td>
+                <img src="${item.image3}" alt="" class="img-fluid">
             </td>
         </tr>
         </c:forEach>
