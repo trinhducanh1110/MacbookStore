@@ -1064,13 +1064,13 @@ footer .contact-form button.filled-button:hover {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 230px 0px 150px 0px;
+	padding: 220px 0px 150px 0px;
 	color: #fff;
 }
 
 .page-heading h1 {
 	text-transform: capitalize;
-	font-size: 36px;
+	font-size: 42px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	margin-bottom: 18px;

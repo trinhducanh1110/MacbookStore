@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Home</title>
+    <title>MacbookStore</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/> " rel="stylesheet" type="text/css">
@@ -24,10 +24,10 @@
 <div class="">
     <nav class="navbar navbar-expand-lg" style="background-color: black">
         <div class="container">
-            <a class="navbar-brand" href="/MacbookStore/home"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="/MacbookStore/home" tabindex="0">
+                    <i class="fab fa-apple" style="color:white ">
+                    </i>
+            </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -227,7 +227,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p>Copyright &copy; 2020 MACBOOKSTORE
+                <p>Copyright &copy; 2021 MACBOOKSTORE
 
                     - Design: 18DTHJB1</p>
             </div>

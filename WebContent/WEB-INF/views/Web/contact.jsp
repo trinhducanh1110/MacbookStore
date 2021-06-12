@@ -1,13 +1,5 @@
-
-<div class="page-heading header-text">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Contact Us</h1>
-                <span>feel free to send us a message now!</span>
-            </div>
-        </div>
-    </div>
+<div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.615356086287!2d106.68491651480063!3d10.76409849232989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f19c2406239%3A0x546a6bd1377e3900!2zMjE0IE5ndXnhu4VuIFRyw6NpLCBQaMaw4budbmcgTmd1eeG7hW4gQ8awIFRyaW5oLCBRdeG6rW4gMSwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1623505361583!5m2!1svi!2s" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
 <div class="contact-information">
@@ -17,24 +9,26 @@
                 <div class="contact-item">
                     <i class="fa fa-phone"></i>
                     <h4>Phone</h4>
-                    <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-                    <a href="#">090-080-0760</a>
+                    <p>Hotline - free call</p>
+                        <br>
+                    <a href="#">0977 728 880</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-item">
                     <i class="fa fa-envelope"></i>
                     <h4>Email</h4>
-                    <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-                    <a href="#">info@company.com</a>
+                    <p>Send us an email!</p>
+                    <br>
+                    <a href="#">MacbookStore@apple.com</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-item">
                     <i class="fa fa-map-marker"></i>
                     <h4>Location</h4>
-                    <p>1020 New Mountain Street<br>Forest Park, FP 11220</p>
-                    <a href="#">View on Google Maps</a>
+                    <p>214 Nguyen Trai Street<br>District 1, HCMC</p>
+                    <a href="https://goo.gl/maps/VE7BdLXrUYR83fCH7">View on Google Maps</a>
                 </div>
             </div>
         </div>
@@ -47,7 +41,7 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <h2>Send us a <em>message</em></h2>
-                    <span>Suspendisse a ante in neque iaculis lacinia</span>
+                    <span>SERVING YOU IS OUR PLEASURE! </span>
                 </div>
             </div>
             <div class="col-md-12">
@@ -81,30 +75,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="map">
-    <!-- How to change your own map point
-        1. Go to Google Maps
-        2. Click on your location point
-        3. Click "Share" and choose "Embed map" tab
-        4. Copy only URL and paste it within the src="" field below
-    -->
-    <iframe src="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+H%E1%BB%8Dc+C%C3%B4ng+Ngh%E1%BB%87+TP.HCM+-+HUTECH/@10.8231689,106.7651912,12z/data=!4m5!3m4!1s0x0:0x6c3d29d370b52a7e!8m2!3d10.8017279!4d106.7144917" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
-
-<div class="partners contact-partners">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="owl-partners owl-carousel">
-                    <div class="partner-item">
-                        <img src="assets/images/client-01.png" alt="">
-                    </div>
                 </div>
             </div>
         </div>
