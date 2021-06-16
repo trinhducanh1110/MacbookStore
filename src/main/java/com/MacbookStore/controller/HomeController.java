@@ -22,18 +22,6 @@ public class HomeController {
         productService = new ProductService();
     }
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String homePage(Model model) {
-        List<Product> product = productService.getAllProduct();
-        List<Product> listProduct = new ArrayList<>();
-        for(int i=0; i<6; i++){
-            Product temp = product.get(i);
-            listProduct.add(temp);
-        }
-        model.addAttribute("product", listProduct);
-        return "home";
-    }
-
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String contactPage() {
         return "contact";

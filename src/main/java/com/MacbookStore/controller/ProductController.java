@@ -4,9 +4,7 @@ import com.MacbookStore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -46,12 +44,39 @@ public class ProductController {
         yearService = new YearService();
     }
 
+    public Product getAllInfoProduct(Product productt){
+        Product product = productt;
+        product.setColorID(colorService.getColorName(product.getColorID()));
+        product.setCpuID(cpuService.get1Cpu(product.getCpuID()).getCpuName());
+        product.setDisplayCardID(displayCardService.get1DisplayCard(product.getDisplayCardID()).getDisplayCardName());
+        product.setDisplayID(displayService.get1Display(product.getDisplayID()).getDisplayName());
+        product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
+        product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
+        product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
+        product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
+        return product;
+    }
+
     @GetMapping("/")
     public String home(Model model) {
         List<Product> product = productService.getAllProduct();
         List<Product> listProduct = new ArrayList<>();
         for(int i=0; i<6; i++){
             Product temp = product.get(i);
+            //temp = getAllInfoProduct(temp);
+            listProduct.add(temp);
+        }
+        model.addAttribute("product", listProduct);
+        return "home";
+    }
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String homePage(Model model) {
+        List<Product> product = productService.getAllProduct();
+        List<Product> listProduct = new ArrayList<>();
+        for(int i=0; i<6; i++){
+            Product temp = product.get(i);
+            //temp = getAllInfoProduct(temp);
             listProduct.add(temp);
         }
         model.addAttribute("product", listProduct);
@@ -61,14 +86,7 @@ public class ProductController {
     @GetMapping("/detail/{id}")
     public String productListByCollectionID(@PathVariable("id") String id, Model model) {
         Product product = productService.get1Product((id));
-        product.setColorID(colorService.getColorName(product.getColorID()));
-        product.setCpuID(cpuService.get1Cpu(product.getCpuID()).getCpuName());
-        product.setDisplayCardID(displayCardService.get1DisplayCard(product.getDisplayCardID()).getDisplayCardName());
-        product.setDisplayID(displayService.get1Display(product.getDisplayID()).getDisplayName());
-        product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
-        product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
-        product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
-        product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
+        product = getAllInfoProduct(product);
         model.addAttribute("product", product);
         return "detail";
     }
