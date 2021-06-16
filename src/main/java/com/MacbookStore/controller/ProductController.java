@@ -61,7 +61,14 @@ public class ProductController {
     @GetMapping("/detail/{id}")
     public String productListByCollectionID(@PathVariable("id") String id, Model model) {
         Product product = productService.get1Product((id));
-        //product.setColorID(colorService.getColorName(product.getColorID()));
+        product.setColorID(colorService.getColorName(product.getColorID()));
+        product.setCpuID(cpuService.get1Cpu(product.getCpuID()).getCpuName());
+        product.setDisplayCardID(displayCardService.get1DisplayCard(product.getDisplayCardID()).getDisplayCardName());
+        product.setDisplayID(displayService.get1Display(product.getDisplayID()).getDisplayName());
+        product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
+        product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
+        product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
+        product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
         model.addAttribute("product", product);
         return "detail";
     }

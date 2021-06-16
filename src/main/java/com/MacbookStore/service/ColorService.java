@@ -32,7 +32,7 @@ public class  ColorService {
     public void deleteColor(String colorId) { colorRepository.deleteById(colorId); }
 
     public String getColorName(String colorId) {
-        return colorRepository.findFirstByColorID(colorId).getColorName();
+        return colorRepository.findFirstById(colorId).getColorName();
     }
 
 }
