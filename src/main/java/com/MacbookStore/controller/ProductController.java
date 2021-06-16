@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
@@ -46,7 +48,13 @@ public class ProductController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("product",productService.getAllProduct());
+        List<Product> product = productService.getAllProduct();
+        List<Product> listProduct = new ArrayList<>();
+        for(int i=0; i<6; i++){
+            Product temp = product.get(i);
+            listProduct.add(temp);
+        }
+        model.addAttribute("product", listProduct);
         return "home";
     }
 
