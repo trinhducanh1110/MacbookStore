@@ -18,7 +18,7 @@
           <input class="col-md-12" type="text" id="customerName" name="customerName" value="${customer.customerName}">
           <br/>
           <label>Username</label>
-          <input class="col-md-12" type="text" id="Username" name="Username" value="${customer.username}">
+          <input class="col-md-12" type="text" id="Username" name="Username" value="${customer.username}" readonly>
           <br/>
           <label>Password</label>
           <input class="col-md-12" type="text" id="Password" name="Password" value="${customer.password}">
