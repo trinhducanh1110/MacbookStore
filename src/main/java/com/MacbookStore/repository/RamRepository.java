@@ -16,5 +16,4 @@ import java.util.List;
 public interface RamRepository extends MongoRepository<RAM, String> {
     RAM findFirstById(String ramID);
     void deleteById(String ramID);
-    RAM findFirstByRamID(String id);
 }

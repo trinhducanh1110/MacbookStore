@@ -33,8 +33,4 @@ public class  DisplayCardService {
 
     public void deleteDisplayCard(String displayCardId) { displayCardRepository.deleteById(displayCardId); }
 
-    public String getDisplayCardId(String displayCardId){
-        return displayCardRepository.findFirstByDisplayCardID(displayCardId).getDisplayCardID();
-    }
-
 }

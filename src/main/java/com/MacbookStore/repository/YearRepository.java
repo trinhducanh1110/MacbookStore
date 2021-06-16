@@ -15,8 +15,7 @@ import java.util.List;
 @Transactional
 @Repository
 public interface YearRepository extends MongoRepository<Year, String> {
-    Year findFirstByID(String yearID);
+    Year findFirstById(String yearID);
     void deleteById(String yearID);
     Year findFirstByYearName(String yearName);
-    Year findFirstByYearID(String yearId);
 }

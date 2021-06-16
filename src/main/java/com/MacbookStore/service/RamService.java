@@ -31,8 +31,4 @@ public class  RamService {
 
     public void deleteRam(String ramId) { ramRepository.deleteById(ramId); }
 
-    public String getRamName(String ramId){
-        return ramRepository.findFirstByRamID(ramId).getRamName();
-    }
-
 }

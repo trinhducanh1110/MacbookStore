@@ -31,8 +31,4 @@ public class  GroupService {
 
     public void deleteGroup(String groupId) { groupRepository.deleteById(groupId); }
 
-    public String getGroupName(String groupId){
-        return groupRepository.findFirstByGroupID(groupId).getGroupName();
-    }
-
 }

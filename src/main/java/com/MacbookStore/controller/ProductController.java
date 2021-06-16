@@ -1,49 +1,21 @@
 package com.MacbookStore.controller;
-
 import com.MacbookStore.model.Product;
-import com.MacbookStore.service.*;
+import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 
 
 @Controller
 public class ProductController {
-
     @Autowired
     private final ProductService productService;
-    @Autowired
-    private final YearService yearService;
-    @Autowired
-    private final ColorService colorService;
-    @Autowired
-    private final CpuService cpuService;
-    @Autowired
-    private final DisplayService displayService;
-    @Autowired
-    private final DisplayCardService displayCardService;
-    @Autowired
-    private final GroupService groupService;
-    @Autowired
-    private final HardDriveService hardDriveService;
-    @Autowired
-    private final RamService ramService;
-
-    public ProductController() {
-        productService = new ProductService();
-        yearService = new YearService();
-        colorService = new ColorService();
-        cpuService = new CpuService();
-        displayService = new DisplayService();
-        displayCardService = new DisplayCardService();
-        groupService = new GroupService();
-        hardDriveService = new HardDriveService();
-        ramService = new RamService();
-    }
+    public ProductController() { productService = new ProductService(); }
 
     @GetMapping("/")
     public String home(Model model) {
@@ -53,16 +25,7 @@ public class ProductController {
 
     @GetMapping("/detail/{id}")
     public String productListByCollectionID(@PathVariable("id") String id, Model model) {
-        Product product = productService.get1Product(id);
-        product.setYearID(yearService.getYearName(product.getYearID()));
-        product.setColorID(colorService.getColorName(product.getColorID()));
-        product.setCpuID(cpuService.getCpuName(product.getYearID()));
-        product.setDisplayID(displayService.getDisplayName(product.getYearID()));
-        product.setDisplayCardID(displayCardService.getDisplayCardId(product.getYearID()));
-        product.setGroupID(groupService.getGroupName(product.getYearID()));
-        product.setHardDriveID(hardDriveService.get1HardDrive(product.getYearID()).getHardDriveName());
-        product.setRamID(ramService.get1Ram(product.getYearID()).getRamName());
-        model.addAttribute("product", product);
+        model.addAttribute("product", productService.get1Product(id));
         return "detail";
     }
     @GetMapping("/category/{status}/{groupId}/{year}")

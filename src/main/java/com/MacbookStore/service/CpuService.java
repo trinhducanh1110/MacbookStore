@@ -31,8 +31,4 @@ public class  CpuService {
 
     public void deleteCpu(String cpuId) { cpuRepository.deleteById(cpuId); }
 
-    public String getCpuName(String cpuId){
-        return cpuRepository.findFirstByCpuID(cpuId).getCpuName();
-    }
-
 }

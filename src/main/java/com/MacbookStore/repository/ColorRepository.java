@@ -13,7 +13,6 @@ import java.util.List;
 @Transactional
 @Repository
 public interface ColorRepository extends MongoRepository<Color, String> {
-    Color findFirstByColorID(String colorID);
+    Color findFirstById(String colorID);
     void deleteById(String colorID);
-    Color findFirstBy
 }

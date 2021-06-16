@@ -20,13 +20,7 @@ public class  YearService {
     }
 
     public Year get1Year(String yearId) {
-        return yearRepository.findFirstByID(yearId);
-    }
-
-    public String getYearName(String yearId){
-        Year yearResult = yearRepository.findFirstByYearID(yearId);
-        String result = yearResult.getYearName();
-        return result;
+        return yearRepository.findFirstById(yearId);
     }
 
     public void insertYear(Year year) {

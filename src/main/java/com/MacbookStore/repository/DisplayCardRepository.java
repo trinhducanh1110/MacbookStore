@@ -15,5 +15,4 @@ import java.util.List;
 public interface DisplayCardRepository extends MongoRepository<DisplayCard, String> {
     DisplayCard findFirstById(String displayCardID);
     void deleteById(String displayCardID);
-    DisplayCard findFirstByDisplayCardID(String displayCardId);
 }
