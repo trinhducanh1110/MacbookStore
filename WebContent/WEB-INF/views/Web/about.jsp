@@ -5,17 +5,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">About Us</h1>
-                <span style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">Deadline is coming. Fear is surrounding us. In the foreground is just Darkness
-                    <br>But we don't scare!!! Because....
-                    <br><h5>Magic Winx Enchantix!!! Transfirgueeeeee!!!</h5>
-                </span>
+                <h1 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;"> <strong>About Us</strong></h1>
             </div>
         </div>
     </div>
 </div>
 <br>
 <br>
+
 <div class="introduction">
     <div class="container">
         <div class="row">
@@ -23,7 +20,7 @@
                 <div class="section-heading">
                     <h2>Our <em>missions</em></h2>
                     <br>
-                    <p>Thanks to the continuous development of the technology industry, we are enjoying the myriad of benefits it brings.
+                    <p><strong>Thanks to</strong> the continuous development of the technology industry, we are enjoying the myriad of benefits it brings.
                         A big brand that everyone knows, every season this brand releases a new product that the whole world has to watch, none other than Apple.
                         Macbook Store was born with the mission to become a bridge to bring Vietnamese users to access the products of Apple more easily, conveniently and safely.</p>
                 </div>
@@ -35,7 +32,7 @@
                 <div class="section-heading">
                     <h2>Our <em>vision</em></h2>
                     <br>
-                    <p>Not stopping at selling Apple products, Macbook Store in the near future wishes to become the leading brand in Vietnam for Apple products including product and solution supply chain stores, communication channels.</p>
+                    <p><strong>Not stopping at selling Apple products,</strong> Macbook Store in the near future wishes to become the leading brand in Vietnam for Apple products including product and solution supply chain stores, communication channels.</p>
                 </div>
             </div>
         </div>
@@ -54,7 +51,6 @@
         </div>
     </div>
 </div>
-
 <div class="team">
     <div class="container">
         <div class="row">
@@ -69,7 +65,9 @@
                     <div class="down-content">
                         <h4>Duc Anh Trinh</h4>
                         <span>Security</span>
-                        <p>pera pera pera pera!!!!!</p>
+                        <p>Life isn't about finding yourself
+                            <br>
+                            Life is about creating yourself.</p>
                     </div>
                 </div>
             </div>
@@ -96,101 +94,7 @@
         </div>
     </div>
 </div>
+<br>
+<br>
 
-<div class="fun-facts">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="left-content">
-                    <span>Lorem ipsum dolor sit amet</span>
-                    <h2>Our solutions for your <em>business growth</em></h2>
-                    <p>Pellentesque ultrices at turpis in vestibulum. Aenean pretium elit nec congue elementum. Nulla luctus laoreet porta. Maecenas at nisi tempus, porta metus vitae, faucibus augue.
-                        <br><br>Fusce et venenatis ex. Quisque varius, velit quis dictum sagittis, odio velit molestie nunc, ut posuere ante tortor ut neque.</p>
-                    <a href="" class="filled-button">Read More</a>
-                </div>
-            </div>
-            <div class="col-md-6 align-self-center">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="count-area-content">
-                            <div class="count-digit">945</div>
-                            <div class="count-title">Work Hours</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="count-area-content">
-                            <div class="count-digit">1280</div>
-                            <div class="count-title">Great Reviews</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="count-area-content">
-                            <div class="count-digit">578</div>
-                            <div class="count-title">Projects Done</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="count-area-content">
-                            <div class="count-digit">26</div>
-                            <div class="count-title">Awards Won</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="testimonials">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>What they say <em>about us</em></h2>
-                    <span>testimonials from our greatest clients</span>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="owl-testimonials owl-carousel">
-
-                    <div class="testimonial-item">
-                        <div class="inner-content">
-                            <h4>George Walker</h4>
-                            <span>Chief Financial Analyst</span>
-                            <p>"Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus."</p>
-                        </div>
-                        <img src="http://placehold.it/60x60" alt="">
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="inner-content">
-                            <h4>John Smith</h4>
-                            <span>Market Specialist</span>
-                            <p>"In eget leo ante. Sed nibh leo, laoreet accumsan euismod quis, scelerisque a nunc. Mauris accumsan, arcu id ornare malesuada, est nulla luctus nisi."</p>
-                        </div>
-                        <img src="http://placehold.it/60x60" alt="">
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="inner-content">
-                            <h4>David Wood</h4>
-                            <span>Chief Accountant</span>
-                            <p>"Ut ultricies maximus turpis, in sollicitudin ligula posuere vel. Donec finibus maximus neque, vitae egestas quam imperdiet nec. Proin nec mauris eu tortor consectetur tristique."</p>
-                        </div>
-                        <img src="http://placehold.it/60x60" alt="">
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="inner-content">
-                            <h4>Andrew Boom</h4>
-                            <span>Marketing Head</span>
-                            <p>"Curabitur sollicitudin, tortor at suscipit volutpat, nisi arcu aliquet dui, vitae semper sem turpis quis libero. Quisque vulputate lacinia nisl ac lobortis."</p>
-                        </div>
-                        <img src="http://placehold.it/60x60" alt="">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<br>

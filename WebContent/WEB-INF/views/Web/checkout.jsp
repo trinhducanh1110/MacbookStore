@@ -10,7 +10,7 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Checkout</title>
 </head>
 <body style="padding-bottom: 100px; padding-top: 20px">
 <div class="container">
