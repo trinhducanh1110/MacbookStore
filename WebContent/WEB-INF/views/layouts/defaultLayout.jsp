@@ -21,16 +21,19 @@
 
 <body>
 
-<div class="">
-    <nav class="navbar navbar-expand-lg" style="background-color: black">
-        <div class="container">
-            <a class="navbar-brand" href="/MacbookStore/home" tabindex="0">
-                    <i class="fab fa-apple" style="color:white ">
-                    </i>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+<div>
+    <nav class="navbar navbar-expand-lg" style="background-color: black; text-align: center">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/MacbookStore/home" >
+            <i class="fab fa-apple" style="color:white; padding-left: 20px"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="padding-left: 2%; padding-right: 2%">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/home">HOME
                             <span class="sr-only">(current)</span>
                         </a>
@@ -119,6 +122,7 @@
 
                 </ul>
             </div>
+        </div>
         </div>
     </nav>
 </div>
