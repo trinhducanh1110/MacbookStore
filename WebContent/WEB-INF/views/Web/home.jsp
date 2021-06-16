@@ -10,7 +10,7 @@
                     <h6>Our newest product</h6>
                     <h4 style="text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;">MACBOOK PRO 16 INCH <br>2021</h4>
                     <p style="color: #6c4646">This Macbook is incredible</p>
-                    <a href="/MacbookStore/newest" class="filled-button">More </a>
+                    <a href="https://www.apple.com/macbook-pro-16/" class="filled-button">More </a>
                 </div>
             </div>
         </div>
