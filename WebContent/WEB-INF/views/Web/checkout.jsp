@@ -21,7 +21,6 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Amount</th>
-                <th></th>
             </tr>
             <c:forEach var="item" items="${cart}">
                 <tr>
@@ -29,11 +28,6 @@
                     <td>${item.getPrice()}</td>
                     <td>${item.getQuantity()}</td>
                     <td>${item.total()}</td>
-                    <td>
-                        <a href="/MacbookStore/cart/delete/${item.get_id()}">
-                            <input class="btn btn-danger" type="button" value="Delete">
-                        </a>
-                    </td>
                 </tr>
             </c:forEach>
         </table>
@@ -42,19 +36,19 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <div class="row">
+                <div class="row" style="margin-top: 10px">
                     <div class="col-md-4">Name</div>
                     <div class="col-md-8">
                         <input type="text" name="CustomerName" value="${customer.getCustomerName()}">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 10px">
                     <div class="col-md-4">Phone number</div>
                     <div class="col-md-8">
                         <input type="text" name="PhoneNumber" value="${customer.getPhoneNumber()}">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 10px">
                     <div class="col-md-4">Address</div>
                     <div class="col-md-8">
                         <input type="text" name="Address" value="${customer.getAddress()}">
@@ -64,7 +58,7 @@
             <div class="col-md-3"></div>
         </div>
 
-        <div style="text-align: center">
+        <div style="text-align: center; margin-top: 10px">
             <input type="submit" value="Conform" style="margin-left: auto; margin-right: auto">
         </div>
     </form>
