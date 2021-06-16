@@ -1,10 +1,11 @@
 package com.MacbookStore.service;
 
 
-import com.MacbookStore.repository.ProductRepository;
+import com.MacbookStore.ViewModel.ProductViewModel;
+import com.MacbookStore.model.HardDrive;
+import com.MacbookStore.repository.*;
 import com.MacbookStore.model.Product;
 import com.MacbookStore.model.Year;
-import com.MacbookStore.repository.YearRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

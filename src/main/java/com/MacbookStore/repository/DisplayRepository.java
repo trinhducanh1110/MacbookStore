@@ -15,4 +15,5 @@ import java.util.List;
 public interface DisplayRepository extends MongoRepository<Display, String> {
     Display findFirstById(String displayID);
     void deleteById(String displayID);
+    Display findFirstByDisplayID(String displayID);
 }

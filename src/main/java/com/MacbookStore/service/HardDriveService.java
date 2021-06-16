@@ -30,4 +30,8 @@ public class  HardDriveService {
 
     public void deleteHardDrive(String hardDriveId) { hardDriveRepository.deleteById(hardDriveId); }
 
+    public String getHardDriveName(String hardDriveId){
+        return hardDriveRepository.findFirstByHardDriveID(hardDriveId).getHardDriveName();
+    }
+
 }

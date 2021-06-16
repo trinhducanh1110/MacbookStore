@@ -16,4 +16,5 @@ import java.util.List;
 public interface GroupRepository extends MongoRepository<Group, String> {
     Group findFirstById(String groupID);
     void deleteById(String groupID);
+    Group findFirstByGroupID(String groupId);
 }

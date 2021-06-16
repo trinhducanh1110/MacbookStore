@@ -31,4 +31,8 @@ public class  DisplayService {
 
     public void deleteDisplay(String displayId) { displayRepository.deleteById(displayId); }
 
+    public String getDisplayName(String displayId){
+        return displayRepository.findFirstByDisplayID(displayId).getDisplayName();
+    }
+
 }

@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MacbookStore" />
-        <module name="Macbook" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Macbook" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

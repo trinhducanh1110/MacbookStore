@@ -20,7 +20,7 @@ public class  ColorService {
     }
 
     public Color get1Color(String colorId) {
-        return colorRepository.findFirstById(colorId);
+        return colorRepository.findFirstByColorID(colorId);
     }
 
     public void insertColor(Color color) {
@@ -30,5 +30,9 @@ public class  ColorService {
     public void updateColor(Color color) { colorRepository.save(color); }
 
     public void deleteColor(String colorId) { colorRepository.deleteById(colorId); }
+
+    public String getColorName(String colorID){
+        return colorRepository.findFirstByColorID(colorID).getColorName();
+    }
 
 }
