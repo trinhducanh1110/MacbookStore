@@ -6,6 +6,7 @@ import com.MacbookStore.service.CustomerService;
 import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -84,6 +85,31 @@ public class UserController {
         }
         customerService.insertCustomer(customer);
         return "login";
+    }
+    @RequestMapping("/manage/{id}")
+    public String manage(@PathVariable("id") String id, Model model){
+        Customer customer = customerService.getCustomerByUsername(id);
+        CustomerViewModel cvm = new CustomerViewModel();
+        cvm.setId(customer.getId());
+        cvm.setCustomerName(customer.getCustomerName());
+        cvm.setAddress(customer.getAddress());
+        cvm.setBirth(customer.getBirth().toString());
+        cvm.setEmail(customer.getEmail());
+        cvm.setUsername(customer.getUsername());
+        cvm.setPassword(customer.getPassword());
+        cvm.setPhoneNumber(customer.getPhoneNumber());
+
+        model.addAttribute("customer", cvm);
+        return "manage";
+    }
+    @PostMapping("/editSubmit")
+    public String editSubmit(@Valid @ModelAttribute("customer") CustomerViewModel customer, BindingResult br, Model model) throws ParseException {
+        if(br.hasErrors()){
+            return "error";
+        }
+        customerService.save(customer);
+        model.addAttribute("customer", customer);
+        return "manage";
     }
 
 }

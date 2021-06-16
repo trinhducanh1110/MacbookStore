@@ -72,4 +72,20 @@ public class CustomerService {
 
     public void updateCustomer(Customer customer) { customerRepository.save(customer); }
 
+    public void save(CustomerViewModel customer) throws ParseException {
+        Customer temp = new Customer();
+        temp.setId(customer.getId());
+        temp.setUsername(customer.getUsername());
+        temp.setPassword(customer.getPassword());
+        temp.setAddress(customer.getAddress());
+        String tempDate = customer.getBirth();
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date birth = format.parse(tempDate);
+
+        temp.setBirth(birth);
+        temp.setEmail(customer.getEmail());
+        temp.setCustomerName(customer.getCustomerName());
+        temp.setPhoneNumber(customer.getPhoneNumber());
+        customerRepository.save(temp);
+    }
 }

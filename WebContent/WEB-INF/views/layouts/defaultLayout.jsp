@@ -113,7 +113,7 @@
                                 Hello ${sessionScope.user}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Manage</a>
+                                <a class="dropdown-item" href="/MacbookStore/user/manage/${sessionScope.user}">Manage</a>
                                 <a class="dropdown-item" href="#">Orders</a>
                                 <a class="dropdown-item" href="/MacbookStore/user/logout">Log out</a>
                             </div>

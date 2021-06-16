@@ -45,7 +45,12 @@
     <definition name="successCheckout" extends="home">
         <put-attribute name="body" value="/WEB-INF/views/Web/successCheckout.jsp"/>
     </definition>
-
+    <definition name="manage" extends="home">
+        <put-attribute name="body" value="/WEB-INF/views/Web/manage.jsp"/>
+    </definition>
+    <definition name="orderList" extends="home">
+        <put-attribute name="body" value="/WEB-INF/views/Web/orderList.jsp"/>
+    </definition>
 
 
     <definition name="adminHome" template="/WEB-INF/views/layouts/adminLayout.jsp">

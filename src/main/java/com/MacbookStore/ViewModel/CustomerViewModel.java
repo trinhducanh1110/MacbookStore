@@ -3,7 +3,7 @@ package com.MacbookStore.ViewModel;
 import java.util.Date;
 
 public class CustomerViewModel {
-    private String _id;
+    private String Id;
     private String Username;
     private String Password;
     private String customerName;
@@ -68,11 +68,11 @@ public class CustomerViewModel {
         Birth = birth;
     }
 
-    public String get_id() {
-        return _id;
+    public String getId() {
+        return Id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setId(String id) {
+        Id = id;
     }
 }
