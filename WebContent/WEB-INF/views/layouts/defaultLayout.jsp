@@ -127,7 +127,7 @@
         <tiles:insertAttribute name="body"/>
     </div>
 
-<footer>
+<footer style="margin-top: 20px">
     <div class="container">
         <div class="row">
             <div class="col-md-3 footer-item">

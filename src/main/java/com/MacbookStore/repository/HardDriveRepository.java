@@ -15,4 +15,5 @@ import java.util.List;
 public interface HardDriveRepository extends MongoRepository<HardDrive, String> {
     HardDrive findFirstById(String hardDriveID);
     void deleteById(String hardDriveID);
+    HardDrive findFirstByHardDriveID(String hardDriveId);
 }

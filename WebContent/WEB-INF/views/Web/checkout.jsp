@@ -14,8 +14,8 @@
 </head>
 <body style="padding-bottom: 100px; padding-top: 20px">
 <div class="container">
-    <form method="post" action="/MacbookStore/cart/confirmOrder">
-        <table border="1" style="margin-left: auto; margin-right: auto; padding-bottom: 20px">
+    <form method="post" action="/MacbookStore/cart/confirmOrder" style="margin-top: 20px">
+        <table border="1" style="margin-left: auto; margin-right: auto; padding-bottom: 20px; text-align: center">
             <tr>
                 <th>Product name</th>
                 <th>Price</th>
@@ -65,7 +65,7 @@
         </div>
 
         <div style="text-align: center">
-            <button type="submit">Confirm</button>
+            <input type="submit" value="Conform" style="margin-left: auto; margin-right: auto">
         </div>
     </form>
 </div>

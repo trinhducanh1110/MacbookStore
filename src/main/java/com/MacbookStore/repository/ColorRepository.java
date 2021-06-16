@@ -15,4 +15,5 @@ import java.util.List;
 public interface ColorRepository extends MongoRepository<Color, String> {
     Color findFirstById(String colorID);
     void deleteById(String colorID);
+    Color findFirstByColorID(String colorId);
 }

@@ -15,4 +15,5 @@ import java.util.List;
 public interface CpuRepository extends MongoRepository<CPU, String> {
     CPU findFirstById(String cpuID);
     void deleteById(String cpuID);
+    CPU findFirstByCpuID(String cupId);
 }

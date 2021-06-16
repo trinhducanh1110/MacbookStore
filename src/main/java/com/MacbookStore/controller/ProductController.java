@@ -1,6 +1,6 @@
 package com.MacbookStore.controller;
-import com.MacbookStore.model.Product;
-import com.MacbookStore.service.ProductService;
+import com.MacbookStore.model.*;
+import com.MacbookStore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,34 @@ import javax.validation.Valid;
 public class ProductController {
     @Autowired
     private final ProductService productService;
-    public ProductController() { productService = new ProductService(); }
+    @Autowired
+    private final ColorService colorService;
+    @Autowired
+    private final CpuService cpuService;
+    @Autowired
+    private final DisplayService displayService;
+    @Autowired
+    private final DisplayCardService displayCardService;
+    @Autowired
+    private final GroupService groupService;
+    @Autowired
+    private final HardDriveService hardDriveService;
+    @Autowired
+    private final RamService ramService;
+    @Autowired
+    private final YearService yearService;
+
+    public ProductController() {
+        productService = new ProductService();
+        colorService = new ColorService();
+        cpuService = new CpuService();
+        displayCardService = new DisplayCardService();
+        displayService = new DisplayService();
+        groupService = new GroupService();
+        hardDriveService = new HardDriveService();
+        ramService = new RamService();
+        yearService = new YearService();
+    }
 
     @GetMapping("/")
     public String home(Model model) {
@@ -25,7 +52,9 @@ public class ProductController {
 
     @GetMapping("/detail/{id}")
     public String productListByCollectionID(@PathVariable("id") String id, Model model) {
-        model.addAttribute("product", productService.get1Product(id));
+        Product product = productService.get1Product((id));
+        //product.setColorID(colorService.getColorName(product.getColorID()));
+        model.addAttribute("product", product);
         return "detail";
     }
     @GetMapping("/category/{status}/{groupId}/{year}")
