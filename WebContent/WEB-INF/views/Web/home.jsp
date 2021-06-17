@@ -36,7 +36,9 @@
                                 </a>
                                 <div class="down-content">
                                     <h4>${item.productName}</h4><p style="font-weight: bold">Price: ${item.price}</p>
-                                    <p>${item.cpuID} - ${item.ramID} - ${item.hardDriveID} - ${item.displayCardID} <br/> ${item.colorID} - ${item.displayID} - ${item.yearID} - ${item.status} </p>
+                                    <p>
+                                        ${item.cpuID} - ${item.ramID} - ${item.hardDriveID} <c:if test="${item.displayCardID!=null}">- ${item.displayCardID}</c:if><br/> ${item.colorID} - ${item.displayID} - ${item.yearID} - ${item.status}
+                                    </p>
                                     <a href="/MacbookStore/detail/${item.id}" class="btn btn-outline-dark ">Read More</a>
                                     <a href="" class="btn btn-outline-dark ">Add To Cart</a>
                                 </div>

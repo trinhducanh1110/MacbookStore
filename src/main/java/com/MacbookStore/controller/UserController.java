@@ -2,6 +2,7 @@ package com.MacbookStore.controller;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.model.Customer;
+import com.MacbookStore.model.Product;
 import com.MacbookStore.service.CustomerService;
 import com.MacbookStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +16,12 @@ import javax.servlet.http.HttpSession;
 
 import javax.validation.Valid;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController extends ProductController{
     @Autowired
     private final CustomerService customerService;
     @Autowired
@@ -54,7 +57,14 @@ public class UserController {
             String customerId = customerService.getCustomerId(customer.getUsername());
             session.setAttribute("customerId", customerId);
             model.addAttribute("currentUser", customer.getUsername());
-            model.addAttribute("product",productService.getAllProduct());
+            List<Product> listProduct = productService.getAllProduct();
+            List<Product> newList = new ArrayList<>();
+            for (Product item:listProduct
+            ) {
+                item = getAllInfoProduct(item);
+                newList.add(item);
+            }
+            model.addAttribute("product", newList);
             return "home";
         }
         else{
@@ -69,7 +79,14 @@ public class UserController {
         session.setAttribute("customer", null);
         session.setAttribute("customerId", null);
         session.setAttribute("cartSize", 0);
-        model.addAttribute("product",productService.getAllProduct());
+        List<Product> listProduct = productService.getAllProduct();
+        List<Product> newList = new ArrayList<>();
+        for (Product item:listProduct
+        ) {
+            item = getAllInfoProduct(item);
+            newList.add(item);
+        }
+        model.addAttribute("product", newList);
         return "home";
     }
 

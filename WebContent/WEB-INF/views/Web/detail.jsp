@@ -76,7 +76,7 @@
 
                 <b>HARD DRIVE</b>: ${product.hardDriveID}<br><br>
 
-                <b>DISPLAY CARD</b>: ${product.displayCardID}<br><br>
+                <b>DISPLAY CARD</b>: <c:if test="${product.displayCardID!=null}">${product.displayCardID}</c:if><br><br>
 
                 <b>STATUS</b>:&ensp;${product.status}<br><br>
 
