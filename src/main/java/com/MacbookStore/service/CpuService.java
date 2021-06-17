@@ -1,7 +1,6 @@
 package com.MacbookStore.service;
 
 import com.MacbookStore.model.CPU;
-import com.MacbookStore.model.Product;
 import com.MacbookStore.repository.CpuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

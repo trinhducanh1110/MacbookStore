@@ -1,7 +1,5 @@
 package com.MacbookStore.service;
 
-import com.MacbookStore.model.CPU;
-import com.MacbookStore.model.Color;
 import com.MacbookStore.model.Display;
 import com.MacbookStore.repository.DisplayRepository;
 import org.springframework.beans.factory.annotation.Autowired;

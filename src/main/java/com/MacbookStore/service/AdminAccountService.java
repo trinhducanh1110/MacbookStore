@@ -1,16 +1,11 @@
 package com.MacbookStore.service;
 
-import com.MacbookStore.ViewModel.AdminViewModel;
 import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.model.AdminAccount;
-import com.MacbookStore.model.Customer;
 import com.MacbookStore.repository.AdminAccountRepository;
-import com.MacbookStore.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Transactional
 @Service

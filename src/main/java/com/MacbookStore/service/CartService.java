@@ -1,10 +1,6 @@
 package com.MacbookStore.service;
 
-import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.model.Cart;
-import com.MacbookStore.model.Customer;
-import com.MacbookStore.model.Order;
-import com.MacbookStore.model.OrderDetail;
 import com.MacbookStore.repository.CartRepository;
 import com.MacbookStore.repository.OrderDetailRepository;
 import com.MacbookStore.repository.OrderRepository;
