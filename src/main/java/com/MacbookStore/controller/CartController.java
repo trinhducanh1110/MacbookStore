@@ -2,10 +2,7 @@ package com.MacbookStore.controller;
 
 import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.model.*;
-import com.MacbookStore.service.CartService;
-import com.MacbookStore.service.OrderDetailService;
-import com.MacbookStore.service.OrderService;
-import com.MacbookStore.service.ProductService;
+import com.MacbookStore.service.*;
 import org.mvel2.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,12 +30,15 @@ public class CartController{
     private final OrderDetailService orderDetailService;
     @Autowired
     private final ProductService productService;
+    @Autowired
+    private final ColorService colorService;
 
     public CartController(){
         cartService = new CartService();
         orderService = new OrderService();
         orderDetailService = new OrderDetailService();
         productService = new ProductService();
+        colorService = new ColorService();
     }
 
     public int total(HttpSession session){
@@ -67,6 +67,11 @@ public class CartController{
             return "login";
         }
         List<Cart> cartList = cartService.findAllByCustomerId((String)session.getAttribute("customerId"));
+        List<Cart> newCartList = new ArrayList<>();
+        for (Cart item:cartList
+             ) {
+            item.setColor(colorService.get1Color(item.getColor()).getColorName());
+        }
         session.setAttribute("cart", cartList);
         session.setAttribute("cartSize", cartList.size());
         return "cart";
@@ -87,6 +92,8 @@ public class CartController{
             Product product = productService.get1Product(_id);
             cart.setProductId(_id);
             cart.setPrice(Integer.parseInt(product.getPrice()));
+            cart.setImage(product.getImage());
+            cart.setColor(product.getColorID());
             cart.setProductName(product.getProductName());
             cart.setQuantity(1);
             cart.setCustomerId((String)session.getAttribute("customerId"));

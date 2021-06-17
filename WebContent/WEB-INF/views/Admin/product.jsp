@@ -82,7 +82,7 @@
         <c:forEach var="item" items="${product}">
         <tr>
             <td>
-                <a href="/MacbookStore/admin/product/edit/${item.id}">
+                <a href="/MacbookStore/admin/product/editproduct/${item.id}">
                     <input type="button" value="Edit" class="btn btn-warning">
                 </a>
                 <a href="/MacbookStore/admin/product/delete/${item.id}">

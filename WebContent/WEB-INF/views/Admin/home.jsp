@@ -5,6 +5,6 @@
         <title>Home Page</title>
     </head>
     <body>
-        <h1>MacbookStore Spring MVC 22</h1>
+        <h1 style="text-align: center;padding-bottom: 100px;padding-top: 100px">MacbookStore Spring MVC</h1>
     </body>
 </html>

@@ -55,17 +55,19 @@ public class AdminController {
 
     public Product getAllInfoProduct(Product productt){
         Product product = productt;
-        product.setColorID(colorService.getColorName(product.getColorID()));
-        product.setCpuID(cpuService.get1Cpu(product.getCpuID()).getCpuName());
-        product.setDisplayCardID(displayCardService.get1DisplayCard(product.getDisplayCardID()).getDisplayCardName());
-        if(product.getDisplayCardID().equals("none")){
-            product.setDisplayCardID(null);
+        if(product.getRamID().length()>10){
+            product.setColorID(colorService.getColorName(product.getColorID()));
+            product.setCpuID(cpuService.get1Cpu(product.getCpuID()).getCpuName());
+            product.setDisplayCardID(displayCardService.get1DisplayCard(product.getDisplayCardID()).getDisplayCardName());
+            if(product.getDisplayCardID().equals("none")){
+                product.setDisplayCardID(null);
+            }
+            product.setDisplayID(displayService.get1Display(product.getDisplayID()).getDisplayName());
+            product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
+            product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
+            product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
+            product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
         }
-        product.setDisplayID(displayService.get1Display(product.getDisplayID()).getDisplayName());
-        product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
-        product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
-        product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
-        product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
         return product;
     }
 
@@ -127,10 +129,12 @@ public class AdminController {
         }
         List<Product> product = productService.getAllProduct();
         List<Product> listProduct = new ArrayList<>();
-        for(int i=0; i<60; i++){
+        for(int i=0; i<30; i++){
             Product temp = product.get(i);
             temp = getAllInfoProduct(temp);
-            listProduct.add(temp);
+            if(temp.getRamID()!=null){
+                listProduct.add(temp);
+            }
         }
         model.addAttribute("product", listProduct);
         return "adminProduct";
@@ -406,13 +410,14 @@ public class AdminController {
         model.addAttribute("id", customerService.get1Customer(id));
         return "adminEditCustomer";
     }
-    @GetMapping("/admin/product/edit/{productId}")
+    @GetMapping("/admin/product/editproduct/{productId}")
     public String editProduct(@Valid @ModelAttribute("productId") String productId, BindingResult br, Model model, HttpSession session)
     {
         if(br.hasErrors()){
             return "error";
         }
-        model.addAttribute("product", productService.get1Product(productId));
+        Product temp = productService.get1Product(productId);
+        model.addAttribute("product", temp);
         return "adminEditProduct";
     }
     @GetMapping("/admin/cpu/edit/{cpuId}")

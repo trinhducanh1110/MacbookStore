@@ -12,7 +12,7 @@
 <head>
     <title>Checkout</title>
 </head>
-<body style="padding-bottom: 100px; padding-top: 20px">
+<body style="padding-bottom: 100px">
 <div class="container">
     <form method="post" action="/MacbookStore/cart/confirmOrder" style="margin-top: 20px">
         <table border="1" style="margin-left: auto; margin-right: auto; padding-bottom: 20px; text-align: center">

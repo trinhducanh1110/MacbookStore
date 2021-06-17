@@ -93,9 +93,9 @@
                     <li class="nav-item">
                         <a style="color: white" class="nav-link" href="/MacbookStore/contact">CONTACT US</a>
                     </li>
-                    <li class="nav-item">
-                        <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>
-                    </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a style="color: white" class="nav-link" href="/MacbookStore/contact"><i class="fas fa-search"></i></a>--%>
+<%--                    </li>--%>
                     <c:if test="${sessionScope.user.length() == null}">
                         <li class="nav-item">
                             <a style="color: white" class="nav-link" href="/MacbookStore/user/login"><i class="fas fa-shopping-cart"></i></a>
@@ -134,7 +134,7 @@
 <footer style="margin-top: 20px">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 footer-item">
+            <div class="col-md-4 footer-item">
                 <h4>MACBOOK STORE</h4>
                 <br>
                 Showroom 1: 214 Le Van Viet Street, District 9, HCMC
@@ -164,7 +164,7 @@
                     <li><a href="https://www.apple.com/"><i class="fa fa-apple"></i></a></li>
                 </ul>
             </div>
-            <div class="col-md-3 footer-item">
+            <div class="col-md-4 footer-item">
                 <h4>MACBOOK REPAIR SERVICE</h4>
                 MBService (Warranty - Service)
                 <br>
@@ -185,7 +185,7 @@
                     <i class="fa fa-cc-paypal" style="font-size:36px"></i>
                 </ul>
             </div>
-            <div class="col-md-3 footer-item">
+            <div class="col-md-4 footer-item">
                 <h4>ADDITIONALS PAGES</h4>
                 <ul class="menu-list">
                     <li><a href="/MacbookStore/about">About Us</a></li>
@@ -193,35 +193,6 @@
                     <li><a href="/MacbookStore/contact">Contact Us</a></li>
                     <li><a href="/MacbookStore/newest">Newest</a></li>
                 </ul>
-            </div>
-            <div class="col-md-3 footer-item last-item">
-                <h4>CONTACT US</h4>
-                <div class="contact-form">
-                    <form id="contact footer-contact" action="" method="post">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <fieldset>
-                                    <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>

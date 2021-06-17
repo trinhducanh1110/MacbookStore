@@ -12,19 +12,23 @@
 <head>
     <title>Title</title>
 </head>
-<body style="padding-bottom: 100px; padding-top: 20px">
+<body style="padding-bottom: 100px">
 <form method="post" action="/MacbookStore/cart/checkout" style="margin-top: 20px">
-        <table border="1" style="margin-left: auto; margin-right: auto; padding-bottom: 20px; text-align: center">
+        <table border="1" style="margin-left: auto; margin-right: auto; padding-bottom: 20px; text-align: center" class="table">
             <tr>
                 <th>Product name</th>
+                <th>Image</th>
+                <th>Color</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Amount</th>
+                <th>Total</th>
                 <th></th>
             </tr>
             <c:forEach var="item" items="${cart}">
             <tr>
                 <td>${item.getProductName()}</td>
+                <td><img src="${item.getImage()}" alt="..." class="img-thumbnail" style="max-width: 300px" /></td>
+                <td>${item.getColor()}</td>
                 <td>${item.getPrice()}</td>
                 <td>${item.getQuantity()}</td>
                 <td>${item.total()}</td>
