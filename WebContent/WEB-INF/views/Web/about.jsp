@@ -12,45 +12,44 @@
 </div>
 <br>
 <br>
-
-<div class="introduction">
+<div class="single-services">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Our <em>missions</em></h2>
-                    <br>
-                    <p><strong>Thanks to</strong> the continuous development of the technology industry, we are enjoying the myriad of benefits it brings.
-                        A big brand that everyone knows, every season this brand releases a new product that the whole world has to watch, none other than Apple.
-                        Macbook Store was born with the mission to become a bridge to bring Vietnamese users to access the products of Apple more easily, conveniently and safely.</p>
-                </div>
+        <div class="row" id="tabs">
+            <div class="col-md-4">
+                <ul>
+                    <li><a href='#tabs-1'>Our missions<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href='#tabs-2'>Our vision<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href='#tabs-3'>Core values of MacbookStore<i class="fa fa-angle-right"></i></a></li>
+                </ul>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Our <em>vision</em></h2>
-                    <br>
-                    <p><strong>Not stopping at selling Apple products,</strong> Macbook Store in the near future wishes to become the leading brand in Vietnam for Apple products including product and solution supply chain stores, communication channels.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Core values <em>of MacbookStore</em></h2>
-                    <br>
-                    <p><strong>Quality comes first -</strong> With a world leading brand like Apple, MacbookStore is responsible for always ensuring the best experience in terms of product quality, worthy of class.</p>
-                    <p><strong>Trust -</strong> For MacbookStore, the word "credibility" is a guideline for all actions and a measure of MacbookStore's value in the market.</p>
-                    <p><strong>Friendly, attentive -</strong> Besides quality products, coming to MacbookStore, customers also enjoy enjoyable shopping experiences with friendly, honest staff and professional environment.</p>
-                    <p><strong>Excellent after-sales service -</strong> After owning Apple products at MacbookStore, customers also enjoy after-sales service</p>
-                </div>
+            <div class="col-md-8">
+                <section class='tabs-content'>
+                    <article id='tabs-1'>
+                        <img src="assets/images/single_service_01.jpg" alt="">
+                        <h4>Our missions</h4>
+                        <p><strong>Thanks to</strong> the continuous development of the technology industry, we are enjoying the myriad of benefits it brings.
+                            A big brand that everyone knows, every season this brand releases a new product that the whole world has to watch, none other than Apple.
+                            Macbook Store was born with the mission to become a bridge to bring Vietnamese users to access the products of Apple more easily, conveniently and safely.
+                    </article>
+                    <article id='tabs-2'>
+                        <img src="assets/images/single_service_02.jpg" alt="">
+                        <h4>Our vision</h4>
+                        <p><strong>Not stopping at selling Apple products,</strong> Macbook Store in the near future wishes to become the leading brand in Vietnam for Apple products including product and solution supply chain stores, communication channels.</p>
+                    </article>
+                    <article id='tabs-3'>
+                        <img src="assets/images/single_service_03.jpg" alt="">
+                        <h4>Core values of MacbookStore</h4>
+                        <<p><strong>Quality comes first -</strong> With a world leading brand like Apple, MacbookStore is responsible for always ensuring the best experience in terms of product quality, worthy of class.</p>
+                        <p><strong>Trust -</strong> For MacbookStore, the word "credibility" is a guideline for all actions and a measure of MacbookStore's value in the market.</p>
+                        <p><strong>Friendly, attentive -</strong> Besides quality products, coming to MacbookStore, customers also enjoy enjoyable shopping experiences with friendly, honest staff and professional environment.</p>
+                        <p><strong>Excellent after-sales service -</strong> After owning Apple products at MacbookStore, customers also enjoy after-sales service</p>
+                    </article>
+                </section>
             </div>
         </div>
     </div>
 </div>
+
 <div class="team">
     <div class="container">
         <div class="row">
