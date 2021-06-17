@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class AdminController {
@@ -50,6 +52,23 @@ public class AdminController {
         yearService = new YearService();
         customerService = new CustomerService();
     }
+
+    public Product getAllInfoProduct(Product productt){
+        Product product = productt;
+        product.setColorID(colorService.getColorName(product.getColorID()));
+        product.setCpuID(cpuService.get1Cpu(product.getCpuID()).getCpuName());
+        product.setDisplayCardID(displayCardService.get1DisplayCard(product.getDisplayCardID()).getDisplayCardName());
+        if(product.getDisplayCardID().equals("none")){
+            product.setDisplayCardID(null);
+        }
+        product.setDisplayID(displayService.get1Display(product.getDisplayID()).getDisplayName());
+        product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
+        product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
+        product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
+        product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
+        return product;
+    }
+
     //1
     @GetMapping("/admin/home")
     public String homeForm(){
@@ -106,7 +125,14 @@ public class AdminController {
         if(!checkAdmin(session)){
             return "adminLogin";
         }
-        model.addAttribute("product",productService.getAllProduct());
+        List<Product> product = productService.getAllProduct();
+        List<Product> listProduct = new ArrayList<>();
+        for(int i=0; i<60; i++){
+            Product temp = product.get(i);
+            temp = getAllInfoProduct(temp);
+            listProduct.add(temp);
+        }
+        model.addAttribute("product", listProduct);
         return "adminProduct";
     }
     @GetMapping("/admin/cpu")
