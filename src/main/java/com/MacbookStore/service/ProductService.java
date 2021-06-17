@@ -16,8 +16,6 @@ import java.util.List;
 public class ProductService {
     @Autowired
     private ProductRepository productRepository;
-    @Autowired
-    private YearRepository yearRepository;
 
     public List<Product> getAllProduct() {
         return productRepository.findAll();

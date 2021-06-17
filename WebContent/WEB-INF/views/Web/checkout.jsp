@@ -59,7 +59,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 10px">
-            <input type="submit" value="Conform" style="margin-left: auto; margin-right: auto">
+            <input type="submit" value="Confirm" style="margin-left: auto; margin-right: auto">
         </div>
     </form>
 </div>

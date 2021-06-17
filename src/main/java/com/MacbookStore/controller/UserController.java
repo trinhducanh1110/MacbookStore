@@ -3,8 +3,7 @@ package com.MacbookStore.controller;
 import com.MacbookStore.ViewModel.CustomerViewModel;
 import com.MacbookStore.model.Customer;
 import com.MacbookStore.model.Product;
-import com.MacbookStore.service.CustomerService;
-import com.MacbookStore.service.ProductService;
+import com.MacbookStore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
@@ -40,6 +39,11 @@ public class UserController extends ProductController{
         }
     }
 
+    public Product getNewProduct(Product product){
+        product = getAllInfoProduct(product);
+        return product;
+    }
+
     @RequestMapping("/login")
     public String loginForm(Model model){
         model.addAttribute("customer", new CustomerViewModel());
@@ -57,14 +61,8 @@ public class UserController extends ProductController{
             String customerId = customerService.getCustomerId(customer.getUsername());
             session.setAttribute("customerId", customerId);
             model.addAttribute("currentUser", customer.getUsername());
-            List<Product> listProduct = productService.getAllProduct();
-            List<Product> newList = new ArrayList<>();
-            for (Product item:listProduct
-            ) {
-                item = getAllInfoProduct(item);
-                newList.add(item);
-            }
-            model.addAttribute("product", newList);
+
+            model.addAttribute("product", productService.getAllProduct());
             return "home";
         }
         else{
@@ -79,14 +77,7 @@ public class UserController extends ProductController{
         session.setAttribute("customer", null);
         session.setAttribute("customerId", null);
         session.setAttribute("cartSize", 0);
-        List<Product> listProduct = productService.getAllProduct();
-        List<Product> newList = new ArrayList<>();
-        for (Product item:listProduct
-        ) {
-            item = getAllInfoProduct(item);
-            newList.add(item);
-        }
-        model.addAttribute("product", newList);
+        model.addAttribute("product", productService.getAllProduct());
         return "home";
     }
 
