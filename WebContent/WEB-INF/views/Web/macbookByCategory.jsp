@@ -21,8 +21,9 @@
                                     <img src="${item.image}" class="d-block w-100" alt="">
                                 </a>
                                 <div class="down-content">
-                                    <h4>${item.productName}</h4><p style="font-weight: bold">Price: ${item.price}</p>
-                                    <p>${item.cpuID} - ${item.ramID} - ${item.hardDriveID} <c:if test="${item.displayCardID!=null}">- ${item.displayCardID}</c:if><br/> ${item.colorID} - ${item.displayID} - ${item.yearID} - ${item.status} </p>
+                                    <h4><bold style="color: red">[ ${item.status} ]</bold> ${item.productName} - ${item.displayID} - ${item.productID}</h4>
+                                    <h6 style="color:red">Price: ${item.price} VND</h6>
+                                    <p>${item.cpuID} - ${item.ramID} - ${item.hardDriveID} <c:if test="${item.displayCardID!=null}">- ${item.displayCardID}</c:if><br/> ${item.colorID} - ${item.displayID}</p>
                                     <a href="/MacbookStore/detail/${item.id}" class="btn btn-outline-dark ">Read More</a>
                                     <a href="/MacbookStore/cart/add/${item.id}" class="btn btn-outline-dark ">Add To Cart</a>
                                 </div>
