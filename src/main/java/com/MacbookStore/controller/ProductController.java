@@ -56,7 +56,7 @@ public class ProductController {
         product.setGroupID(groupService.get1Group(product.getGroupID()).getGroupName());
         product.setHardDriveID(hardDriveService.get1HardDrive(product.getHardDriveID()).getHardDriveName());
         product.setRamID(ramService.get1Ram(product.getRamID()).getRamName());
-        //product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
+        product.setYearID(yearService.get1Year(product.getYearID()).getYearName());
         return product;
     }
 
